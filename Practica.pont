@@ -1,4 +1,4 @@
-; Tue May 08 16:31:41 CEST 2018
+; Tue May 08 18:59:27 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -11,20 +11,16 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot Serv
-		(type INSTANCE)
-;+		(allowed-classes Servicio)
+	(single-slot Tama%C3%B1o
+		(type SYMBOL)
+		(allowed-values Peque%C3%B1a Mediana Grande)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot Valoraci%C3%B3n
-		(type INTEGER)
-		(range 1 10)
-;+		(cardinality 1 1)
+	(multislot Medio
+		(type SYMBOL)
+		(allowed-values Metro Autob%C3%BAs Tren Ferrocarril)
 		(create-accessor read-write))
 	(single-slot Continente
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot Nombre
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
@@ -34,6 +30,45 @@
 		(create-accessor read-write))
 	(single-slot Coord.+Y
 		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Calidad
+		(type SYMBOL)
+		(allowed-values Alta Media Baja)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Serv
+		(type INSTANCE)
+;+		(allowed-classes Servicio)
+		(create-accessor read-write))
+	(single-slot Valoraci%C3%B3n
+		(type INTEGER)
+		(range 1 10)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Tipo
+		(type SYMBOL)
+		(allowed-values Mar Aire Tierra)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Precio
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Practica_Class6
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Practica_Class0
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Practica_Class2
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(single-slot Nombre
+		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
@@ -57,6 +92,11 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot Tama%C3%B1o
+		(type SYMBOL)
+		(allowed-values Peque%C3%B1a Mediana Grande)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot Nombre
 		(type STRING)
 ;+		(cardinality 1 1)
@@ -72,11 +112,24 @@
 
 (defclass Servicio
 	(is-a USER)
-	(role concrete))
+	(role abstract)
+	(single-slot Precio
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Calidad
+		(type SYMBOL)
+		(allowed-values Alta Media Baja)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
 
 (defclass Mobilidad
 	(is-a Servicio)
-	(role concrete))
+	(role concrete)
+	(multislot Medio
+		(type SYMBOL)
+		(allowed-values Metro Autob%C3%BAs Tren Ferrocarril)
+		(create-accessor read-write)))
 
 (defclass Ocio
 	(is-a Servicio)
@@ -102,4 +155,12 @@
 		(type SYMBOL)
 		(allowed-values Alta Media Baja)
 ;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Tem%C3%A1tica
+	(is-a USER)
+	(role concrete)
+	(single-slot Practica_Class6
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write)))
