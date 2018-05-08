@@ -1,0 +1,33 @@
+; Tue May 08 16:31:41 CEST 2018
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract))
+
+(defclass Ciudad
+	(is-a USER)
+	(role concrete))
+
+(defclass Servicio
+	(is-a USER)
+	(role concrete))
+
+(defclass Mobilidad
+	(is-a Servicio)
+	(role concrete))
+
+(defclass Ocio
+	(is-a Servicio)
+	(role concrete))
+
+(defclass Hospedaje
+	(is-a Servicio)
+	(role concrete))
+
+(defclass Transporte
+	(is-a USER)
+	(role concrete))
