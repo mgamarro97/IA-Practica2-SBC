@@ -30,4 +30,18 @@
 
 (defclass Transporte
 	(is-a USER)
-	(role concrete))
+	(role concrete)
+	(single-slot Tipo
+		(type SYMBOL)
+		(allowed-values Mar Aire Tierra)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Precio
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Calidad
+		(type SYMBOL)
+		(allowed-values Alta Media Baja)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
