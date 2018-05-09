@@ -1,4 +1,4 @@
-; Tue May 08 18:59:27 CEST 2018
+; Wed May 09 09:07:21 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -11,6 +11,10 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot Tem%C3%A1ticaCiudad
+		(type SYMBOL)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot Tama%C3%B1o
 		(type SYMBOL)
 		(allowed-values Peque%C3%B1a Mediana Grande)
@@ -22,6 +26,16 @@
 		(create-accessor read-write))
 	(single-slot Continente
 		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Tema
+		(type SYMBOL)
+		(allowed-values Rom%C3%A1ntico Familiar Cultural Ocio Descanso Ex%C3%B3tico)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot TipoOcio
+		(type SYMBOL)
+		(allowed-values Museo Monumento Excursi%C3%B3n)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Coord.+X
@@ -37,13 +51,23 @@
 		(allowed-values Alta Media Baja)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(multislot Terreno
+		(type SYMBOL)
+		(allowed-values Playa Monta%C3%B1a Nieve Desierto)
+		(create-accessor read-write))
 	(multislot Serv
 		(type INSTANCE)
 ;+		(allowed-classes Servicio)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot Valoraci%C3%B3n
 		(type INTEGER)
 		(range 1 10)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot CiudadDestino
+		(type INSTANCE)
+;+		(allowed-classes Ciudad)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Tipo
@@ -55,17 +79,10 @@
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot Practica_Class6
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot Practica_Class0
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
-	(single-slot Practica_Class2
-		(type STRING)
-;+		(cardinality 0 1)
+	(single-slot CiudadOrigen
+		(type INSTANCE)
+;+		(allowed-classes Ciudad)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Nombre
 		(type STRING)
@@ -87,6 +104,7 @@
 	(multislot Serv
 		(type INSTANCE)
 ;+		(allowed-classes Servicio)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot Continente
 		(type STRING)
@@ -96,6 +114,11 @@
 		(type SYMBOL)
 		(allowed-values Peque%C3%B1a Mediana Grande)
 ;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Tema
+		(type SYMBOL)
+		(allowed-values Rom%C3%A1ntico Familiar Cultural Ocio Descanso Ex%C3%B3tico)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot Nombre
 		(type STRING)
@@ -108,6 +131,10 @@
 	(single-slot Coord.+Y
 		(type INTEGER)
 ;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Terreno
+		(type SYMBOL)
+		(allowed-values Playa Monta%C3%B1a Nieve Desierto)
 		(create-accessor read-write)))
 
 (defclass Servicio
@@ -131,17 +158,40 @@
 		(allowed-values Metro Autob%C3%BAs Tren Ferrocarril)
 		(create-accessor read-write)))
 
-(defclass Ocio
-	(is-a Servicio)
-	(role concrete))
-
 (defclass Hospedaje
 	(is-a Servicio)
-	(role concrete))
+	(role concrete)
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Ocio
+	(is-a Servicio)
+	(role concrete)
+	(single-slot TipoOcio
+		(type SYMBOL)
+		(allowed-values Museo Monumento Excursi%C3%B3n)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
 
 (defclass Transporte
 	(is-a USER)
 	(role concrete)
+	(single-slot CiudadOrigen
+		(type INSTANCE)
+;+		(allowed-classes Ciudad)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot CiudadDestino
+		(type INSTANCE)
+;+		(allowed-classes Ciudad)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(single-slot Tipo
 		(type SYMBOL)
 		(allowed-values Mar Aire Tierra)
@@ -155,12 +205,4 @@
 		(type SYMBOL)
 		(allowed-values Alta Media Baja)
 ;+		(cardinality 1 1)
-		(create-accessor read-write)))
-
-(defclass Tem%C3%A1tica
-	(is-a USER)
-	(role concrete)
-	(single-slot Practica_Class6
-		(type STRING)
-;+		(cardinality 0 1)
 		(create-accessor read-write)))
