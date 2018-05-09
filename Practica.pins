@@ -102,3 +102,26 @@
 	(Tema Familiar Descanso)
 	(Terreno Playa Montana)
 	(Valoracion 10))
+
+([Practica_Class2] of  Transporte
+
+	(Calidad Baja)
+	(CiudadDestino [Practica_Class19])
+	(CiudadOrigen [Practica_Class15])
+	(Precio 1490)
+	(Tipo Avion))
+	
+([Practica_Class5] of  Transporte
+
+	(Calidad Baja)
+	(CiudadDestino [Practica_Class20])
+	(CiudadOrigen [Practica_Class15])
+	(Precio 3390)
+	(Tipo Avion))
+
+([Practica_Class6] of  Transporte
+
+	(Calidad Baja)
+	(CiudadDestino [Practica_Class18])
+	(CiudadOrigen [Practica_Class15])
+	(Tipo Avion))
