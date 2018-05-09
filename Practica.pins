@@ -1,4 +1,4 @@
-; Wed May 09 11:41:33 CEST 2018
+; Wed May 09 12:12:42 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -81,3 +81,24 @@
 	(Tamanyo Mediana)
 	(Tema Romantico)
 	(Valoracion 7))
+
+([Practica_Class22] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Narnia")
+	(Pais "Alemania")
+	(PosX 50.207188)
+	(Tema Familiar)
+	(Valoracion 3))
+
+([Practica_Class24] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Esparta")
+	(Pais "Grecia")
+	(PosX 37.09516)
+	(PosY 22.15699)
+	(Tamanyo Pequena)
+	(Tema Familiar Descanso)
+	(Terreno Playa Montana)
+	(Valoracion 10))
