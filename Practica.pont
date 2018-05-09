@@ -1,4 +1,4 @@
-; Wed May 09 11:38:37 CEST 2018
+; Wed May 09 12:12:42 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -11,13 +11,13 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot Tem%C3%A1ticaCiudad
-		(type SYMBOL)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(multislot Medio
 		(type SYMBOL)
 		(allowed-values Metro Autobus Tren Ferrocarril)
+		(create-accessor read-write))
+	(single-slot Practica_Class23
+		(type STRING)
+;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot Tamanyo
 		(type SYMBOL)
@@ -68,7 +68,7 @@
 		(create-accessor read-write))
 	(single-slot Tipo
 		(type SYMBOL)
-		(allowed-values Barco Avion Tren Monociclo Delorean)
+		(allowed-values Barco Avion Tren Monociclo Delorean Coche)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot PosX
@@ -190,6 +190,10 @@
 (defclass Transporte
 	(is-a USER)
 	(role concrete)
+	(single-slot Practica_Class23
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
 	(single-slot CiudadOrigen
 		(type INSTANCE)
 ;+		(allowed-classes Ciudad)
@@ -202,7 +206,7 @@
 		(create-accessor read-write))
 	(single-slot Tipo
 		(type SYMBOL)
-		(allowed-values Barco Avion Tren Monociclo Delorean)
+		(allowed-values Barco Avion Tren Monociclo Delorean Coche)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Precio
