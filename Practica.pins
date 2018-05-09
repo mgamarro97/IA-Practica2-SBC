@@ -1,4 +1,83 @@
-; Tue May 08 16:31:41 CEST 2018
+; Wed May 09 11:41:33 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
+
+([Practica_Class15] of  Ciudad
+
+	(Continente "Africa")
+	(Nombre "Wakanda")
+	(Pais "Wakanda")
+	(PosX -1.334525)
+	(PosY 31.804743)
+	(Tamanyo Grande)
+	(Tema Exotico Cultural)
+	(Valoracion 10))
+
+([Practica_Class16] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Barcelona")
+	(Pais "Espana")
+	(PosX 41.38508)
+	(PosY 2.124209)
+	(Tamanyo Mediana)
+	(Tema Ocio Cultural Familiar)
+	(Terreno Playa Montana)
+	(Valoracion 8))
+
+([Practica_Class17] of  Ciudad
+
+	(Continente "NorteAmerica")
+	(Nombre "NuevaYork")
+	(Pais "USA")
+	(PosX 42.72877)
+	(PosY -78.01356)
+	(Tamanyo Grande)
+	(Tema Familiar Cultural Ocio)
+	(Valoracion 2))
+
+([Practica_Class18] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Roma")
+	(Pais "Italia")
+	(PosX 41.91024)
+	(PosY 12.395912)
+	(Tamanyo Mediana)
+	(Tema Cultural Romantico)
+	(Valoracion 5))
+
+([Practica_Class19] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Mordor")
+	(Pais "Espana")
+	(PosX 37.980595)
+	(PosY -1.1621948)
+	(Tamanyo Mediana)
+	(Tema Romantico)
+	(Terreno Playa)
+	(Valoracion 1))
+
+([Practica_Class20] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Tokio")
+	(Pais "Japon")
+	(PosX 35.673542)
+	(PosY 139.5703)
+	(Tamanyo Grande)
+	(Tema Cultural Exotico)
+	(Valoracion 10))
+
+([Practica_Class21] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Paris")
+	(Pais "Francia")
+	(PosX 48.85895)
+	(PosY 2.2770197)
+	(Tamanyo Mediana)
+	(Tema Romantico)
+	(Valoracion 7))
