@@ -1,4 +1,4 @@
-; Wed May 09 09:54:21 CEST 2018
+; Wed May 09 11:27:09 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -38,6 +38,11 @@
 		(allowed-values Museo Monumento Excursi%C3%B3n)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(multislot Target
+		(type SYMBOL)
+		(allowed-values Ni%C3%B1os Adultos Familias Grupos Parejas)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
 	(single-slot Calidad
 		(type SYMBOL)
 		(allowed-values Alta Media Baja)
@@ -50,7 +55,6 @@
 	(multislot Serv
 		(type INSTANCE)
 ;+		(allowed-classes Servicio)
-		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot Valoracion
 		(type INTEGER)
@@ -64,15 +68,15 @@
 		(create-accessor read-write))
 	(single-slot Tipo
 		(type SYMBOL)
-		(allowed-values Mar Aire Tierra)
+		(allowed-values Barco Avi%C3%B3n Tren Monociclo Delorean)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot PosX
-		(type INTEGER)
+		(type FLOAT)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot PosY
-		(type INTEGER)
+		(type FLOAT)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Precio
@@ -109,14 +113,13 @@
 	(multislot Serv
 		(type INSTANCE)
 ;+		(allowed-classes Servicio)
-		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot Continente
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot PosX
-		(type INTEGER)
+		(type FLOAT)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot Tema
@@ -125,7 +128,7 @@
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
 	(single-slot PosY
-		(type INTEGER)
+		(type FLOAT)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Nombre
@@ -150,7 +153,7 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
-(defclass Mobilidad
+(defclass Movilidad
 	(is-a Servicio)
 	(role concrete)
 	(multislot Medio
@@ -169,6 +172,11 @@
 (defclass Ocio
 	(is-a Servicio)
 	(role concrete)
+	(multislot Target
+		(type SYMBOL)
+		(allowed-values Ni%C3%B1os Adultos Familias Grupos Parejas)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
 	(single-slot TipoOcio
 		(type SYMBOL)
 		(allowed-values Museo Monumento Excursi%C3%B3n)
@@ -194,7 +202,7 @@
 		(create-accessor read-write))
 	(single-slot Tipo
 		(type SYMBOL)
-		(allowed-values Mar Aire Tierra)
+		(allowed-values Barco Avi%C3%B3n Tren Monociclo Delorean)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Precio
