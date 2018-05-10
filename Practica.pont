@@ -1,4 +1,4 @@
-; Wed May 09 12:12:42 CEST 2018
+; Thu May 10 15:57:23 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -190,10 +190,6 @@
 (defclass Transporte
 	(is-a USER)
 	(role concrete)
-	(single-slot Practica_Class23
-		(type STRING)
-;+		(cardinality 0 1)
-		(create-accessor read-write))
 	(single-slot CiudadOrigen
 		(type INSTANCE)
 ;+		(allowed-classes Ciudad)
