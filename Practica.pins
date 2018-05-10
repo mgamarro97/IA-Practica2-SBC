@@ -125,3 +125,83 @@
 	(CiudadDestino [Practica_Class18])
 	(CiudadOrigen [Practica_Class15])
 	(Tipo Avion))
+	
+([Practica_Class0] of  Transporte
+
+	(Calidad Baja)
+	(CiudadDestino [Practica_Class16])
+	(CiudadOrigen [Practica_Class15])
+	(Precio 1531)
+	(Tipo Avion))
+
+([Practica_Class10000] of  Transporte
+
+	(Calidad Alta)
+	(CiudadDestino [Practica_Class17])
+	(CiudadOrigen [Practica_Class20])
+	(Precio 300)
+	(Tipo Barco))
+
+([Practica_Class10002] of  Transporte
+
+	(Calidad Alta)
+	(CiudadDestino [Practica_Class21])
+	(CiudadOrigen [Practica_Class20])
+	(Precio 390)
+	(Tipo Avion))
+
+([Practica_Class10003] of  Transporte
+
+	(Calidad Alta)
+	(CiudadDestino [Practica_Class18])
+	(CiudadOrigen [Practica_Class20])
+	(Precio 210)
+	(Tipo Avion))
+
+([Practica_Class10004] of  Transporte
+
+	(Calidad Alta)
+	(CiudadDestino [Practica_Class16])
+	(CiudadOrigen [Practica_Class17])
+	(Precio 540)
+	(Tipo Avion))
+
+([Practica_Class10005] of  Transporte
+
+	(Calidad Media)
+	(CiudadDestino [Practica_Class16])
+	(CiudadOrigen [Practica_Class17])
+	(Precio 180)
+	(Tipo Barco))
+
+([Practica_Class10006] of  Transporte
+
+	(Calidad Alta)
+	(CiudadDestino [Practica_Class15])
+	(CiudadOrigen [Practica_Class17])
+	(Precio 3960)
+	(Tipo Avion))
+
+([Practica_Class10008] of  Transporte
+
+	(Calidad Baja)
+	(CiudadDestino [Practica_Class18])
+	(CiudadOrigen [Practica_Class16])
+	(Precio 30)
+	(Tipo Monociclo))
+
+([Practica_Class10009] of  Transporte
+
+	(Calidad Media)
+	(CiudadDestino [Practica_Class19])
+	(CiudadOrigen [Practica_Class16])
+	(Precio 460)
+	(Tipo Delorean))
+
+([Practica_Class10011] of  Transporte
+
+	(Calidad Media)
+	(CiudadDestino [Practica_Class15])
+	(CiudadOrigen [Practica_Class19])
+	(Precio 2400)
+	(Tipo Delorean))
