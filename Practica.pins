@@ -1,4 +1,4 @@
-; Wed May 09 12:12:42 CEST 2018
+; Thu May 10 15:57:23 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -35,6 +35,7 @@
 	(PosY -78.01356)
 	(Tamanyo Grande)
 	(Tema Familiar Cultural Ocio)
+	(Terreno Playa)
 	(Valoracion 2))
 
 ([Practica_Class18] of  Ciudad
@@ -86,8 +87,9 @@
 
 	(Continente "Europa")
 	(Nombre "Narnia")
-	(Pais "Alemania")
+	(Pais "ReinoUnido")
 	(PosX 50.207188)
+	(PosY -5.277354)
 	(Tema Familiar)
 	(Valoracion 3))
 
@@ -102,6 +104,29 @@
 	(Tema Familiar Descanso)
 	(Terreno Playa Montana)
 	(Valoracion 10))
+
+([Practica_Class25] of  Ciudad
+
+	(Continente "NorteAmerica")
+	(Nombre "California")
+	(Pais "USA")
+	(PosX 37.193005)
+	(PosY -123.799446)
+	(Tamanyo Mediana)
+	(Tema Ocio)
+	(Valoracion 6))
+
+([Practica_Class26] of  Ciudad
+
+	(Continente "Africa")
+	(Nombre "ElCairo")
+	(Pais "Egipto")
+	(PosX 30.059484)
+	(PosY 31.223444)
+	(Tema Exotico Cultural)
+	(Terreno Desierto)
+	(Valoracion 4))
+
 
 ([Practica_Class2] of  Transporte
 
