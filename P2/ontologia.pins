@@ -1,0 +1,535 @@
+; Sat Dec 16 22:28:39 CET 2017
+; 
+;+ (version "3.4.1")
+;+ (build "Build 537")
+
+([24h1] of  Comercio
+
+	(barrioServicio [Barrio4])
+	(posX 16)
+	(posY 21)
+	(tipo_comercio 24h))
+
+([Bachillerato1] of  Educacion
+
+	(barrioServicio [Barrio6])
+	(posX 65)
+	(posY 2)
+	(tipo_nivel_maximo Bachillerato))
+
+([Bar1] of  Ocio
+
+	(barrioServicio [Barrio2])
+	(posX 55)
+	(posY 70)
+	(tipo_ocio Bar))
+
+([Barrio1] of  Barrio
+
+	(Nombre "Les Corts")
+	(Servicios
+		[CAP1]
+		[Colegio1]
+		[Mercado1])
+	(Viviendas [Duplex4])
+	(xmax 30)
+	(xmin 0)
+	(ymax 100)
+	(ymin 55))
+
+([Barrio2] of  Barrio
+
+	(Nombre "Pedralbes")
+	(Servicios
+		[CentroComercial1]
+		[Universidad1]
+		[Bar1])
+	(Viviendas
+		[Piso2]
+		[Unifamiliar4])
+	(xmax 60)
+	(xmin 30)
+	(ymax 100)
+	(ymin 55))
+
+([Barrio3] of  Barrio
+
+	(Nombre "Bona nova")
+	(Servicios
+		[Biblioteca1]
+		[Cine2])
+	(Viviendas
+		[Duplex3]
+		[Duplex2])
+	(xmax 100)
+	(xmin 60)
+	(ymax 100)
+	(ymin 55))
+
+([Barrio4] of  Barrio
+
+	(Nombre "Raval")
+	(Servicios
+		[Instituto1]
+		[Parque2]
+		[24h1])
+	(Viviendas [Duplex1])
+	(xmax 20)
+	(xmin 0)
+	(ymax 55)
+	(ymin 20))
+
+([Barrio5] of  Barrio
+
+	(Nombre "Poble nou")
+	(Servicios
+		[Hospital1]
+		[Cine1])
+	(Viviendas
+		[Piso4]
+		[Unifamiliar2]
+		[Duplex5])
+	(xmax 60)
+	(xmin 20)
+	(ymax 55)
+	(ymin 20))
+
+([Barrio6] of  Barrio
+
+	(Nombre "Sants")
+	(Servicios
+		[Playa1]
+		[CAP2]
+		[Bachillerato1])
+	(Viviendas
+		[Unifamiliar1]
+		[Unifamiliar3]
+		[Unifamiliar5]
+		[Unifamiliar6])
+	(xmax 100)
+	(xmin 60)
+	(ymax 55)
+	(ymin 0))
+
+([Barrio7] of  Barrio
+
+	(Nombre "Gracia")
+	(Servicios [Transporte1])
+	(Viviendas
+		[Piso1]
+		[Piso3]
+		[Piso5]
+		[Duplex6])
+	(xmax 40)
+	(xmin 0)
+	(ymax 20)
+	(ymin 0))
+
+([Barrio8] of  Barrio
+
+	(Nombre "Fort Pienc")
+	(Servicios
+		[Guarderia1]
+		[Parque1]
+		[Teatro1])
+	(Viviendas [Piso6])
+	(xmax 60)
+	(xmin 40)
+	(ymax 0)
+	(ymin 20))
+
+([Biblioteca1] of  Ocio
+
+	(barrioServicio [Barrio3])
+	(posX 66)
+	(posY 95)
+	(tipo_ocio Biblioteca))
+
+([CAP1] of  Sanitario
+
+	(barrioServicio [Barrio1])
+	(posX 3)
+	(posY 58)
+	(tipo_sanitario CAP))
+
+([CAP2] of  Sanitario
+
+	(barrioServicio [Barrio6])
+	(posX 69)
+	(posY 34)
+	(tipo_sanitario CAP))
+
+([CentroComercial1] of  Comercio
+
+	(barrioServicio [Barrio2])
+	(posX 35)
+	(posY 70)
+	(tipo_comercio CentroComercial))
+
+([Cine1] of  Ocio
+
+	(barrioServicio [Barrio5])
+	(posX 21)
+	(posY 30)
+	(tipo_ocio Cine))
+
+([Cine2] of  Ocio
+
+	(barrioServicio [Barrio3])
+	(posX 70)
+	(posY 86)
+	(tipo_ocio Cine))
+
+([Colegio1] of  Educacion
+
+	(barrioServicio [Barrio1])
+	(posX 25)
+	(posY 70)
+	(tipo_nivel_maximo Primaria))
+
+([Duplex1] of  Duplex
+
+	(amueblada FALSE)
+	(ascensor FALSE)
+	(balcon TRUE)
+	(barrioVivienda [Barrio4])
+	(electrodomesticos FALSE)
+	(garaje TRUE)
+	(numbanyos 2)
+	(numDormDoble 1)
+	(numDormSimple 3)
+	(piscina FALSE)
+	(posicionX 1)
+	(posicionY 23)
+	(preciomensual 600)
+	(superficie 70)
+	(terraza FALSE))
+
+([Duplex2] of  Duplex
+
+	(balcon TRUE)
+	(barrioVivienda [Barrio3])
+	(numbanyos 2)
+	(numDormDoble 1)
+	(numDormSimple 1)
+	(posicionX 65)
+	(posicionY 80)
+	(preciomensual 845)
+	(superficie 100))
+
+([Duplex3] of  Duplex
+
+	(amueblada TRUE)
+	(ascensor TRUE)
+	(balcon TRUE)
+	(barrioVivienda [Barrio3])
+	(electrodomesticos TRUE)
+	(garaje TRUE)
+	(mascotas TRUE)
+	(numbanyos 2)
+	(numDormDoble 1)
+	(numDormSimple 2)
+	(piscina FALSE)
+	(posicionX 90)
+	(posicionY 90)
+	(preciomensual 955)
+	(superficie 120)
+	(terraza FALSE))
+
+([Duplex4] of  Duplex
+
+	(amueblada TRUE)
+	(balcon TRUE)
+	(barrioVivienda [Barrio1])
+	(electrodomesticos TRUE)
+	(numbanyos 1)
+	(numDormDoble 1)
+	(numDormSimple 1)
+	(posicionX 1)
+	(posicionY 70)
+	(preciomensual 625)
+	(superficie 85))
+
+([Duplex5] of  Duplex
+
+	(amueblada TRUE)
+	(ascensor TRUE)
+	(balcon FALSE)
+	(barrioVivienda [Barrio5])
+	(electrodomesticos TRUE)
+	(garaje TRUE)
+	(mascotas TRUE)
+	(numbanyos 3)
+	(numDormDoble 2)
+	(numDormSimple 2)
+	(piscina TRUE)
+	(posicionX 22)
+	(posicionY 35)
+	(preciomensual 1650)
+	(superficie 98)
+	(terraza TRUE))
+
+([Duplex6] of  Duplex
+
+	(amueblada TRUE)
+	(ascensor TRUE)
+	(barrioVivienda [Barrio7])
+	(electrodomesticos TRUE)
+	(garaje TRUE)
+	(mascotas TRUE)
+	(numbanyos 1)
+	(numDormDoble 1)
+	(numDormSimple 2)
+	(piscina TRUE)
+	(posicionX 16)
+	(posicionY 16)
+	(preciomensual 890)
+	(superficie 89))
+
+([Guarderia1] of  Educacion
+
+	(barrioServicio [Barrio8])
+	(posX 44)
+	(posY 8)
+	(tipo_nivel_maximo Guarderia))
+
+([Hospital1] of  Sanitario
+
+	(barrioServicio [Barrio5])
+	(posX 44)
+	(posY 36)
+	(tipo_sanitario Hospital))
+
+([Instituto1] of  Educacion
+
+	(barrioServicio [Barrio4])
+	(posX 11)
+	(posY 37)
+	(tipo_nivel_maximo Secundaria))
+
+([Mercado1] of  Comercio
+
+	(barrioServicio [Barrio1])
+	(posX 1)
+	(posY 89)
+	(tipo_comercio Mercado))
+
+([Parque1] of  Natural
+
+	(barrioServicio [Barrio8])
+	(posX 54)
+	(posY 5)
+	(tipo_natural Parque))
+
+([Parque2] of  Natural
+
+	(barrioServicio [Barrio4])
+	(posX 2)
+	(posY 50)
+	(tipo_natural Parque))
+
+([Piso1] of  Piso
+
+	(amueblada TRUE)
+	(balcon TRUE)
+	(barrioVivienda [Barrio7])
+	(mascotas TRUE)
+	(numbanyos 1)
+	(numDormDoble 1)
+	(numDormSimple 2)
+	(piscina FALSE)
+	(posicionX 2)
+	(posicionY 2)
+	(preciomensual 350)
+	(superficie 50)
+	(terraza FALSE))
+
+([Piso2] of  Piso
+
+	(ascensor FALSE)
+	(barrioVivienda [Barrio2])
+	(mascotas TRUE)
+	(numbanyos 2)
+	(numDormDoble 1)
+	(numDormSimple 1)
+	(posicionX 45)
+	(posicionY 75)
+	(preciomensual 450)
+	(superficie 90)
+	(terraza TRUE))
+
+([Piso3] of  Piso
+
+	(amueblada FALSE)
+	(ascensor TRUE)
+	(balcon TRUE)
+	(barrioVivienda [Barrio7])
+	(electrodomesticos TRUE)
+	(garaje TRUE)
+	(mascotas TRUE)
+	(numbanyos 1)
+	(numDormDoble 1)
+	(numDormSimple 2)
+	(piscina TRUE)
+	(posicionX 3)
+	(posicionY 2)
+	(preciomensual 600)
+	(superficie 75))
+
+([Piso4] of  Piso
+
+	(balcon TRUE)
+	(barrioVivienda [Barrio5])
+	(mascotas TRUE)
+	(numbanyos 1)
+	(numDormDoble 0)
+	(numDormSimple 1)
+	(posicionX 21)
+	(posicionY 44)
+	(preciomensual 200)
+	(superficie 40))
+
+([Piso5] of  Piso
+
+	(amueblada TRUE)
+	(ascensor TRUE)
+	(balcon TRUE)
+	(barrioVivienda [Barrio7])
+	(electrodomesticos TRUE)
+	(mascotas TRUE)
+	(numbanyos 3)
+	(numDormDoble 2)
+	(numDormSimple 1)
+	(piscina TRUE)
+	(posicionX 8)
+	(posicionY 19)
+	(preciomensual 1500)
+	(superficie 200)
+	(terraza TRUE))
+
+([Piso6] of  Piso
+
+	(barrioVivienda [Barrio8])
+	(numbanyos 1)
+	(numDormDoble 0)
+	(numDormSimple 1)
+	(posicionX 59)
+	(posicionY 15)
+	(preciomensual 250)
+	(superficie 40))
+
+([Playa1] of  Natural
+
+	(barrioServicio [Barrio6])
+	(posX 62)
+	(posY 0)
+	(tipo_natural Playa))
+
+([Teatro1] of  Ocio
+
+	(barrioServicio [Barrio8])
+	(posX 41)
+	(posY 16)
+	(tipo_ocio Teatro))
+
+([Transporte1] of  Transporte
+
+	(barrioServicio [Barrio7])
+	(posX 12)
+	(posY 5))
+
+([Unifamiliar1] of  Unifamiliar
+
+	(amueblada TRUE)
+	(balcon TRUE)
+	(barrioVivienda [Barrio6])
+	(electrodomesticos TRUE)
+	(mascotas TRUE)
+	(numbanyos 2)
+	(numDormDoble 2)
+	(numDormSimple 3)
+	(posicionX 70)
+	(posicionY 40)
+	(preciomensual 1200)
+	(superficie 150)
+	(terraza TRUE))
+
+([Unifamiliar2] of  Unifamiliar
+
+	(balcon TRUE)
+	(barrioVivienda [Barrio5])
+	(numbanyos 1)
+	(numDormDoble 1)
+	(numDormSimple 2)
+	(posicionX 23)
+	(posicionY 32)
+	(preciomensual 600)
+	(superficie 80)
+	(terraza TRUE))
+
+([Unifamiliar3] of  Unifamiliar
+
+	(amueblada TRUE)
+	(balcon TRUE)
+	(barrioVivienda [Barrio6])
+	(electrodomesticos TRUE)
+	(mascotas TRUE)
+	(numbanyos 4)
+	(numDormDoble 2)
+	(numDormSimple 3)
+	(posicionX 65)
+	(posicionY 45)
+	(preciomensual 2500)
+	(superficie 500)
+	(terraza TRUE))
+
+([Unifamiliar4] of  Unifamiliar
+
+	(amueblada TRUE)
+	(barrioVivienda [Barrio2])
+	(mascotas FALSE)
+	(numbanyos 2)
+	(numDormDoble 1)
+	(numDormSimple 2)
+	(posicionX 36)
+	(posicionY 80)
+	(preciomensual 900)
+	(superficie 115)
+	(terraza TRUE))
+
+([Unifamiliar5] of  Unifamiliar
+
+	(barrioVivienda [Barrio6])
+	(mascotas TRUE)
+	(numbanyos 1)
+	(numDormDoble 1)
+	(numDormSimple 1)
+	(posicionX 64)
+	(posicionY 36)
+	(preciomensual 750)
+	(superficie 89)
+	(terraza TRUE))
+
+([Unifamiliar6] of  Unifamiliar
+
+	(amueblada TRUE)
+	(ascensor FALSE)
+	(barrioVivienda [Barrio6])
+	(garaje FALSE)
+	(mascotas FALSE)
+	(numbanyos 1)
+	(numDormDoble 1)
+	(numDormSimple 2)
+	(piscina FALSE)
+	(posicionX 78)
+	(posicionY 35)
+	(preciomensual 750)
+	(superficie 89)
+	(terraza TRUE))
+
+([Universidad1] of  Educacion
+
+	(barrioServicio [Barrio2])
+	(posX 55)
+	(posY 90)
+	(tipo_nivel_maximo Universidad))

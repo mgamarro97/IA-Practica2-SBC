@@ -1,0 +1,52 @@
+El problema es un problema de analisis.
+
+Usaremos clasificacion heuristica: Datos -> Soluciones, queremos soluciones concretas (todos los inmuebles en 
+alquiler).
+
+def Ontologia/ cojto de conceptos relevantes en este dominio
+
+Cliente --- Inmueble (precio, etc).
+		- Equipamiento: hospital, tipo, etc
+
+Ej: Dada ubicacion podemos det las ubicaciones que estan cerca, etc
+Del cliente tenemos sus datos.
+
+
+Equipamientos y inmuebles tendremos MUCHOS y clientes SOLO 1. (pueden que con deftemplate podemos tener suficiente)
+
+Podemos tener perfiles de clientes: elitista/estudiante/lo_quiero_todo_cerca/rico ...
+Si hacemos esto, los inmuebles tambien tienen perfiles y podemos relacionarlos.
+
+
+-------------------
+
+
+Diferenciar que son RESTRICCIONES y que son PREFERENCIAS!. NECESITO 1 ENTRESUELO vs prefiero vivir en una mansion.
+
+
+
+No hay que dar soluciones vacias!!!
+
+--------------------
+
+Alternativa asociacion heuristica -> asignar puntos a las diferentes opciones, al final tenemos un ranking.
+Ej: dar 100 puntos para cada preferencia que cumpla.
+
+---------------------
+
+Alternatia bestia (poco recomendable por como esta orientada), si no cumples ninguna de las restricciones -> 
+	eliminada (tu no juegas nunca mas), esta instancia ya no aparece en ninguna otra regla (nos vamos cargando 
+	cosas).
+Podriamos hacer que el sistema diga en caso de tener restricciones muy fuertes que es imposible esta restriccion.
+
+Ej: y que tal te parece una casa unifamiliar? 
+
+------------------------------------------------------
+
+Podriamos hacer un algoritmo que genere instancias de forma al azar. Si las hicieramos a mano sabemos cuales son las
+posibles soluciones.
+
+
+-------------------------------------------------------
+
+Clips nos deberia ir haciendo log (por pantalla o en fichero) sobre que instancias descarta y por que clausula
