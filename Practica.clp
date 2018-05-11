@@ -19,12 +19,12 @@
 (deftemplate MAIN::datos_grupo
   ; Caracteristicas del Grupos
   (slot grupo (type STRING)(default ?NONE))
-  (slot edad (type STRING)(default ?NONE))
-  (slot cultura (type STRING)(default ?NONE))
+  (slot edad (type STRING)(default ""))
+  (slot cultura (type STRING)(default ""))
   (slot ninos (type INTEGER)(default 0))
-  (slot edad_ninos (type STRING)(default ?NONE))
-  (slot objetivo (type STRING)(default ?NONE))
-  (slot evento_especial (type STRING)(default ?NONE))
+  (slot edad_ninos (type STRING)(default ""))
+  (slot objetivo (type STRING)(default ""))
+  (slot evento_especial (type STRING)(default ""))
 
   ; Restricciones del Viaje
   (slot min_dias (type INTEGER)(default 1))
@@ -34,12 +34,11 @@
   (slot min_dias_ciudad (type INTEGER)(default 1))
   (slot max_dias_ciudad (type INTEGER)(default 1))
 
-  (slot presupuesto (type FLOAT)(default 0.0))
-  (slot transporte_no (type STRING)(default ?NONE))
-  (slot calidad (type STRING)(default ?NONE))
+  (slot presupuesto (type STRING)(default ""))
+  (multislot transporte (type STRING)(default ""))
+  (slot calidad (type STRING)(default ""))
 
   ; Preferencias del Viaje
-  (multislot sacrificar (type STRING)(default ?NONE))
   (slot lugar_conocido (type INTEGER)(default 0))
 )
 
@@ -62,20 +61,18 @@
 )
 
 (deffunction RECOPILAR_INFO::pregunta_valor_posible (?question $?allowed-values)
-"Escribe una pregunta y lee uno de los valores posibles"
-  (printout t ?question)
-  (printout t " ")
-  (printout ?allowed-values)
-  (printout ": ")
-  (bind ?answer (read))
-  (if (lexemep ?answer) then (bind ?answer (lowcase ?answer)))
-  (while (not (member$ ?answer ?allowed-values)) do
-    (printout t ?question)
-    (bind ?answer (read))
-    (if (lexemep ?answer) then (bind ?answer (lowcase ?answer)))
-  )
-  (printout t crlf)
-(return ?answer)
+"Escribe una pregunta y lee uno de los valores posibles (allowed-values)"
+	(printout t ?question)
+    (printout t "(si/s/no/n): ")
+	(bind ?answer (read))
+	(if (lexemep ?answer) then (bind ?answer (lowcase ?answer)))
+	(while (not (member$ ?answer ?allowed-values)) do
+		(printout t ?question)
+		(bind ?answer (read))
+		(if (lexemep ?answer) then (bind ?answer (lowcase ?answer)))
+	)
+    (printout t crlf)
+	(return ?answer)
 )
 
 (deffunction RECOPILAR_INFO::pregunta_entero (?question)
@@ -92,64 +89,62 @@
   (return ?answer)
 )
 
-
-; Recopilacion de datos
-(defrule RECOPILAR_INFO::determinar_cantidad_grupo
-    (declare (salience 10))
-    (not (datos_grupo))
-    =>
-    (bind ?d (pregunta_entero "Cantidad del grupo? "))
-    (bind ?grupo nil)
-    (if (>= ?d 10) then (bind ?grupo "Grande"))
-    (if (and (>= ?d 5)(< ?d 10)) then (bind ?grupo "Medio"))
-    (if (and(< ?d 5)(> ?d 2)) then (bind ?grupo "Pequeno"))
-    (if (= ?d 2) then (bind ?grupo "Pareja"))
-    (if (= ?d 1) then (bind ?grupo "Individual"))
-    (bind ?d (pregunta_entero "Pregunta full random "))
-    (assert (datos_grupos ?grupo))
+;--------------------------------------- Recopilacion de datos --------------------------------------
+(defrule RECOPILAR_INFO::determinar_parametros
+  (declare (salience 10))
+  (not (datos_grupo))
+  =>
+  (bind ?d (pregunta_entero "Quantos adultos sois en el grupo? "))
+  (bind ?grupo nil)
+  (if (= ?d 1) then (bind ?grupo "Individual"))
+  (if (= ?d 2) then (bind ?grupo "Pareja"))
+  (if (and (> ?d 2)(< ?d 5)) then (bind ?grupo "Pequeño"))
+  (if (and (>= ?d 5)(< ?d 8)) then (bind ?grupo "Mediano"))
+  (if (>= ?d 8) then (bind ?grupo "Grande"))
+  (assert (datos_grupo (grupo ?grupo)))
 )
 
-(defrule RECOPILAR_INFO::determinar_edad_grupo
+(defrule RECOPILAR_INFO::determinar_edad
   (declare (salience 8))
   ?ref <- (datos_grupo)
-  (not (test_edad_grupo))
+  (not (test_edad))
   =>
-  (bind ?d (pregunta_entero "Edad media del grupo? "))
   (bind ?s "")
-  (if (<= ?d 30) then (bind ?s "Joven"))
-  (if (and (> ?d 30)(<= ?d 50)) then (bind ?s "Viejoven"))
-  (if (and (> ?d 50)(<= ?d 65)) then (bind ?s "Mayor"))
-  (if (> ?d 65) then (bind ?s "Inserso"))
+  (bind ?d (pregunta_entero "Que edad teneis? "))
+  (if (< ?d 30) then (bind ?s "Joven"))
+  (if (and(>= ?d 30)(< ?d 60)) then (bind ?s "Adulto"))
+  (if (>= ?d 60) then (bind ?s "Anciano"))
   (modify ?ref (edad ?s))
-  ;(printout t crlf)
-  ;(printout t ?s)
-  ;(printout t crlf)
-  (assert (test_edad_grupo))
-)
-
-(defrule RECOPILAR_INFO::determinar_cultura
-  (declare (salience 8))
-  ?ref <- (datos_grupo)
-  (not (test_cultura))
-  =>
-  (bind ?d (pregunta_valor_posible "Cultura del grupo? " ALTA MEDIA BAJA))
-  (modify ?ref (cultura ?d))
-  (assert (test_cultura))
+  (assert (test_edad))
 )
 
 (defrule RECOPILAR_INFO::determinar_ninos
-  (declare (salience 8))
+  (declare (salience 7))
   ?ref <- (datos_grupo)
-  (not (tienen_ninos))
+  (not (test_ninos))
   =>
-  (bind ?d (pregunta_entero "Hay ninyos en el grupo? "))
-  (if (!= ?d 0) then (modify ?ref (ninos 1))
-    (bind ?d (pregunta_entero "Edad de los ninyos del grupo? "))
-    (if (<= ?d 5) then (modify ?ref (edad_ninos "Peques")))
-    (if (and (> ?d 5)(<= ?d 10)) then (modify ?ref (edad_ninos "Medianos")))
-    (if (and (> ?d 10)(<= ?d 18)) then (modify ?ref (edad_ninos "Teen")))
-    (if (> ?d 18) then (modify ?ref (edad_ninos "Grandes")))
+  (bind ?s "")
+  (bind ?d (pregunta_valor_posible "Hay ninos en el grupo? " si s no n))
+  (if (or (eq ?d si)(eq ?d s))
+    then
+      (modify ?ref (ninos 1))
+      (bind ?d (pregunta_entero "Que edad tienen los ninos? "))
+      (if (< ?d 3) then (modify ?ref (edad_ninos "Pequeños")))
+      (if (and (>= ?d 3)(< ?d 6)) then (modify ?ref (edad_ninos "Medianos")))
+      (if (and (>= ?d 6)(< ?d 12)) then (modify ?ref (edad_ninos "Grandes")))
+      (if (>= ?d 12) then (modify ?ref (edad_ninos "Adolescentes")))
+    else
+      (modify ?ref (ninos 0))
   )
-  (if (= ?d 0) then (modify ?ref (ninos 0)))
-  (assert (tienen_ninos))
+  (assert (test_ninos))
+)
+
+(defrule RECOPILAR_INFO::determinar_dias_ciudad
+  (declare (salience 7))
+  ?ref <- (datos_grupo)
+  (not (test_dias_ciudad))
+  =>
+  (modify ?ref (min_dias_ciudad (pregunta_entero "Minimo de dias por ciudad? ")))
+  (modify ?ref (max_dias_ciudad (pregunta_entero "Maximo de dias por ciudad? ")))
+  (assert (test_dias_ciudad))
 )
