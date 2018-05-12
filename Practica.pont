@@ -1,4 +1,4 @@
-; Thu May 10 15:57:23 CEST 2018
+; Sat May 12 17:33:07 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,9 +20,9 @@
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
 	(single-slot Tamanyo
-		(type SYMBOL)
-		(allowed-values Pequena Mediana Grande)
-;+		(cardinality 0 1)
+		(type INTEGER)
+		(range 1 %3FVARIABLE)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Continente
 		(type STRING)
@@ -101,9 +101,9 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Tamanyo
-		(type SYMBOL)
-		(allowed-values Pequena Mediana Grande)
-;+		(cardinality 0 1)
+		(type INTEGER)
+		(range 1 %3FVARIABLE)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Valoracion
 		(type INTEGER)
