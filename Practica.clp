@@ -1,6 +1,6 @@
 (defmodule MAIN (export ?ALL))
 (defmodule RECOPILAR_INFO (import MAIN ?ALL)(export ?ALL))
-;(defmodule PROCESO_DATOS (import MAIN ?ALL)(export ?ALL))
+(defmodule PROCESAR_DATOS (import MAIN ?ALL)(export ?ALL))
 (defmodule IMPRIMIR_SOL (import MAIN ?ALL)(export ?ALL))
 
 (defclass MAIN::Puntuaciones
@@ -18,7 +18,8 @@
 
 (deftemplate MAIN::datos_grupo
   ; Caracteristicas del Grupo
-  (slot grupo (type STRING)(default ?NONE))
+  (slot num_adultos (type INTEGER)(default 1))
+  (slot tipo_grupo (type STRING)(default ?NONE))
   (slot edad (type STRING)(default ""))
   (slot cultura (type STRING)(default ""))
   (slot ninos (type INTEGER)(default 0))
@@ -27,10 +28,8 @@
   (slot evento_especial (type STRING)(default ""))
 
   ; Restricciones del Viaje
-  (slot min_dias (type INTEGER)(default 1))
-  (slot max_dias (type INTEGER)(default 1))
-  (slot min_ciudades (type INTEGER)(default 1))
-  (slot max_ciudades (type INTEGER)(default 1))
+  (slot num_dias (type INTEGER)(default 1))
+  (slot num_ciudades (type INTEGER)(default 1))
   (slot min_dias_ciudad (type INTEGER)(default 1))
   (slot max_dias_ciudad (type INTEGER)(default 1))
 
@@ -102,7 +101,7 @@
   (if (and (> ?d 2)(< ?d 5)) then (bind ?grupo "Pequeño"))
   (if (and (>= ?d 5)(< ?d 8)) then (bind ?grupo "Mediano"))
   (if (>= ?d 8) then (bind ?grupo "Grande"))
-  (assert (datos_grupo (grupo ?grupo)))
+  (assert (datos_grupo (tipo_grupo ?grupo)(num_adultos ?d)))
 )
 
 (defrule RECOPILAR_INFO::determinar_edad
@@ -128,6 +127,7 @@
   (bind ?d (pregunta_valor_posible "Hay ninos en el grupo? " si s no n))
   (if (or (eq ?d si)(eq ?d s))
     then
+      (modify ?ref (tipo_grupo "Familia"))
       (modify ?ref (ninos (pregunta_entero "Cuantos? ")))
       (bind ?d (pregunta_entero "Que edad tienen los ninos? "))
       (if (< ?d 3) then (modify ?ref (edad_ninos "Pequeños")))
@@ -138,7 +138,25 @@
       (modify ?ref (ninos 0))
   )
   (assert (test_ninos))
-)
+  )
+
+  (defrule RECOPILAR_INFO::determinar_numero_ciudades
+    (declare (salience 7))
+    ?ref <- (datos_grupo)
+    (not (test_ciudades))
+    =>
+    (modify ?ref (num_ciudades (pregunta_entero "Cuantas ciudades quieres ver? ")))
+    (assert (test_ciudades))
+  )
+
+  (defrule RECOPILAR_INFO::determinar_dias
+    (declare (salience 7))
+    ?ref <- (datos_grupo)
+    (not (test_dias))
+    =>
+    (modify ?ref (num_dias (pregunta_entero "Cuantos dias va a durar el viaje? ")))
+    (assert (test_dias))
+  )
 
 (defrule RECOPILAR_INFO::determinar_dias_ciudad
   (declare (salience 7))
@@ -159,3 +177,19 @@
   (modify ?ref (max_presupuesto (pregunta_entero "Cuanto quieres gastar como maximo? ")))
   (assert (test_presupuesto))
 )
+
+(defrule RECOPILAR_INFO::datos_recopilados
+    (declare (salience 1))
+    =>
+    (focus PROCESAR_DATOS)
+    (printout t crlf)
+    (printout t crlf)
+    (printout t crlf)
+    (format t "##########################################################################%n%n")
+    (format t "                              PROCESANDO DATOS ...                        %n%n")
+    (format t "##########################################################################")
+    (printout t crlf)
+    (printout t crlf)
+)
+
+;;; ################################ PROCESO DE DATOS ################################
