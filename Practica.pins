@@ -1,4 +1,4 @@
-; Sat May 12 17:04:06 CEST 2018
+; Sat May 12 17:33:07 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -90,7 +90,7 @@
 	(Pais "Wakanda")
 	(PosX -1.334525)
 	(PosY 31.804743)
-	(Tamanyo Grande)
+	(Tamanyo 3)
 	(Tema Exotico Cultural)
 	(Valoracion 10))
 
@@ -101,7 +101,7 @@
 	(Pais "Espana")
 	(PosX 41.38508)
 	(PosY 2.124209)
-	(Tamanyo Mediana)
+	(Tamanyo 2)
 	(Tema Ocio Cultural Familiar)
 	(Terreno Playa Montana)
 	(Valoracion 8))
@@ -113,7 +113,7 @@
 	(Pais "USA")
 	(PosX 42.72877)
 	(PosY -78.01356)
-	(Tamanyo Grande)
+	(Tamanyo 6)
 	(Tema Familiar Cultural Ocio)
 	(Terreno Playa)
 	(Valoracion 2))
@@ -125,7 +125,7 @@
 	(Pais "Italia")
 	(PosX 41.91024)
 	(PosY 12.395912)
-	(Tamanyo Mediana)
+	(Tamanyo 2)
 	(Tema Cultural Romantico)
 	(Valoracion 5))
 
@@ -136,7 +136,7 @@
 	(Pais "Espana")
 	(PosX 37.980595)
 	(PosY -1.1621948)
-	(Tamanyo Mediana)
+	(Tamanyo 3)
 	(Tema Romantico)
 	(Terreno Playa)
 	(Valoracion 1))
@@ -156,7 +156,7 @@
 	(Pais "Japon")
 	(PosX 35.673542)
 	(PosY 139.5703)
-	(Tamanyo Grande)
+	(Tamanyo 2)
 	(Tema Cultural Exotico)
 	(Valoracion 10))
 
@@ -239,7 +239,7 @@
 	(Pais "Francia")
 	(PosX 48.85895)
 	(PosY 2.2770197)
-	(Tamanyo Mediana)
+	(Tamanyo 4)
 	(Tema Romantico)
 	(Valoracion 7))
 
@@ -250,6 +250,7 @@
 	(Pais "ReinoUnido")
 	(PosX 50.207188)
 	(PosY -5.277354)
+	(Tamanyo 4)
 	(Tema Familiar)
 	(Valoracion 3))
 
@@ -260,7 +261,7 @@
 	(Pais "Grecia")
 	(PosX 37.09516)
 	(PosY 22.15699)
-	(Tamanyo Pequena)
+	(Tamanyo 1)
 	(Tema Familiar Descanso)
 	(Terreno Playa Montana)
 	(Valoracion 10))
@@ -272,7 +273,7 @@
 	(Pais "USA")
 	(PosX 37.193005)
 	(PosY -123.799446)
-	(Tamanyo Mediana)
+	(Tamanyo 6)
 	(Tema Ocio)
 	(Valoracion 6))
 
@@ -283,6 +284,7 @@
 	(Pais "Egipto")
 	(PosX 30.059484)
 	(PosY 31.223444)
+	(Tamanyo 3)
 	(Tema Exotico Cultural)
 	(Terreno Desierto)
 	(Valoracion 4))
