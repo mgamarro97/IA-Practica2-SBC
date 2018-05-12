@@ -17,7 +17,7 @@
 )
 
 (deftemplate MAIN::datos_grupo
-  ; Caracteristicas del Grupos
+  ; Caracteristicas del Grupo
   (slot grupo (type STRING)(default ?NONE))
   (slot edad (type STRING)(default ""))
   (slot cultura (type STRING)(default ""))
@@ -34,7 +34,8 @@
   (slot min_dias_ciudad (type INTEGER)(default 1))
   (slot max_dias_ciudad (type INTEGER)(default 1))
 
-  (slot presupuesto (type STRING)(default ""))
+  (slot min_presupuesto (type INTEGER)(default 0))
+  (slot max_presupuesto (type INTEGER)(default 0))
   (multislot transporte (type STRING)(default ""))
   (slot calidad (type STRING)(default ""))
 
@@ -127,7 +128,7 @@
   (bind ?d (pregunta_valor_posible "Hay ninos en el grupo? " si s no n))
   (if (or (eq ?d si)(eq ?d s))
     then
-      (modify ?ref (ninos 1))
+      (modify ?ref (ninos (pregunta_entero "Cuantos? ")))
       (bind ?d (pregunta_entero "Que edad tienen los ninos? "))
       (if (< ?d 3) then (modify ?ref (edad_ninos "Pequeños")))
       (if (and (>= ?d 3)(< ?d 6)) then (modify ?ref (edad_ninos "Medianos")))
@@ -147,4 +148,14 @@
   (modify ?ref (min_dias_ciudad (pregunta_entero "Minimo de dias por ciudad? ")))
   (modify ?ref (max_dias_ciudad (pregunta_entero "Maximo de dias por ciudad? ")))
   (assert (test_dias_ciudad))
+)
+
+(defrule RECOPILAR_INFO::determinar_presupuesto
+  (declare (salience 7))
+  ?ref <- (datos_grupo)
+  (not (test_presupuesto))
+  =>
+  (modify ?ref (min_presupuesto (pregunta_entero "Cuanto quieres gastar como minimo? ")))
+  (modify ?ref (max_presupuesto (pregunta_entero "Cuanto quieres gastar como maximo? ")))
+  (assert (test_presupuesto))
 )
