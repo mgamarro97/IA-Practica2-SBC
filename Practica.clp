@@ -19,14 +19,8 @@
   ; Caracteristicas del Grupo
   (slot num_adultos (type INTEGER)(default 1))
   (slot tipo_grupo (type STRING)(default ?NONE))
-  (slot edad (type STRING)(default ""))
-  (slot cultura (type STRING)(default ""))
   (slot ninos (type INTEGER)(default 0))
-  (slot edad_ninos (type STRING)(default ""))
-  (slot objetivo (type STRING)(default ""))
-  (slot evento_especial (type STRING)(default ""))
   (slot zona (type STRING)(default ""))
-  (slot valoracion (type INTEGER)(default 0))
 
   ; Restricciones del Viaje
   (slot min_num_dias (type INTEGER)(default 1))
@@ -36,11 +30,6 @@
   (slot max_dias_ciudad (type INTEGER)(default 1))
 
   (slot presupuesto (type INTEGER)(default 0))
-  (multislot transporte (type STRING)(default ""))
-  (slot calidad (type STRING)(default ""))
-
-  ; Preferencias del Viaje
-  (slot lugar_conocido (type INTEGER)(default 0))
 )
 
 (defrule MAIN::init
@@ -90,38 +79,6 @@
   (return ?answer)
 )
 
-(deffunction PROCESAR_DATOS::distancia (?a ?b)
-"Calcula la distancia entre a (Vivienda) y b (Servicio)"
-    (bind ?Ax (send ?a get-posicionX))
-    (bind ?Ay (send ?a get-posicionY))
-    (bind ?Bx (send ?b get-posX))
-    (bind ?By (send ?b get-posY))
-    (bind ?dist (+ (abs (- ?Ax ?Bx))(abs (- ?Ay ?By))))
-    (if (< ?dist 40) then (return 0))
-    (if (< ?dist 60) then (return 1))
-    (return 2)
-)
-
-(deffunction PROCESAR_DATOS::max-puntos ($?puntos)
-"Devuelve la instancia de Puntuacion que tiene mayor puntuacion"
-(bind ?max 0)
-(bind ?resultado nil)
-(loop-for-count (?i 1 (length$ $?puntos)) do
-  (bind ?aux (nth$ ?i $?puntos))
-  (if (= ?i 1)
-    then
-    (bind ?max (send ?aux get-puntos))
-    (bind ?resultado ?aux)
-    else
-    (if (> (send ?aux get-puntos) ?max) then
-      (bind ?max (send ?aux get-puntos))
-      (bind ?resultado ?aux)
-    )
-  )
-)
-(return ?resultado)
-)
-
 (deffunction PROCESAR_DATOS::min-puntos ($?puntos)
   (bind ?min 0)
   (bind ?resultado nil)
@@ -141,7 +98,8 @@
   (return ?resultado)
 )
 
-;--------------------------------------- Recopilacion de datos --------------------------------------
+;PREGUNTAS PARA RECOGER DATA DEL USUARIO
+
 (defrule RECOPILAR_INFO::determinar_parametros
   (declare (salience 10))
   (not (datos_grupo))
@@ -156,19 +114,19 @@
   (assert (datos_grupo (tipo_grupo ?grupo)(num_adultos ?d)))
 )
 
-(defrule RECOPILAR_INFO::determinar_edad
-  (declare (salience 8))
-  ?ref <- (datos_grupo)
-  (not (test_edad))
-  =>
-  (bind ?s "")
-  (bind ?d (pregunta_entero "Que edad teneis? "))
-  (if (< ?d 30) then (bind ?s "Joven"))
-  (if (and(>= ?d 30)(< ?d 60)) then (bind ?s "Adulto"))
-  (if (>= ?d 60) then (bind ?s "Anciano"))
-  (modify ?ref (edad ?s))
-  (assert (test_edad))
-)
+;(defrule RECOPILAR_INFO::determinar_edad
+;  (declare (salience 8))
+;  ?ref <- (datos_grupo)
+;  (not (test_edad))
+;  =>
+;  (bind ?s "")
+;  (bind ?d (pregunta_entero "Que edad teneis? "))
+;  (if (< ?d 30) then (bind ?s "Joven"))
+;  (if (and(>= ?d 30)(< ?d 60)) then (bind ?s "Adulto"))
+;  (if (>= ?d 60) then (bind ?s "Anciano"))
+;  (modify ?ref (edad ?s))
+;  (assert (test_edad))
+;)
 
 (defrule RECOPILAR_INFO::determinar_ninos
   (declare (salience 7))
@@ -181,11 +139,11 @@
     then
       (modify ?ref (tipo_grupo "Familia"))
       (modify ?ref (ninos (pregunta_entero "Cuantos? ")))
-      (bind ?d (pregunta_entero "Que edad tienen los ninos? "))
-      (if (< ?d 3) then (modify ?ref (edad_ninos "Pequeños")))
-      (if (and (>= ?d 3)(< ?d 6)) then (modify ?ref (edad_ninos "Medianos")))
-      (if (and (>= ?d 6)(< ?d 12)) then (modify ?ref (edad_ninos "Grandes")))
-      (if (>= ?d 12) then (modify ?ref (edad_ninos "Adolescentes")))
+;      (bind ?d (pregunta_entero "Que edad tienen los ninos? "))
+;      (if (< ?d 3) then (modify ?ref (edad_ninos "Pequeños")))
+;      (if (and (>= ?d 3)(< ?d 6)) then (modify ?ref (edad_ninos "Medianos")))
+;      (if (and (>= ?d 6)(< ?d 12)) then (modify ?ref (edad_ninos "Grandes")))
+;      (if (>= ?d 12) then (modify ?ref (edad_ninos "Adolescentes")))
     else
       (modify ?ref (ninos 0))
   )
@@ -201,15 +159,15 @@
     (assert (test_ciudades))
   )
 
-  (defrule RECOPILAR_INFO::determinar_dias
-    (declare (salience 7))
-    ?ref <- (datos_grupo)
-    (not (test_dias))
-    =>
-    (modify ?ref (min_num_dias (pregunta_entero "Cuantos dias va a durar el viaje como minimo? ")))
-    (modify ?ref (max_num_dias (pregunta_entero "Cuantos dias va a durar el viaje como maximo? ")))
-    (assert (test_dias))
-  )
+;  (defrule RECOPILAR_INFO::determinar_dias
+;    (declare (salience 7))
+;    ?ref <- (datos_grupo)
+;    (not (test_dias))
+;    =>
+;    (modify ?ref (min_num_dias (pregunta_entero "Cuantos dias va a durar el viaje como minimo? ")))
+;    (modify ?ref (max_num_dias (pregunta_entero "Cuantos dias va a durar el viaje como maximo? ")))
+;    (assert (test_dias))
+;  )
 
 (defrule RECOPILAR_INFO::determinar_dias_ciudad
   (declare (salience 7))
@@ -238,27 +196,14 @@
   (assert (test_zona))
 )
 
-(defrule RECOPILAR_INFO::determinar_criticas
-  (declare (salience 7))
-  ?ref <- (datos_grupo)
-  (not (test_criticas))
-  =>
-  (bind ?d (pregunta_valor_posible "Quieres ver viajes bien valorados por otros usuarios? " si s no n))
-  (if (or (eq ?d si)(eq ?d s))
-  then
-    (modify ?ref (valoracion 1))
-  )
-  (assert (test_criticas))
-)
-
-(defrule RECOPILAR_INFO::determinar_presupuesto
-  (declare (salience 7))
-  ?ref <- (datos_grupo)
-  (not (test_presupuesto))
-  =>
-  (modify ?ref (presupuesto (pregunta_entero "Cuanto quieres gastar? ")))
-  (assert (test_presupuesto))
-)
+;(defrule RECOPILAR_INFO::determinar_presupuesto
+;  (declare (salience 7))
+;  ?ref <- (datos_grupo)
+;  (not (test_presupuesto))
+;  =>
+;  (modify ?ref (presupuesto (pregunta_entero "Cuanto quieres gastar? ")))
+;  (assert (test_presupuesto))
+;)
 
 (defrule RECOPILAR_INFO::datos_recopilados
     (declare (salience 1))
@@ -268,10 +213,8 @@
     (printout t crlf)
     (printout t crlf)
     (format t "##########################################################################%n%n")
-    (format t "                              PROCESANDO DATOS ...                        %n%n")
-    (format t "##########################################################################")
-    (printout t crlf)
-    (printout t crlf)
+    (format t "     ESTAMOS PROCESANDO SU VIAJE DE ENSUEÑO, ESPERE UN MICROSEGUNDO ...   %n%n")
+    (format t "##########################################################################%n%n")
 )
 
 ;;; ################################ PROCESO DE DATOS ################################
@@ -322,15 +265,6 @@
   (assert (valorado-continente ?c))
 )
 
-(defrule PROCESAR_DATOS::filtrar_valoracion
-  (declare (salience 6))
-  ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (puntos ?p))
-  (not (valorado-critica ?c))
-  =>
-  (bind ?n (send ?c get-Nombre))
-  (assert (valorado-critica ?c))
-)
-
 (defrule PROCESAR_DATOS::pasar-todo-viaje
   (declare (salience 6))
   (datos_grupo (num_adultos ?n)(ninos ?e))
@@ -377,11 +311,7 @@
     (bind $?c (delete-member$ $?c ?peor_ciudad))
   )
   (focus IMPRIMIR_SOL)
-  (printout t crlf)
-  (printout t crlf)
-  (printout t crlf)
-  (format t "##########################################################################%n%n")
-  (format t "                       TE PRINTEO LA SOL NOMAS                       %n%n")
+  (format t "               ENHORABUENA, TENEMOS EL VIAJE IDEAL PARA USTED                  %n%n")
   (format t "##########################################################################")
   (printout t crlf)
   (printout t crlf)
