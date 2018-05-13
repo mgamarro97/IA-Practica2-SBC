@@ -3,17 +3,17 @@
 (defmodule PROCESAR_DATOS (import MAIN ?ALL)(export ?ALL))
 (defmodule IMPRIMIR_SOL (import MAIN ?ALL)(export ?ALL))
 
-(defclass MAIN::Puntuaciones
+(defclass MAIN::ciudades_validas
   (is-a USER) (role concrete)
     (slot ciudad (type INSTANCE)(create-accessor read-write))
     (slot precio (type INTEGER)(default 0)(create-accessor read-write))
     (multislot justificaciones (type STRING)(create-accessor read-write))
 )
 
-(deftemplate MAIN::solucion
-  (multislot parcialmente (type INSTANCE))
-  (multislot adecuado (type INSTANCE))
-  (multislot recomendable (type INSTANCE))
+(deftemplate MAIN::viaje
+  (multislot ciudades (type INSTANCE))
+  (multislot precio (type INTEGER))
+  (multislot dias (type INTEGER))
 )
 
 (deftemplate MAIN::datos_grupo
@@ -227,7 +227,7 @@
 	=>
 	(bind $?a (find-all-instances ((?inst Ciudad)) TRUE))
 	(progn$ (?curr-con ?a)
-		(make-instance (gensym) of Puntuaciones (ciudad ?curr-con)(precio 0))
+		(make-instance (gensym) of ciudades_validas (ciudad ?curr-con)(precio 0))
 	)
 )
 
@@ -235,7 +235,7 @@
 (defrule PROCESAR_DATOS::eliminar-dias
     (declare (salience 8))
     (datos_grupo (min_dias_ciudad ?min_c)(max_dias_ciudad ?max_c)(max_num_dias ?max))
-    ?rec <- (object (is-a Puntuaciones) (ciudad ?c) (precio ?p)(justificaciones $?j))
+    ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (precio ?p)(justificaciones $?j))
 	(not (valorado-dias ?c))
 	=>
    (bind ?t (send ?c get-Tamanyo))
@@ -244,12 +244,13 @@
         (send ?rec delete)
         (printout t "La ciudad "?n" es demasiado grande" crlf)
     )
+    assert(valorado-dias ?c)
 )
 
 (defrule PROCESAR_DATOS::eliminar-continente
   (declare (salience 8))
   (datos_grupo (zona ?cont))
-  ?rec <- (object (is-a Puntuaciones) (ciudad ?c) (precio ?p)(justificaciones $?j))
+  ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (precio ?p)(justificaciones $?j))
   (not (valorado-continente ?c))
   =>
   (bind ?zona (send ?c get-Continente))
@@ -260,6 +261,16 @@
       (printout t "La ciudad "?n" no esta en la zona deseada" crlf)
     )
   )
+  assert(valorado-continente ?c)
 )
 
 ;;; ################################  PREFERENCIAS DEL PROBLEMA ################################
+
+;;; ################################  CALCULAR SOLUCION  ################################
+
+(defrule PROCESO_DATOS::calcular-solucion
+    (declare (salience 2))
+    (not (final-proceso))
+    =>
+    (bind $?objs (find-all-instances ((?inst ciudades_validas)) TRUE))
+    
