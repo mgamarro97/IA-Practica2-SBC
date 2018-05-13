@@ -7,7 +7,6 @@
   (is-a USER) (role concrete)
     (slot ciudad (type INSTANCE)(create-accessor read-write))
     (slot puntos (type INTEGER)(default 0)(create-accessor read-write))
-    (multislot justificaciones (type STRING)(create-accessor read-write))
 )
 
 (deftemplate MAIN::viaje
@@ -32,8 +31,7 @@
   ; Restricciones del Viaje
   (slot min_num_dias (type INTEGER)(default 1))
   (slot max_num_dias (type INTEGER)(default 1))
-  (slot min_num_ciudades (type INTEGER)(default 1))
-  (slot max_num_ciudades (type INTEGER)(default 1))
+  (slot num_ciudades (type INTEGER)(default 1))
   (slot min_dias_ciudad (type INTEGER)(default 1))
   (slot max_dias_ciudad (type INTEGER)(default 1))
 
@@ -66,7 +64,7 @@
 (deffunction RECOPILAR_INFO::pregunta_valor_posible (?question $?allowed-values)
 "Escribe una pregunta y lee uno de los valores posibles (allowed-values)"
 	(printout t ?question)
-    (printout t ":"$?allowed-values)
+    (printout t $?allowed-values " : ")
 	(bind ?answer (read))
 	(if (lexemep ?answer) then (bind ?answer (lowcase ?answer)))
 	(while (not (member$ ?answer ?allowed-values)) do
@@ -102,6 +100,45 @@
     (if (< ?dist 40) then (return 0))
     (if (< ?dist 60) then (return 1))
     (return 2)
+)
+
+(deffunction PROCESAR_DATOS::max-puntos ($?puntos)
+"Devuelve la instancia de Puntuacion que tiene mayor puntuacion"
+(bind ?max 0)
+(bind ?resultado nil)
+(loop-for-count (?i 1 (length$ $?puntos)) do
+  (bind ?aux (nth$ ?i $?puntos))
+  (if (= ?i 1)
+    then
+    (bind ?max (send ?aux get-puntos))
+    (bind ?resultado ?aux)
+    else
+    (if (> (send ?aux get-puntos) ?max) then
+      (bind ?max (send ?aux get-puntos))
+      (bind ?resultado ?aux)
+    )
+  )
+)
+(return ?resultado)
+)
+
+(deffunction PROCESAR_DATOS::min-puntos ($?puntos)
+  (bind ?min 0)
+  (bind ?resultado nil)
+  (loop-for-count (?i 1 (length$ $?puntos)) do
+    (bind ?aux (nth$ ?i $?puntos))
+    (if (= ?i 1)
+      then
+      (bind ?min (send ?aux get-puntos))
+      (bind ?resultado ?aux)
+      else
+      (if (< (send ?aux get-puntos) ?min) then
+        (bind ?min (send ?aux get-puntos))
+        (bind ?resultado ?aux)
+      )
+    )
+  )
+  (return ?resultado)
 )
 
 ;--------------------------------------- Recopilacion de datos --------------------------------------
@@ -160,8 +197,7 @@
     ?ref <- (datos_grupo)
     (not (test_ciudades))
     =>
-    (modify ?ref (min_num_ciudades (pregunta_entero "Cuantas ciudades quereis ver como minimo? ")))
-    (modify ?ref (max_num_ciudades (pregunta_entero "Cuantas ciudades quereis ver como maximo? ")))
+    (modify ?ref (num_ciudades (pregunta_entero "Cuantas ciudades quereis ver? ")))
     (assert (test_ciudades))
   )
 
@@ -207,12 +243,12 @@
   ?ref <- (datos_grupo)
   (not (test_criticas))
   =>
-  (bind ?s "")
   (bind ?d (pregunta_valor_posible "Quieres ver viajes bien valorados por otros usuarios? " si s no n))
   (if (or (eq ?d si)(eq ?d s))
   then
     (modify ?ref (valoracion 1))
   )
+  (assert (test_criticas))
 )
 
 (defrule RECOPILAR_INFO::determinar_presupuesto
@@ -248,55 +284,131 @@
 	)
 )
 
-;;; ################################  RESTRICCIONES DEL PROBLEMA ################################
-(defrule PROCESAR_DATOS::eliminar-dias
-    (declare (salience 8))
-    (datos_grupo (min_dias_ciudad ?min_c)(max_dias_ciudad ?max_c)(max_num_dias ?max))
-    ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (puntos ?p)(justificaciones $?j))
+(defrule PROCESAR_DATOS::puntuarSegun-dias
+  (declare (salience 8))
+  (datos_grupo (min_dias_ciudad ?min_c)(max_dias_ciudad ?max_c))
+  ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (puntos ?p))
 	(not (valorado-dias ?c))
 	=>
-   (bind ?t (send ?c get-Tamanyo))
-   (bind ?n (send ?c get-Nombre))
-    (if (or (> ?min_c ?t)(< ?max_c ?t)(< ?max ?t)) then
-        (send ?rec delete)
-        (printout t "La ciudad "?n" es demasiado grande" crlf)
-    )
-    (assert (valorado-dias ?c))
+  (bind ?t (send ?c get-Tamanyo))
+  (bind ?n (send ?c get-Nombre))
+  (if (or (> ?min_c ?t)(< ?max_c ?t))
+    then
+    (send ?rec put-puntos (- (send ?rec get-puntos) 200))
+    else
+    (send ?rec put-puntos (+ (send ?rec get-puntos) 200))
+  )
+  (assert (valorado-dias ?c))
 )
 
-(defrule PROCESAR_DATOS::eliminar-continente
+(defrule PROCESAR_DATOS::puntuarSegun-continente
   (declare (salience 7))
   (datos_grupo (zona ?cont))
-  ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (puntos ?p)(justificaciones $?j))
+  ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (puntos ?p))
   (not (valorado-continente ?c))
   =>
   (bind ?zona (send ?c get-Continente))
   (bind ?n (send ?c get-Nombre))
-  (if (not(eq ?cont "")) then
-    (if (not(eq ?cont ?zona)) then
-      (send ?rec delete)
-      (printout t "La ciudad "?n" no esta en la zona deseada" crlf)
+  (if (not (eq ?cont "")) then
+    (if (not(eq ?cont ?zona))
+      then
+      (send ?rec put-puntos (- (send ?rec get-puntos) 500))
+      else
+      (send ?rec put-puntos (+ (send ?rec get-puntos) 500))
     )
+    else
+    (send ?rec put-puntos (+ (send ?rec get-puntos) 100))
   )
   (assert (valorado-continente ?c))
 )
 
-;;; ################################  PREFERENCIAS DEL PROBLEMA ################################
-
-(defrule PROCESAR_DATOS::filtrar-valoracion
+(defrule PROCESAR_DATOS::filtrar_valoracion
   (declare (salience 6))
-  (datos_grupo (valoracion ?v))
-  ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (puntos ?p)(justificaciones $?j))
+  ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (puntos ?p))
   (not (valorado-critica ?c))
   =>
-  (bind ?val (send ?c get-Valoracion))
   (bind ?n (send ?c get-Nombre))
-  (if (= ?v 1) then
-      (send ?rec put-puntos (+ ?p ?val))
-  )
-  (bind ?val (send ?c get-Valoracion))
-  (printout t "La ciudad "?n" tiene "?val" puntos" crlf)
   (assert (valorado-critica ?c))
 )
 
-;;; ################################  CALCULO DE LA SOLUCION ################################
+(defrule PROCESAR_DATOS::pasar-todo-viaje
+  (declare (salience 6))
+  (datos_grupo (num_adultos ?n)(ninos ?e))
+  (not (viaje))
+  =>
+  (bind $?viajes (create$ ))
+  (bind ?precio 0)
+  (bind ?dias 0)
+  (bind ?na ?n)
+  (bind ?euw ?e)
+  (bind $?objs (find-all-instances ((?inst ciudades_validas)) TRUE))
+  (loop-for-count (?i 1 (length$ $?objs)) do
+    (bind ?act (nth$ ?i $?objs))
+    (bind ?viajes (insert$ ?viajes (+ (length$ ?viajes) 1) ?act))
+    (bind ?t (send (send ?act get-ciudad) get-Tamanyo))
+    (bind ?v (send (send ?act get-ciudad) get-Valoracion))
+    (bind ?precio_nino (* 10 (* ?euw (+ ?t ?v))))
+    (bind ?precio_adulto (* 10 (* (* 5 ?na) (+ ?t ?v))))
+    (bind ?precio (+ ?precio (+ ?precio_nino ?precio_adulto)))
+    (bind ?dias (+ ?dias ?t))
+  )
+  (assert (viaje(ciudades $?viajes)(precio ?precio)(dias ?dias)))
+)
+
+(defrule PROCESAR_DATOS::eliminar-cosis
+  (viaje (ciudades $?c)(precio ?precio)(dias ?dias))
+  (datos_grupo (num_ciudades ?n)(num_adultos ?a)(ninos ?e))
+  (not (filtrameloto))
+  =>
+  (bind ?num_ciudades ?n)
+  (bind ?na ?a)
+  (bind ?euw ?e)
+  (while (> (length$ $?c) ?n)
+  do
+    (bind ?peor_ciudad (min-puntos $?c))
+    (bind ?t (send (send ?peor_ciudad get-ciudad) get-Tamanyo))
+    (bind ?v (send (send ?peor_ciudad get-ciudad) get-Valoracion))
+    (bind ?precio_nino (* 10 (* ?euw (+ ?t ?v))))
+    (bind ?precio_adulto (* 10 (* (* 5 ?na) (+ ?t ?v))))
+    (bind ?precio_restar (+ ?precio_nino ?precio_adulto))
+    (bind ?precio (- ?precio ?precio_restar))
+    (bind ?t (send (send ?peor_ciudad get-ciudad) get-Tamanyo))
+    (bind ?dias (- ?dias ?t))
+    (bind $?c (delete-member$ $?c ?peor_ciudad))
+  )
+  (focus IMPRIMIR_SOL)
+  (printout t crlf)
+  (printout t crlf)
+  (printout t crlf)
+  (format t "##########################################################################%n%n")
+  (format t "                       TE PRINTEO LA SOL NOMAS                       %n%n")
+  (format t "##########################################################################")
+  (printout t crlf)
+  (printout t crlf)
+  (assert (viaje (ciudades $?c)(precio ?precio)(dias ?dias)))
+  (assert (filtrameloto))
+)
+
+;; ############################# IMPRIMIMOH LA SOLUCIONAO #########################
+
+(defrule IMPRIMIR_SOL::finalizar-procesarDatos
+  (viaje (ciudades $?c)(precio ?p)(dias ?d))
+  (not (print))
+  =>
+  (loop-for-count (?i 1 (length$ $?c)) do
+    (bind ?aux (nth$ ?i $?c))
+    (send ?aux imprimir)
+  )
+  (printout t "Precio (TOTAL): " ?p " BC" crlf)
+  (printout t "Dias: " ?d crlf)
+  (assert (print))
+)
+
+(defmessage-handler IMPRIMIR_SOL::ciudades_validas imprimir()
+  (send ?self:ciudad imprimir)
+)
+
+(defmessage-handler IMPRIMIR_SOL::Ciudad imprimir()
+  (printout t "Ciudad: " ?self:Nombre)
+  (printout t  " " ?self:Tamanyo " dia(s)" crlf)
+)
