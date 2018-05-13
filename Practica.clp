@@ -5,8 +5,8 @@
 
 (defclass MAIN::Puntuaciones
   (is-a USER) (role concrete)
-    (multislot viaje (type INSTANCE)(create-accessor read-write))
-    (slot puntuacion (type INTEGER)(default 0)(create-accessor read-write))
+    (slot ciudad (type INSTANCE)(create-accessor read-write))
+    (slot precio (type INTEGER)(default 0)(create-accessor read-write))
     (multislot justificaciones (type STRING)(create-accessor read-write))
 )
 
@@ -26,15 +26,18 @@
   (slot edad_ninos (type STRING)(default ""))
   (slot objetivo (type STRING)(default ""))
   (slot evento_especial (type STRING)(default ""))
+  (slot zona (type STRING)(default ""))
 
   ; Restricciones del Viaje
-  (slot num_dias (type INTEGER)(default 1))
-  (slot num_ciudades (type INTEGER)(default 1))
+  (slot elOrigen (type STRING)(default "Barcelona"))
+  (slot min_num_dias (type INTEGER)(default 1))
+  (slot max_num_dias (type INTEGER)(default 1))
+  (slot min_num_ciudades (type INTEGER)(default 1))
+  (slot max_num_ciudades (type INTEGER)(default 1))
   (slot min_dias_ciudad (type INTEGER)(default 1))
   (slot max_dias_ciudad (type INTEGER)(default 1))
 
-  (slot min_presupuesto (type INTEGER)(default 0))
-  (slot max_presupuesto (type INTEGER)(default 0))
+  (slot presupuesto (type INTEGER)(default 0))
   (multislot transporte (type STRING)(default ""))
   (slot calidad (type STRING)(default ""))
 
@@ -63,7 +66,7 @@
 (deffunction RECOPILAR_INFO::pregunta_valor_posible (?question $?allowed-values)
 "Escribe una pregunta y lee uno de los valores posibles (allowed-values)"
 	(printout t ?question)
-    (printout t "(si/s/no/n): ")
+    (printout t ":"$?allowed-values)
 	(bind ?answer (read))
 	(if (lexemep ?answer) then (bind ?answer (lowcase ?answer)))
 	(while (not (member$ ?answer ?allowed-values)) do
@@ -87,6 +90,18 @@
   )
   (printout t crlf)
   (return ?answer)
+)
+
+(deffunction PROCESAR_DATOS::distancia (?a ?b)
+"Calcula la distancia entre a (Vivienda) y b (Servicio)"
+    (bind ?Ax (send ?a get-posicionX))
+    (bind ?Ay (send ?a get-posicionY))
+    (bind ?Bx (send ?b get-posX))
+    (bind ?By (send ?b get-posY))
+    (bind ?dist (+ (abs (- ?Ax ?Bx))(abs (- ?Ay ?By))))
+    (if (< ?dist 40) then (return 0))
+    (if (< ?dist 60) then (return 1))
+    (return 2)
 )
 
 ;--------------------------------------- Recopilacion de datos --------------------------------------
@@ -145,7 +160,8 @@
     ?ref <- (datos_grupo)
     (not (test_ciudades))
     =>
-    (modify ?ref (num_ciudades (pregunta_entero "Cuantas ciudades quieres ver? ")))
+    (modify ?ref (min_num_ciudades (pregunta_entero "Cuantas ciudades quereis ver como minimo? ")))
+    (modify ?ref (max_num_ciudades (pregunta_entero "Cuantas ciudades quereis ver como maximo? ")))
     (assert (test_ciudades))
   )
 
@@ -154,7 +170,8 @@
     ?ref <- (datos_grupo)
     (not (test_dias))
     =>
-    (modify ?ref (num_dias (pregunta_entero "Cuantos dias va a durar el viaje? ")))
+    (modify ?ref (min_num_dias (pregunta_entero "Cuantos dias va a durar el viaje como minimo? ")))
+    (modify ?ref (max_num_dias (pregunta_entero "Cuantos dias va a durar el viaje como maximo? ")))
     (assert (test_dias))
   )
 
@@ -168,13 +185,25 @@
   (assert (test_dias_ciudad))
 )
 
+(defrule RECOPILAR_INFO::determinar_zona
+  (declare (salience 7))
+  ?ref <- (datos_grupo)
+  (not (test_zona))
+  =>
+  (bind ?s "")
+  (bind ?d (pregunta_valor_posible "Tiene alguna zona preferente para el viaje? " europa asia africa norteamerica))
+  (if (eq ?d europa)then(modify ?ref (zona "Europa")))
+  (if (eq ?d africa)then(modify ?ref (zona "Africa")))
+  (if (eq ?d asia)then(modify ?ref (zona "Asia")))
+  (if (eq ?d norteamerica)then(modify ?ref (zona "NorteAmerica")))
+  (assert (test_zona))
+)
 (defrule RECOPILAR_INFO::determinar_presupuesto
   (declare (salience 7))
   ?ref <- (datos_grupo)
   (not (test_presupuesto))
   =>
-  (modify ?ref (min_presupuesto (pregunta_entero "Cuanto quieres gastar como minimo? ")))
-  (modify ?ref (max_presupuesto (pregunta_entero "Cuanto quieres gastar como maximo? ")))
+  (modify ?ref (presupuesto (pregunta_entero "Cuanto quieres gastar? ")))
   (assert (test_presupuesto))
 )
 
@@ -193,3 +222,44 @@
 )
 
 ;;; ################################ PROCESO DE DATOS ################################
+(defrule PROCESAR_DATOS::inicializar_puntuacion
+(declare (salience 10))
+	=>
+	(bind $?a (find-all-instances ((?inst Ciudad)) TRUE))
+	(progn$ (?curr-con ?a)
+		(make-instance (gensym) of Puntuaciones (ciudad ?curr-con)(precio 0))
+	)
+)
+
+;;; ################################  RESTRICCIONES DEL PROBLEMA ################################
+(defrule PROCESAR_DATOS::eliminar-dias
+    (declare (salience 8))
+    (datos_grupo (min_dias_ciudad ?min_c)(max_dias_ciudad ?max_c)(max_num_dias ?max))
+    ?rec <- (object (is-a Puntuaciones) (ciudad ?c) (precio ?p)(justificaciones $?j))
+	(not (valorado-dias ?c))
+	=>
+   (bind ?t (send ?c get-Tamanyo))
+   (bind ?n (send ?c get-Nombre))
+    (if (or (> ?min_c ?t)(< ?max_c ?t)(< ?max ?t)) then
+        (send ?rec delete)
+        (printout t "La ciudad "?n" es demasiado grande" crlf)
+    )
+)
+
+(defrule PROCESAR_DATOS::eliminar-continente
+  (declare (salience 8))
+  (datos_grupo (zona ?cont))
+  ?rec <- (object (is-a Puntuaciones) (ciudad ?c) (precio ?p)(justificaciones $?j))
+  (not (valorado-continente ?c))
+  =>
+  (bind ?zona (send ?c get-Continente))
+  (bind ?n (send ?c get-Nombre))
+  (if (not(eq ?cont "")) then
+    (if (not(eq ?cont ?zona)) then
+      (send ?rec delete)
+      (printout t "La ciudad "?n" no esta en la zona deseada" crlf)
+    )
+  )
+)
+
+;;; ################################  PREFERENCIAS DEL PROBLEMA ################################
