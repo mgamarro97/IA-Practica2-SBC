@@ -6,14 +6,14 @@
 (defclass MAIN::ciudades_validas
   (is-a USER) (role concrete)
     (slot ciudad (type INSTANCE)(create-accessor read-write))
-    (slot precio (type INTEGER)(default 0)(create-accessor read-write))
+    (slot puntos (type INTEGER)(default 0)(create-accessor read-write))
     (multislot justificaciones (type STRING)(create-accessor read-write))
 )
 
 (deftemplate MAIN::viaje
   (multislot ciudades (type INSTANCE))
-  (multislot precio (type INTEGER))
-  (multislot dias (type INTEGER))
+  (slot precio (type INTEGER))
+  (slot dias (type INTEGER))
 )
 
 (deftemplate MAIN::datos_grupo
@@ -27,9 +27,9 @@
   (slot objetivo (type STRING)(default ""))
   (slot evento_especial (type STRING)(default ""))
   (slot zona (type STRING)(default ""))
+  (slot valoracion (type INTEGER)(default 0))
 
   ; Restricciones del Viaje
-  (slot elOrigen (type STRING)(default "Barcelona"))
   (slot min_num_dias (type INTEGER)(default 1))
   (slot max_num_dias (type INTEGER)(default 1))
   (slot min_num_ciudades (type INTEGER)(default 1))
@@ -190,14 +190,31 @@
   ?ref <- (datos_grupo)
   (not (test_zona))
   =>
-  (bind ?s "")
-  (bind ?d (pregunta_valor_posible "Tiene alguna zona preferente para el viaje? " europa asia africa norteamerica))
-  (if (eq ?d europa)then(modify ?ref (zona "Europa")))
-  (if (eq ?d africa)then(modify ?ref (zona "Africa")))
-  (if (eq ?d asia)then(modify ?ref (zona "Asia")))
-  (if (eq ?d norteamerica)then(modify ?ref (zona "NorteAmerica")))
+  (bind ?d (pregunta_valor_posible "Tiene alguna zona preferente para el viaje? " si s no n))
+  (if (or (eq ?d si)(eq ?d s))
+    then
+      (bind ?d (pregunta_valor_posible "Cual? " europa asia africa norteamerica))
+      (if (eq ?d europa)then(modify ?ref (zona "Europa")))
+      (if (eq ?d africa)then(modify ?ref (zona "Africa")))
+      (if (eq ?d asia)then(modify ?ref (zona "Asia")))
+      (if (eq ?d norteamerica)then(modify ?ref (zona "NorteAmerica")))
+  )
   (assert (test_zona))
 )
+
+(defrule RECOPILAR_INFO::determinar_criticas
+  (declare (salience 7))
+  ?ref <- (datos_grupo)
+  (not (test_criticas))
+  =>
+  (bind ?s "")
+  (bind ?d (pregunta_valor_posible "Quieres ver viajes bien valorados por otros usuarios? " si s no n))
+  (if (or (eq ?d si)(eq ?d s))
+  then
+    (modify ?ref (valoracion 1))
+  )
+)
+
 (defrule RECOPILAR_INFO::determinar_presupuesto
   (declare (salience 7))
   ?ref <- (datos_grupo)
@@ -227,7 +244,7 @@
 	=>
 	(bind $?a (find-all-instances ((?inst Ciudad)) TRUE))
 	(progn$ (?curr-con ?a)
-		(make-instance (gensym) of ciudades_validas (ciudad ?curr-con)(precio 0))
+		(make-instance (gensym) of ciudades_validas (ciudad ?curr-con)(puntos 0))
 	)
 )
 
@@ -235,7 +252,7 @@
 (defrule PROCESAR_DATOS::eliminar-dias
     (declare (salience 8))
     (datos_grupo (min_dias_ciudad ?min_c)(max_dias_ciudad ?max_c)(max_num_dias ?max))
-    ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (precio ?p)(justificaciones $?j))
+    ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (puntos ?p)(justificaciones $?j))
 	(not (valorado-dias ?c))
 	=>
    (bind ?t (send ?c get-Tamanyo))
@@ -244,13 +261,13 @@
         (send ?rec delete)
         (printout t "La ciudad "?n" es demasiado grande" crlf)
     )
-    assert(valorado-dias ?c)
+    (assert (valorado-dias ?c))
 )
 
 (defrule PROCESAR_DATOS::eliminar-continente
-  (declare (salience 8))
+  (declare (salience 7))
   (datos_grupo (zona ?cont))
-  ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (precio ?p)(justificaciones $?j))
+  ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (puntos ?p)(justificaciones $?j))
   (not (valorado-continente ?c))
   =>
   (bind ?zona (send ?c get-Continente))
@@ -261,16 +278,25 @@
       (printout t "La ciudad "?n" no esta en la zona deseada" crlf)
     )
   )
-  assert(valorado-continente ?c)
+  (assert (valorado-continente ?c))
 )
 
 ;;; ################################  PREFERENCIAS DEL PROBLEMA ################################
 
-;;; ################################  CALCULAR SOLUCION  ################################
+(defrule PROCESAR_DATOS::filtrar-valoracion
+  (declare (salience 6))
+  (datos_grupo (valoracion ?v))
+  ?rec <- (object (is-a ciudades_validas) (ciudad ?c) (puntos ?p)(justificaciones $?j))
+  (not (valorado-critica ?c))
+  =>
+  (bind ?val (send ?c get-Valoracion))
+  (bind ?n (send ?c get-Nombre))
+  (if (= ?v 1) then
+      (send ?rec put-puntos (+ ?p ?val))
+  )
+  (bind ?val (send ?c get-Valoracion))
+  (printout t "La ciudad "?n" tiene "?val" puntos" crlf)
+  (assert (valorado-critica ?c))
+)
 
-(defrule PROCESO_DATOS::calcular-solucion
-    (declare (salience 2))
-    (not (final-proceso))
-    =>
-    (bind $?objs (find-all-instances ((?inst ciudades_validas)) TRUE))
-    
+;;; ################################  CALCULO DE LA SOLUCION ################################
