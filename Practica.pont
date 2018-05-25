@@ -1,4 +1,4 @@
-; Sat May 12 17:49:32 CEST 2018
+; Fri May 25 10:55:11 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -11,30 +11,26 @@
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot Medio
-		(type SYMBOL)
-		(allowed-values Metro Autobus Tren Ferrocarril)
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Practica_Class23
 		(type STRING)
 ;+		(cardinality 0 1)
 		(create-accessor read-write))
-	(single-slot Tamanyo
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot Continente
-		(type STRING)
-;+		(cardinality 1 1)
+	(multislot Medio
+		(type SYMBOL)
+		(allowed-values Metro Autobus Tren Ferrocarril)
 		(create-accessor read-write))
 	(multislot Tema
 		(type SYMBOL)
 		(allowed-values Romantico Familiar Cultural Ocio Descanso Exotico)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot TipoOcio
-		(type SYMBOL)
-		(allowed-values Museo Monumento Excursion)
+	(single-slot Valoracion
+		(type INTEGER)
+		(range 1 10)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot Target
@@ -42,27 +38,39 @@
 		(allowed-values Infantes Adultos Familias Grupos Parejas)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot Calidad
-		(type SYMBOL)
-		(allowed-values Alta Media Baja)
+	(single-slot Precio
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot CiudadDestino
+		(type INSTANCE)
+;+		(allowed-classes Ciudad)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot Terreno
 		(type SYMBOL)
 		(allowed-values Playa Montana Nieve Desierto)
 		(create-accessor read-write))
-	(multislot Serv
-		(type INSTANCE)
-;+		(allowed-classes Servicio)
-		(create-accessor read-write))
-	(single-slot Valoracion
-		(type INTEGER)
-		(range 1 10)
+	(single-slot Calidad
+		(type SYMBOL)
+		(allowed-values Alta Media Baja)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot CiudadDestino
+	(single-slot CiudadOrigen
 		(type INSTANCE)
 ;+		(allowed-classes Ciudad)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Continente
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Tamanyo
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot PosY
+		(type FLOAT)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Tipo
@@ -74,33 +82,21 @@
 		(type FLOAT)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot PosY
-		(type FLOAT)
+	(single-slot TipoOcio
+		(type SYMBOL)
+		(allowed-values Museo Monumento Excursion)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot Precio
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot CiudadOrigen
+	(multislot Serv
 		(type INSTANCE)
-;+		(allowed-classes Ciudad)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot Nombre
-		(type STRING)
-;+		(cardinality 1 1)
+;+		(allowed-classes Servicio)
 		(create-accessor read-write)))
 
 (defclass Ciudad
 	(is-a USER)
 	(role concrete)
-	(single-slot Pais
+	(single-slot Nombre
 		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot Tamanyo
-		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Valoracion
@@ -108,34 +104,34 @@
 		(range 1 10)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(multislot Serv
-		(type INSTANCE)
-;+		(allowed-classes Servicio)
-		(create-accessor read-write))
-	(single-slot Continente
-		(type STRING)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot PosX
-		(type FLOAT)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(multislot Tema
 		(type SYMBOL)
 		(allowed-values Romantico Familiar Cultural Ocio Descanso Exotico)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot PosY
-		(type FLOAT)
+	(single-slot Continente
+		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot Nombre
+	(single-slot Pais
 		(type STRING)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(multislot Terreno
 		(type SYMBOL)
 		(allowed-values Playa Montana Nieve Desierto)
+		(create-accessor read-write))
+	(single-slot PosY
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot PosX
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Serv
+		(type INSTANCE)
+;+		(allowed-classes Servicio)
 		(create-accessor read-write)))
 
 (defclass Servicio
@@ -170,27 +166,26 @@
 (defclass Ocio
 	(is-a Servicio)
 	(role concrete)
-	(multislot Target
-		(type SYMBOL)
-		(allowed-values Infantes Adultos Familias Grupos Parejas)
-		(cardinality 1 ?VARIABLE)
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot TipoOcio
 		(type SYMBOL)
 		(allowed-values Museo Monumento Excursion)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot Nombre
-		(type STRING)
-;+		(cardinality 1 1)
+	(multislot Target
+		(type SYMBOL)
+		(allowed-values Infantes Adultos Familias Grupos Parejas)
+		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write)))
 
 (defclass Transporte
 	(is-a USER)
 	(role concrete)
-	(single-slot CiudadOrigen
-		(type INSTANCE)
-;+		(allowed-classes Ciudad)
+	(single-slot Precio
+		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot CiudadDestino
@@ -203,12 +198,13 @@
 		(allowed-values Barco Avion Tren Monociclo Delorean Coche)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot Precio
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot Calidad
 		(type SYMBOL)
 		(allowed-values Alta Media Baja)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot CiudadOrigen
+		(type INSTANCE)
+;+		(allowed-classes Ciudad)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))

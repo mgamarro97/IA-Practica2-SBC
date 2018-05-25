@@ -1,4 +1,4 @@
-; Sat May 12 17:33:07 CEST 2018
+; Fri May 25 10:55:11 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -90,7 +90,9 @@
 	(Pais "Wakanda")
 	(PosX -1.334525)
 	(PosY 31.804743)
-	(Tamanyo 3)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001])
 	(Tema Exotico Cultural)
 	(Valoracion 10))
 
@@ -101,7 +103,9 @@
 	(Pais "Espana")
 	(PosX 41.38508)
 	(PosY 2.124209)
-	(Tamanyo 2)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001])
 	(Tema Ocio Cultural Familiar)
 	(Terreno Playa Montana)
 	(Valoracion 8))
@@ -113,7 +117,9 @@
 	(Pais "USA")
 	(PosX 42.72877)
 	(PosY -78.01356)
-	(Tamanyo 6)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001])
 	(Tema Familiar Cultural Ocio)
 	(Terreno Playa)
 	(Valoracion 2))
@@ -125,7 +131,10 @@
 	(Pais "Italia")
 	(PosX 41.91024)
 	(PosY 12.395912)
-	(Tamanyo 2)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001]
+		[Practica_Class60018])
 	(Tema Cultural Romantico)
 	(Valoracion 5))
 
@@ -136,7 +145,9 @@
 	(Pais "Espana")
 	(PosX 37.980595)
 	(PosY -1.1621948)
-	(Tamanyo 3)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50002])
 	(Tema Romantico)
 	(Terreno Playa)
 	(Valoracion 1))
@@ -156,7 +167,9 @@
 	(Pais "Japon")
 	(PosX 35.673542)
 	(PosY 139.5703)
-	(Tamanyo 2)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001])
 	(Tema Cultural Exotico)
 	(Valoracion 10))
 
@@ -239,7 +252,9 @@
 	(Pais "Francia")
 	(PosX 48.85895)
 	(PosY 2.2770197)
-	(Tamanyo 4)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001])
 	(Tema Romantico)
 	(Valoracion 7))
 
@@ -250,7 +265,9 @@
 	(Pais "ReinoUnido")
 	(PosX 50.207188)
 	(PosY -5.277354)
-	(Tamanyo 4)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001])
 	(Tema Familiar)
 	(Valoracion 3))
 
@@ -261,7 +278,9 @@
 	(Pais "Grecia")
 	(PosX 37.09516)
 	(PosY 22.15699)
-	(Tamanyo 1)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001])
 	(Tema Familiar Descanso)
 	(Terreno Playa Montana)
 	(Valoracion 10))
@@ -273,7 +292,9 @@
 	(Pais "USA")
 	(PosX 37.193005)
 	(PosY -123.799446)
-	(Tamanyo 6)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001])
 	(Tema Ocio)
 	(Valoracion 6))
 
@@ -284,7 +305,9 @@
 	(Pais "Egipto")
 	(PosX 30.059484)
 	(PosY 31.223444)
-	(Tamanyo 3)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001])
 	(Tema Exotico Cultural)
 	(Terreno Desierto)
 	(Valoracion 4))
@@ -913,6 +936,24 @@
 	(Precio 10260)
 	(Tipo Avion))
 
+([Practica_Class50000] of  Hospedaje
+
+	(Calidad Alta)
+	(Nombre "CentroPokemon")
+	(Precio 200))
+
+([Practica_Class50001] of  Hospedaje
+
+	(Calidad Media)
+	(Nombre "HotelTransilvania")
+	(Precio 100))
+
+([Practica_Class50002] of  Hospedaje
+
+	(Calidad Baja)
+	(Nombre "Barad-dur")
+	(Precio 50))
+
 ([Practica_Class6] of  Transporte
 
 	(Calidad Alta)
@@ -920,3 +961,260 @@
 	(CiudadOrigen [Practica_Class15])
 	(Precio 4230)
 	(Tipo Avion))
+
+([Practica_Class60000] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Pekin")
+	(Pais "China")
+	(PosX 39.9042)
+	(PosY 116.407394)
+	(Serv [Practica_Class60020])
+	(Tema Familiar Cultural Ocio)
+	(Terreno Montana)
+	(Valoracion 5))
+
+([Practica_Class60001] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Moscu")
+	(Pais "Rusia")
+	(PosX 55.755825)
+	(PosY 37.6173)
+	(Tema Exotico)
+	(Terreno Nieve)
+	(Valoracion 5))
+
+([Practica_Class60002] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Seul")
+	(Pais "CoreaMala")
+	(PosX 37.566536)
+	(PosY 126.97797)
+	(Tema Familiar Cultural Ocio)
+	(Valoracion 2))
+
+([Practica_Class60003] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Pionyang")
+	(Pais "CoreaBuena")
+	(PosX 39.03922)
+	(PosY 125.76253)
+	(Tema Romantico Familiar Cultural Ocio Descanso Exotico)
+	(Valoracion 10))
+
+([Practica_Class60004] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Londres")
+	(Pais "UK")
+	(PosX 51.50735)
+	(PosY -0.1277583)
+	(Tema Romantico Descanso Ocio Familiar)
+	(Valoracion 8))
+
+([Practica_Class60005] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Osaka")
+	(Pais "Japon")
+	(PosX 34.693737)
+	(PosY 135.50217)
+	(Tema Cultural Descanso)
+	(Valoracion 8))
+
+([Practica_Class60006] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Shangai")
+	(Pais "China")
+	(PosX 31.23039)
+	(PosY 121.4737)
+	(Tema Cultural Descanso)
+	(Valoracion 8))
+
+([Practica_Class60007] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Colonia")
+	(Pais "Alemania")
+	(PosX 50.93753)
+	(PosY 6.9602785)
+	(Tema Cultural Familiar Ocio)
+	(Valoracion 7))
+
+([Practica_Class60008] of  Ciudad
+
+	(Continente "America")
+	(Nombre "Chicago")
+	(Pais "USA")
+	(PosX 41.878113)
+	(PosY -87.6298)
+	(Tema Familiar Cultural)
+	(Valoracion 8))
+
+([Practica_Class60009] of  Ciudad
+
+	(Continente "America")
+	(Nombre "WashingtonDC")
+	(Pais "USA")
+	(PosX 38.907192)
+	(PosY -77.03687)
+	(Tema Familiar Ocio)
+	(Valoracion 8))
+
+([Practica_Class60010] of  Ciudad
+
+	(Continente "America")
+	(Nombre "Sao Paulo")
+	(Pais "Brasil")
+	(PosX -23.55052)
+	(PosY -46.63331)
+	(Tema Cultural Descanso Exotico)
+	(Valoracion 8))
+
+([Practica_Class60011] of  Ciudad
+
+	(Continente "America")
+	(Nombre "MexicoDC")
+	(Pais "Mexico")
+	(PosX 19.432608)
+	(PosY -99.13321)
+	(Tema Exotico)
+	(Valoracion 7))
+
+([Practica_Class60012] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Singapur")
+	(Pais "Singapur")
+	(PosX 1.3553793)
+	(PosY 103.867744)
+	(Tema Familiar Exotico)
+	(Valoracion 7))
+
+([Practica_Class60013] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Madrid")
+	(Pais "Espana")
+	(PosX 40.416775)
+	(PosY -3.7037902)
+	(Tema Familiar Descanso)
+	(Valoracion 8))
+
+([Practica_Class60014] of  Ciudad
+
+	(Continente "America")
+	(Nombre "Cusco")
+	(Pais "Peru")
+	(PosX -13.53195)
+	(PosY -71.96746)
+	(Serv [Practica_Class60015])
+	(Tema Cultural)
+	(Terreno Montana)
+	(Valoracion 7))
+
+([Practica_Class60015] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Machu Picchu")
+	(Precio 20)
+	(Target Familias Grupos Parejas Adultos)
+	(TipoOcio Monumento))
+
+([Practica_Class60016] of  Ciudad
+
+	(Continente "America")
+	(Nombre "Cancun")
+	(Pais "Mexico")
+	(PosX 21.161907)
+	(PosY -86.851524)
+	(Tema Cultural Descanso Romantico)
+	(Terreno Playa)
+	(Valoracion 8))
+
+([Practica_Class60017] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Chichen Itza")
+	(Precio 20)
+	(Target Familias Adultos Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class60018] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Coliseo")
+	(Precio 30)
+	(Target Grupos Familias Adultos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class60019] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Cristo Redentor")
+	(Precio 20)
+	(Target Adultos Familias Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class60020] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Gran Muralla China")
+	(Precio 50)
+	(Target Familias Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class60021] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Petra")
+	(Precio 20)
+	(Target Familias Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class60022] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Taj Mahal")
+	(Precio 50)
+	(Target Familias Parejas Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class60024] of  Ciudad
+
+	(Continente "America")
+	(Nombre "Rio de Janeiro")
+	(Pais "Brasil")
+	(PosX -22.906847)
+	(PosY -43.172897)
+	(Serv [Practica_Class60019])
+	(Tema Exotico Cultural)
+	(Valoracion 8))
+
+([Practica_Class60025] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Aman")
+	(Pais "Jordania")
+	(PosX 31.945366)
+	(PosY 35.92837)
+	(Serv [Practica_Class60021])
+	(Tema Cultural Exotico)
+	(Terreno Montana)
+	(Valoracion 2))
+
+([Practica_Class60026] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Nueva Delhi")
+	(Pais "India")
+	(PosX 28.61394)
+	(PosY 77.20902)
+	(Serv [Practica_Class60022])
+	(Tema Exotico Cultural)
+	(Terreno Playa)
+	(Valoracion 8))
