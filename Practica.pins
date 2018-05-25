@@ -1,4 +1,4 @@
-; Fri May 25 10:55:11 CEST 2018
+; Fri May 25 19:25:13 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -1218,3 +1218,149 @@
 	(Tema Exotico Cultural)
 	(Terreno Playa)
 	(Valoracion 8))
+
+([Practica_Class70000] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Torre Eiffel")
+	(Precio 25)
+	(Target Grupos Parejas Adultos)
+	(TipoOcio Monumento))
+
+([Practica_Class70001] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Tibidabo")
+	(Precio 5)
+	(Target Infantes Grupos Adultos)
+	(TipoOcio Excursion))
+
+([Practica_Class70002] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Termopilas")
+	(Precio 50)
+	(Target Adultos)
+	(TipoOcio Excursion))
+
+([Practica_Class70003] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Hollywood")
+	(Precio 30)
+	(Target Grupos Familias)
+	(TipoOcio Excursion))
+
+([Practica_Class70004] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "La Mina")
+	(Precio 5)
+	(Target Grupos Adultos)
+	(TipoOcio Excursion))
+
+([Practica_Class70005] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Avengers Base")
+	(Precio 40)
+	(Target Infantes Familias)
+	(TipoOcio Excursion))
+
+([Practica_Class70006] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Piramides Giza")
+	(Precio 25)
+	(Target Adultos Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class70007] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "DisneyLand")
+	(Precio 35)
+	(Target Infantes Grupos Parejas Familias Adultos)
+	(TipoOcio Excursion))
+
+([Practica_Class70008] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Big Ben")
+	(Precio 40)
+	(Target Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class70009] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "MuseoCera")
+	(Precio 15)
+	(Target Familias)
+	(TipoOcio Museo))
+
+([Practica_Class70010] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "McDonalds")
+	(Precio 10)
+	(Target Familias)
+	(TipoOcio Excursion))
+
+([Practica_Class70012] of  Hospedaje
+
+	(Calidad Baja)
+	(Nombre "PensionLoli")
+	(Precio 20))
+
+([Practica_Class70013] of  Hospedaje
+
+	(Calidad Media)
+	(Nombre "HotelCapsula")
+	(Precio 75))
+
+([Practica_Class70014] of  Hospedaje
+
+	(Calidad Baja)
+	(Nombre "Albergue")
+	(Precio 10))
+
+([Practica_Class70015] of  Hospedaje
+
+	(Calidad Alta)
+	(Nombre "Hilton")
+	(Precio 300))
+
+([Practica_Class70016] of  Hospedaje
+
+	(Calidad Baja)
+	(Nombre "BBVA")
+	(Precio 1))
+
+([Practica_Class70017] of  Hospedaje
+
+	(Calidad Media)
+	(Nombre "PisoAlquilado")
+	(Precio 65))
+
+([Practica_Class70018] of  Hospedaje
+
+	(Calidad Alta)
+	(Nombre "H10")
+	(Precio 190))
+
+([Practica_Class70019] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Louvre")
+	(Precio 15)
+	(Target Grupos)
+	(TipoOcio Museo))
+
+([Practica_Class70020] of  Ocio
+
+	(Calidad Media)
+	(Nombre "MuseoArteNacional")
+	(Precio 20)
+	(Target Grupos Adultos)
+	(TipoOcio Museo))
