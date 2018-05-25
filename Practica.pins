@@ -1,4 +1,4 @@
-; Fri May 25 20:42:41 CEST 2018
+; Sat May 26 00:13:08 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -91,8 +91,12 @@
 	(PosX -1.334525)
 	(PosY 31.804743)
 	(Serv
-		[Practica_Class50000]
-		[Practica_Class50001])
+		[Practica_Class50001]
+		[Practica_Class70005]
+		[Practica_Class90006]
+		[Practica_Class90013]
+		[Practica_Class90012]
+		[Practica_Class90010])
 	(Tema Exotico Cultural)
 	(Valoracion 10))
 
@@ -112,7 +116,13 @@
 		[Practica_Class80000]
 		[Practica_Class70009]
 		[Practica_Class70018]
-		[Practica_Class70015])
+		[Practica_Class70015]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90008]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class70004])
 	(Tema Ocio Cultural Familiar)
 	(Terreno Playa Montana)
 	(Valoracion 8))
@@ -126,7 +136,16 @@
 	(PosY -78.01356)
 	(Serv
 		[Practica_Class50000]
-		[Practica_Class50001])
+		[Practica_Class50001]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90005]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class70018]
+		[Practica_Class70005]
+		[Practica_Class70010]
+		[Practica_Class90023])
 	(Tema Familiar Cultural Ocio)
 	(Terreno Playa)
 	(Valoracion 2))
@@ -141,7 +160,12 @@
 	(Serv
 		[Practica_Class50000]
 		[Practica_Class50001]
-		[Practica_Class60018])
+		[Practica_Class60018]
+		[Practica_Class90036]
+		[Practica_Class90037]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004])
 	(Tema Cultural Romantico)
 	(Valoracion 5))
 
@@ -154,7 +178,12 @@
 	(PosY -1.1621948)
 	(Serv
 		[Practica_Class50000]
-		[Practica_Class50002])
+		[Practica_Class50002]
+		[Practica_Class90019]
+		[Practica_Class90013]
+		[Practica_Class90009]
+		[Practica_Class90024]
+		[Practica_Class90025])
 	(Tema Romantico)
 	(Terreno Playa)
 	(Valoracion 1))
@@ -176,7 +205,13 @@
 	(PosY 139.5703)
 	(Serv
 		[Practica_Class50000]
-		[Practica_Class50001])
+		[Practica_Class50001]
+		[Practica_Class90042]
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90003])
 	(Tema Cultural Exotico)
 	(Valoracion 10))
 
@@ -261,7 +296,14 @@
 	(PosY 2.2770197)
 	(Serv
 		[Practica_Class50000]
-		[Practica_Class50001])
+		[Practica_Class50001]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90003]
+		[Practica_Class70005]
+		[Practica_Class70007]
+		[Practica_Class70010]
+		[Practica_Class70000])
 	(Tema Romantico)
 	(Valoracion 7))
 
@@ -275,7 +317,13 @@
 	(Serv
 		[Practica_Class50000]
 		[Practica_Class50001]
-		[Practica_Class80004])
+		[Practica_Class80004]
+		[Practica_Class90013]
+		[Practica_Class90012]
+		[Practica_Class90011]
+		[Practica_Class90010]
+		[Practica_Class90028]
+		[Practica_Class90029])
 	(Tema Familiar)
 	(Valoracion 3))
 
@@ -288,7 +336,12 @@
 	(PosY 22.15699)
 	(Serv
 		[Practica_Class50000]
-		[Practica_Class50001])
+		[Practica_Class50001]
+		[Practica_Class70002]
+		[Practica_Class90013]
+		[Practica_Class90012]
+		[Practica_Class70014]
+		[Practica_Class90019])
 	(Tema Familiar Descanso)
 	(Terreno Playa Montana)
 	(Valoracion 10))
@@ -302,7 +355,19 @@
 	(PosY -123.799446)
 	(Serv
 		[Practica_Class50000]
-		[Practica_Class50001])
+		[Practica_Class50001]
+		[Practica_Class90022]
+		[Practica_Class70007]
+		[Practica_Class90023]
+		[Practica_Class70015]
+		[Practica_Class70018]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90008]
+		[Practica_Class90005]
+		[Practica_Class90004]
+		[Practica_Class90003])
 	(Tema Ocio)
 	(Valoracion 6))
 
@@ -315,7 +380,12 @@
 	(PosY 31.223444)
 	(Serv
 		[Practica_Class50000]
-		[Practica_Class50001])
+		[Practica_Class50001]
+		[Practica_Class70006]
+		[Practica_Class90013]
+		[Practica_Class90016]
+		[Practica_Class70018]
+		[Practica_Class90019])
 	(Tema Exotico Cultural)
 	(Terreno Desierto)
 	(Valoracion 4))
@@ -977,7 +1047,16 @@
 	(Pais "China")
 	(PosX 39.9042)
 	(PosY 116.407394)
-	(Serv [Practica_Class60020])
+	(Serv
+		[Practica_Class60020]
+		[Practica_Class90033]
+		[Practica_Class70014]
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class50000])
 	(Tema Familiar Cultural Ocio)
 	(Terreno Montana)
 	(Valoracion 5))
@@ -989,6 +1068,17 @@
 	(Pais "Rusia")
 	(PosX 55.755825)
 	(PosY 37.6173)
+	(Serv
+		[Practica_Class70014]
+		[Practica_Class50000]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004]
+		[Practica_Class90026]
+		[Practica_Class90027]
+		[Practica_Class70010])
 	(Tema Exotico)
 	(Terreno Nieve)
 	(Valoracion 5))
@@ -1000,6 +1090,15 @@
 	(Pais "CoreaMala")
 	(PosX 37.566536)
 	(PosY 126.97797)
+	(Serv
+		[Practica_Class90039]
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004]
+		[Practica_Class90003])
 	(Tema Familiar Cultural Ocio)
 	(Valoracion 2))
 
@@ -1010,6 +1109,17 @@
 	(Pais "CoreaBuena")
 	(PosX 39.03922)
 	(PosY 125.76253)
+	(Serv
+		[Practica_Class70014]
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class90034]
+		[Practica_Class50000])
 	(Tema Romantico Familiar Cultural Ocio Descanso Exotico)
 	(Valoracion 10))
 
@@ -1020,6 +1130,19 @@
 	(Pais "UK")
 	(PosX 51.50735)
 	(PosY -0.1277583)
+	(Serv
+		[Practica_Class70013]
+		[Practica_Class70018]
+		[Practica_Class70015]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90008]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class70008]
+		[Practica_Class70010]
+		[Practica_Class70008]
+		[Practica_Class90021])
 	(Tema Romantico Descanso Ocio Familiar)
 	(Valoracion 8))
 
@@ -1030,6 +1153,16 @@
 	(Pais "Japon")
 	(PosX 34.693737)
 	(PosY 135.50217)
+	(Serv
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class90023]
+		[Practica_Class90032])
 	(Tema Cultural Descanso)
 	(Valoracion 8))
 
@@ -1040,6 +1173,17 @@
 	(Pais "China")
 	(PosX 31.23039)
 	(PosY 121.4737)
+	(Serv
+		[Practica_Class90040]
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class90041]
+		[Practica_Class50000])
 	(Tema Cultural Descanso)
 	(Valoracion 8))
 
@@ -1050,6 +1194,16 @@
 	(Pais "Alemania")
 	(PosX 50.93753)
 	(PosY 6.9602785)
+	(Serv
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90008]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class70007]
+		[Practica_Class90018]
+		[Practica_Class70013]
+		[Practica_Class70012])
 	(Tema Cultural Familiar Ocio)
 	(Valoracion 7))
 
@@ -1065,6 +1219,13 @@
 		[Practica_Class80006]
 		[Practica_Class70015]
 		[Practica_Class70010]
+		[Practica_Class80007]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90008]
+		[Practica_Class90005]
+		[Practica_Class90004]
+		[Practica_Class90003]
 		[Practica_Class80007])
 	(Tema Familiar Cultural)
 	(Valoracion 8))
@@ -1076,6 +1237,16 @@
 	(Pais "USA")
 	(PosX 38.907192)
 	(PosY -77.03687)
+	(Serv
+		[Practica_Class90043]
+		[Practica_Class90044]
+		[Practica_Class70018]
+		[Practica_Class70015]
+		[Practica_Class70017]
+		[Practica_Class90034]
+		[Practica_Class70003]
+		[Practica_Class70010]
+		[Practica_Class90023])
 	(Tema Familiar Ocio)
 	(Valoracion 8))
 
@@ -1086,6 +1257,12 @@
 	(Pais "Brasil")
 	(PosX -23.55052)
 	(PosY -46.63331)
+	(Serv
+		[Practica_Class90038]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004]
+		[Practica_Class70010])
 	(Tema Cultural Descanso Exotico)
 	(Valoracion 8))
 
@@ -1096,6 +1273,15 @@
 	(Pais "Mexico")
 	(PosX 19.432608)
 	(PosY -99.13321)
+	(Serv
+		[Practica_Class60017]
+		[Practica_Class70014]
+		[Practica_Class70016]
+		[Practica_Class70017]
+		[Practica_Class90019]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90013])
 	(Tema Exotico)
 	(Valoracion 7))
 
@@ -1106,6 +1292,12 @@
 	(Pais "Singapur")
 	(PosX 1.3553793)
 	(PosY 103.867744)
+	(Serv
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90023])
 	(Tema Familiar Exotico)
 	(Valoracion 7))
 
@@ -1116,6 +1308,18 @@
 	(Pais "Espana")
 	(PosX 40.416775)
 	(PosY -3.7037902)
+	(Serv
+		[Practica_Class70018]
+		[Practica_Class70015]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90012]
+		[Practica_Class90008]
+		[Practica_Class90004]
+		[Practica_Class70009]
+		[Practica_Class70005]
+		[Practica_Class70020])
 	(Tema Familiar Descanso)
 	(Valoracion 8))
 
@@ -1126,7 +1330,11 @@
 	(Pais "Peru")
 	(PosX -13.53195)
 	(PosY -71.96746)
-	(Serv [Practica_Class60015])
+	(Serv
+		[Practica_Class60015]
+		[Practica_Class90013]
+		[Practica_Class70014]
+		[Practica_Class90012])
 	(Tema Cultural)
 	(Terreno Montana)
 	(Valoracion 7))
@@ -1148,7 +1356,9 @@
 	(PosY -86.851524)
 	(Serv
 		[Practica_Class70014]
-		[Practica_Class80005])
+		[Practica_Class80005]
+		[Practica_Class90004]
+		[Practica_Class90006])
 	(Tema Cultural Descanso Romantico)
 	(Terreno Playa)
 	(Valoracion 8))
@@ -1208,7 +1418,12 @@
 	(Pais "Brasil")
 	(PosX -22.906847)
 	(PosY -43.172897)
-	(Serv [Practica_Class60019])
+	(Serv
+		[Practica_Class60019]
+		[Practica_Class90035]
+		[Practica_Class70013]
+		[Practica_Class50001]
+		[Practica_Class70010])
 	(Tema Exotico Cultural)
 	(Valoracion 8))
 
@@ -1221,7 +1436,10 @@
 	(PosY 35.92837)
 	(Serv
 		[Practica_Class60021]
-		[Practica_Class70014])
+		[Practica_Class70014]
+		[Practica_Class90016]
+		[Practica_Class90013]
+		[Practica_Class90019])
 	(Tema Cultural Exotico)
 	(Terreno Montana Desierto)
 	(Valoracion 2))
@@ -1233,7 +1451,14 @@
 	(Pais "India")
 	(PosX 28.61394)
 	(PosY 77.20902)
-	(Serv [Practica_Class60022])
+	(Serv
+		[Practica_Class60022]
+		[Practica_Class90030]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class70014]
+		[Practica_Class70013]
+		[Practica_Class70017])
 	(Tema Exotico Cultural)
 	(Terreno Playa)
 	(Valoracion 8))
@@ -1443,3 +1668,271 @@
 	(Precio 0)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
+
+([Practica_Class90003] of  Movibilidad
+
+	(Calidad Alta)
+	(Nombre "Tren")
+	(Precio 5))
+
+([Practica_Class90004] of  Movibilidad
+
+	(Calidad Alta)
+	(Nombre "Taxi")
+	(Precio 15))
+
+([Practica_Class90005] of  Movibilidad
+
+	(Calidad Alta)
+	(Nombre "Monorail")
+	(Precio 5))
+
+([Practica_Class90006] of  Movibilidad
+
+	(Calidad Alta)
+	(Nombre "Bicicleta")
+	(Precio 20))
+
+([Practica_Class90007] of  Movibilidad
+
+	(Calidad Alta)
+	(Nombre "Bus")
+	(Precio 10))
+
+([Practica_Class90008] of  Movibilidad
+
+	(Calidad Alta)
+	(Nombre "Metro")
+	(Precio 5))
+
+([Practica_Class90009] of  Movibilidad
+
+	(Calidad Alta)
+	(Nombre "Nazgul")
+	(Precio 20))
+
+([Practica_Class90010] of  Movibilidad
+
+	(Calidad Alta)
+	(Nombre "León")
+	(Precio 20))
+
+([Practica_Class90011] of  Movibilidad
+
+	(Calidad Alta)
+	(Nombre "Centauro")
+	(Precio 10))
+
+([Practica_Class90012] of  Movibilidad
+
+	(Calidad Alta)
+	(Nombre "Carreta")
+	(Precio 5))
+
+([Practica_Class90013] of  Movibilidad
+
+	(Calidad Alta)
+	(Nombre "Caballo")
+	(Precio 7))
+
+([Practica_Class90016] of  Movibilidad
+
+	(Calidad Alta)
+	(Nombre "Camello")
+	(Precio 10))
+
+([Practica_Class90018] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Catedral de Colonia")
+	(Precio 0)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90019] of  Hospedaje
+
+	(Calidad Alta)
+	(Nombre "Tienda de Campaña")
+	(Precio 25))
+
+([Practica_Class90021] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "London Eye")
+	(Precio 5)
+	(Target Familias Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90022] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Grand Park")
+	(Precio 0)
+	(Target Familias Parejas Grupos)
+	(TipoOcio Excursion))
+
+([Practica_Class90023] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Universal Studios")
+	(Precio 25)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class90024] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "La Comarca")
+	(Precio 0)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class90025] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Gondor")
+	(Precio 0)
+	(Target Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class90026] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Kremlin")
+	(Precio 5)
+	(Target Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class90027] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Plaza Roja")
+	(Precio 0)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90028] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "El Armario")
+	(Precio 5)
+	(Target Infantes)
+	(TipoOcio Excursion))
+
+([Practica_Class90029] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "Correr por el Bosque")
+	(Precio 0)
+	(Target Infantes)
+	(TipoOcio Excursion))
+
+([Practica_Class90030] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "Qutab Minar")
+	(Precio 5)
+	(Target Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class90032] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Dotonbori")
+	(Precio 0)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class90033] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Ciudad Prohibida")
+	(Precio 10)
+	(Target Grupos Familias)
+	(TipoOcio Monumento))
+
+([Practica_Class90034] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Adorar al Gran Líder")
+	(Precio 10)
+	(Target Familias)
+	(TipoOcio Excursion))
+
+([Practica_Class90035] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Ipanema")
+	(Precio 0)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class90036] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Basilica de San Pedro")
+	(Precio 5)
+	(Target Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90037] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Fontana di Trievi")
+	(Precio 5)
+	(Target Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90038] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "Catedral de Sao Paulo")
+	(Precio 10)
+	(Target Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90039] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Myeong-dong")
+	(Precio 0)
+	(Target Grupos)
+	(TipoOcio Excursion))
+
+([Practica_Class90040] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Yuyuan")
+	(Precio 25)
+	(Target Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class90041] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "Jin Mao")
+	(Precio 0)
+	(Target Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class90042] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Senso-Ji")
+	(Precio 20)
+	(Target Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90043] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Monumento a Lincoln")
+	(Precio 5)
+	(Target Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class90044] of  Hospedaje
+
+	(Calidad Alta)
+	(Nombre "Casa Blanca")
+	(Precio 200))
