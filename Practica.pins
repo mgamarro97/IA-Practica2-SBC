@@ -1,4 +1,4 @@
-; Fri May 25 19:25:13 CEST 2018
+; Fri May 25 20:42:41 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -105,7 +105,14 @@
 	(PosY 2.124209)
 	(Serv
 		[Practica_Class50000]
-		[Practica_Class50001])
+		[Practica_Class50001]
+		[Practica_Class80002]
+		[Practica_Class80001]
+		[Practica_Class70001]
+		[Practica_Class80000]
+		[Practica_Class70009]
+		[Practica_Class70018]
+		[Practica_Class70015])
 	(Tema Ocio Cultural Familiar)
 	(Terreno Playa Montana)
 	(Valoracion 8))
@@ -267,7 +274,8 @@
 	(PosY -5.277354)
 	(Serv
 		[Practica_Class50000]
-		[Practica_Class50001])
+		[Practica_Class50001]
+		[Practica_Class80004])
 	(Tema Familiar)
 	(Valoracion 3))
 
@@ -1052,6 +1060,12 @@
 	(Pais "USA")
 	(PosX 41.878113)
 	(PosY -87.6298)
+	(Serv
+		[Practica_Class70017]
+		[Practica_Class80006]
+		[Practica_Class70015]
+		[Practica_Class70010]
+		[Practica_Class80007])
 	(Tema Familiar Cultural)
 	(Valoracion 8))
 
@@ -1132,6 +1146,9 @@
 	(Pais "Mexico")
 	(PosX 21.161907)
 	(PosY -86.851524)
+	(Serv
+		[Practica_Class70014]
+		[Practica_Class80005])
 	(Tema Cultural Descanso Romantico)
 	(Terreno Playa)
 	(Valoracion 8))
@@ -1165,7 +1182,7 @@
 	(Calidad Alta)
 	(Nombre "Gran Muralla China")
 	(Precio 50)
-	(Target Familias Grupos)
+	(Target Familias Grupos Parejas)
 	(TipoOcio Monumento))
 
 ([Practica_Class60021] of  Ocio
@@ -1202,9 +1219,11 @@
 	(Pais "Jordania")
 	(PosX 31.945366)
 	(PosY 35.92837)
-	(Serv [Practica_Class60021])
+	(Serv
+		[Practica_Class60021]
+		[Practica_Class70014])
 	(Tema Cultural Exotico)
-	(Terreno Montana)
+	(Terreno Montana Desierto)
 	(Valoracion 2))
 
 ([Practica_Class60026] of  Ciudad
@@ -1264,7 +1283,7 @@
 	(Calidad Alta)
 	(Nombre "Avengers Base")
 	(Precio 40)
-	(Target Infantes Familias)
+	(Target Familias Infantes)
 	(TipoOcio Excursion))
 
 ([Practica_Class70006] of  Ocio
@@ -1280,7 +1299,7 @@
 	(Calidad Alta)
 	(Nombre "DisneyLand")
 	(Precio 35)
-	(Target Infantes Grupos Parejas Familias Adultos)
+	(Target Grupos Parejas Familias)
 	(TipoOcio Excursion))
 
 ([Practica_Class70008] of  Ocio
@@ -1288,7 +1307,7 @@
 	(Calidad Alta)
 	(Nombre "Big Ben")
 	(Precio 40)
-	(Target Grupos)
+	(Target Grupos Parejas)
 	(TipoOcio Monumento))
 
 ([Practica_Class70009] of  Ocio
@@ -1364,3 +1383,63 @@
 	(Precio 20)
 	(Target Grupos Adultos)
 	(TipoOcio Museo))
+
+([Practica_Class80000] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "PortAventura")
+	(Precio 25)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class80001] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Museu Egipci")
+	(Precio 15)
+	(Target Adultos Grupos)
+	(TipoOcio Museo))
+
+([Practica_Class80002] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Montserrat")
+	(Precio 5)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class80003] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Cair Paravel")
+	(Precio 50))
+
+([Practica_Class80004] of  Hospedaje
+
+	(Calidad Alta)
+	(Nombre "Cair Paravel")
+	(Precio 200))
+
+([Practica_Class80005] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "El Rey")
+	(Precio 15)
+	(Target Adultos Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class80006] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "Cloud Gate")
+	(Precio 0)
+	(Target Familias Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class80007] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Grant Park")
+	(Precio 0)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
