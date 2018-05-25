@@ -147,12 +147,12 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
-(defclass Movilidad
+(defclass Movibilidad
 	(is-a Servicio)
 	(role concrete)
-	(multislot Medio
-		(type SYMBOL)
-		(allowed-values Metro Autobus Tren Ferrocarril)
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 1 1)
 		(create-accessor read-write)))
 
 (defclass Hospedaje
