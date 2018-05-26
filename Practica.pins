@@ -1,23 +1,23 @@
-; Sat May 26 20:20:16 CEST 2018
+; Sat May 26 20:43:08 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
 ([Practica_Class10] of  Transporte
 
-	(PrecioKm 20)
+	(Precio 20)
 	(TipoT "Tren")
 	(Velocidad 80))
 
 ([Practica_Class11] of  Transporte
 
-	(PrecioKm 100)
+	(Precio 100)
 	(TipoT "Avion")
 	(Velocidad 300))
 
 ([Practica_Class12] of  Transporte
 
-	(PrecioKm 80)
+	(Precio 80)
 	(TipoT "Delorean")
 	(Velocidad 10000))
 
@@ -252,19 +252,19 @@
 
 	(Calidad Alta)
 	(Nombre "CentroPokemon")
-	(PrecioKm 200))
+	(Precio 200))
 
 ([Practica_Class50001] of  Hospedaje
 
 	(Calidad Media)
 	(Nombre "HotelTransilvania")
-	(PrecioKm 100))
+	(Precio 100))
 
 ([Practica_Class50002] of  Hospedaje
 
 	(Calidad Baja)
 	(Nombre "Barad-dur")
-	(PrecioKm 50))
+	(Precio 50))
 
 ([Practica_Class60000] of  Ciudad
 
@@ -569,7 +569,7 @@
 
 	(Calidad Alta)
 	(Nombre "Machu Picchu")
-	(PrecioKm 20)
+	(Precio 20)
 	(Target Familias Grupos Parejas Adultos)
 	(TipoOcio Monumento))
 
@@ -593,7 +593,7 @@
 
 	(Calidad Alta)
 	(Nombre "Chichen Itza")
-	(PrecioKm 20)
+	(Precio 20)
 	(Target Familias Adultos Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -601,7 +601,7 @@
 
 	(Calidad Alta)
 	(Nombre "Coliseo")
-	(PrecioKm 30)
+	(Precio 30)
 	(Target Grupos Familias Adultos Parejas)
 	(TipoOcio Monumento))
 
@@ -609,7 +609,7 @@
 
 	(Calidad Alta)
 	(Nombre "Cristo Redentor")
-	(PrecioKm 20)
+	(Precio 20)
 	(Target Adultos Familias Grupos)
 	(TipoOcio Monumento))
 
@@ -617,7 +617,7 @@
 
 	(Calidad Alta)
 	(Nombre "Gran Muralla China")
-	(PrecioKm 50)
+	(Precio 50)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -625,7 +625,7 @@
 
 	(Calidad Alta)
 	(Nombre "Petra")
-	(PrecioKm 20)
+	(Precio 20)
 	(Target Familias Grupos)
 	(TipoOcio Monumento))
 
@@ -633,7 +633,7 @@
 
 	(Calidad Alta)
 	(Nombre "Taj Mahal")
-	(PrecioKm 50)
+	(Precio 50)
 	(Target Familias Parejas Grupos)
 	(TipoOcio Monumento))
 
@@ -691,7 +691,7 @@
 
 ([Practica_Class7] of  Transporte
 
-	(PrecioKm 1)
+	(Precio 1)
 	(TipoT "Monociclo")
 	(Velocidad 10))
 
@@ -699,7 +699,7 @@
 
 	(Calidad Alta)
 	(Nombre "Torre Eiffel")
-	(PrecioKm 25)
+	(Precio 25)
 	(Target Grupos Parejas Adultos)
 	(TipoOcio Monumento))
 
@@ -707,7 +707,7 @@
 
 	(Calidad Media)
 	(Nombre "Tibidabo")
-	(PrecioKm 5)
+	(Precio 5)
 	(Target Infantes Grupos Adultos)
 	(TipoOcio Excursion))
 
@@ -715,7 +715,7 @@
 
 	(Calidad Alta)
 	(Nombre "Termopilas")
-	(PrecioKm 50)
+	(Precio 50)
 	(Target Adultos)
 	(TipoOcio Excursion))
 
@@ -723,7 +723,7 @@
 
 	(Calidad Media)
 	(Nombre "Hollywood")
-	(PrecioKm 30)
+	(Precio 30)
 	(Target Grupos Familias)
 	(TipoOcio Excursion))
 
@@ -731,7 +731,7 @@
 
 	(Calidad Baja)
 	(Nombre "La Mina")
-	(PrecioKm 5)
+	(Precio 5)
 	(Target Grupos Adultos)
 	(TipoOcio Excursion))
 
@@ -739,7 +739,7 @@
 
 	(Calidad Alta)
 	(Nombre "Avengers Base")
-	(PrecioKm 40)
+	(Precio 40)
 	(Target Familias Infantes)
 	(TipoOcio Excursion))
 
@@ -747,7 +747,7 @@
 
 	(Calidad Media)
 	(Nombre "Piramides Giza")
-	(PrecioKm 25)
+	(Precio 25)
 	(Target Adultos Grupos)
 	(TipoOcio Monumento))
 
@@ -755,7 +755,7 @@
 
 	(Calidad Alta)
 	(Nombre "DisneyLand")
-	(PrecioKm 35)
+	(Precio 35)
 	(Target Grupos Parejas Familias)
 	(TipoOcio Excursion))
 
@@ -763,7 +763,7 @@
 
 	(Calidad Alta)
 	(Nombre "Big Ben")
-	(PrecioKm 40)
+	(Precio 40)
 	(Target Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -771,7 +771,7 @@
 
 	(Calidad Baja)
 	(Nombre "MuseoCera")
-	(PrecioKm 15)
+	(Precio 15)
 	(Target Familias)
 	(TipoOcio Museo))
 
@@ -779,7 +779,7 @@
 
 	(Calidad Baja)
 	(Nombre "McDonalds")
-	(PrecioKm 10)
+	(Precio 10)
 	(Target Familias)
 	(TipoOcio Excursion))
 
@@ -787,49 +787,49 @@
 
 	(Calidad Baja)
 	(Nombre "PensionLoli")
-	(PrecioKm 20))
+	(Precio 20))
 
 ([Practica_Class70013] of  Hospedaje
 
 	(Calidad Media)
 	(Nombre "HotelCapsula")
-	(PrecioKm 75))
+	(Precio 75))
 
 ([Practica_Class70014] of  Hospedaje
 
 	(Calidad Baja)
 	(Nombre "Albergue")
-	(PrecioKm 10))
+	(Precio 10))
 
 ([Practica_Class70015] of  Hospedaje
 
 	(Calidad Alta)
 	(Nombre "Hilton")
-	(PrecioKm 300))
+	(Precio 300))
 
 ([Practica_Class70016] of  Hospedaje
 
 	(Calidad Baja)
 	(Nombre "BBVA")
-	(PrecioKm 1))
+	(Precio 1))
 
 ([Practica_Class70017] of  Hospedaje
 
 	(Calidad Media)
 	(Nombre "PisoAlquilado")
-	(PrecioKm 65))
+	(Precio 65))
 
 ([Practica_Class70018] of  Hospedaje
 
 	(Calidad Alta)
 	(Nombre "H10")
-	(PrecioKm 190))
+	(Precio 190))
 
 ([Practica_Class70019] of  Ocio
 
 	(Calidad Alta)
 	(Nombre "Louvre")
-	(PrecioKm 15)
+	(Precio 15)
 	(Target Grupos)
 	(TipoOcio Museo))
 
@@ -837,13 +837,13 @@
 
 	(Calidad Media)
 	(Nombre "MuseoArteNacional")
-	(PrecioKm 20)
+	(Precio 20)
 	(Target Grupos Adultos)
 	(TipoOcio Museo))
 
 ([Practica_Class8] of  Transporte
 
-	(PrecioKm 20)
+	(Precio 20)
 	(TipoT "Barco")
 	(Velocidad 60))
 
@@ -851,7 +851,7 @@
 
 	(Calidad Alta)
 	(Nombre "PortAventura")
-	(PrecioKm 25)
+	(Precio 25)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
 
@@ -859,7 +859,7 @@
 
 	(Calidad Media)
 	(Nombre "Museu Egipci")
-	(PrecioKm 15)
+	(Precio 15)
 	(Target Adultos Grupos)
 	(TipoOcio Museo))
 
@@ -867,7 +867,7 @@
 
 	(Calidad Media)
 	(Nombre "Montserrat")
-	(PrecioKm 5)
+	(Precio 5)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
 
@@ -875,19 +875,19 @@
 
 	(Calidad Alta)
 	(Nombre "Cair Paravel")
-	(PrecioKm 50))
+	(Precio 50))
 
 ([Practica_Class80004] of  Hospedaje
 
 	(Calidad Alta)
 	(Nombre "Cair Paravel")
-	(PrecioKm 200))
+	(Precio 200))
 
 ([Practica_Class80005] of  Ocio
 
 	(Calidad Baja)
 	(Nombre "El Rey")
-	(PrecioKm 15)
+	(Precio 15)
 	(Target Adultos Grupos)
 	(TipoOcio Monumento))
 
@@ -895,7 +895,7 @@
 
 	(Calidad Baja)
 	(Nombre "Cloud Gate")
-	(PrecioKm 0)
+	(Precio 0)
 	(Target Familias Grupos)
 	(TipoOcio Monumento))
 
@@ -903,13 +903,13 @@
 
 	(Calidad Media)
 	(Nombre "Grant Park")
-	(PrecioKm 0)
+	(Precio 0)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
 
 ([Practica_Class9] of  Transporte
 
-	(PrecioKm 30)
+	(Precio 30)
 	(TipoT "Coche")
 	(Velocidad 100))
 
@@ -917,79 +917,79 @@
 
 	(Calidad Alta)
 	(Nombre "Tren")
-	(PrecioKm 5))
+	(Precio 5))
 
 ([Practica_Class90004] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Taxi")
-	(PrecioKm 15))
+	(Precio 15))
 
 ([Practica_Class90005] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Monorail")
-	(PrecioKm 5))
+	(Precio 5))
 
 ([Practica_Class90006] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Bicicleta")
-	(PrecioKm 20))
+	(Precio 20))
 
 ([Practica_Class90007] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Bus")
-	(PrecioKm 10))
+	(Precio 10))
 
 ([Practica_Class90008] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Metro")
-	(PrecioKm 5))
+	(Precio 5))
 
 ([Practica_Class90009] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Nazgul")
-	(PrecioKm 20))
+	(Precio 20))
 
 ([Practica_Class90010] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "León")
-	(PrecioKm 20))
+	(Precio 20))
 
 ([Practica_Class90011] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Centauro")
-	(PrecioKm 10))
+	(Precio 10))
 
 ([Practica_Class90012] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Carreta")
-	(PrecioKm 5))
+	(Precio 5))
 
 ([Practica_Class90013] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Caballo")
-	(PrecioKm 7))
+	(Precio 7))
 
 ([Practica_Class90016] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Camello")
-	(PrecioKm 10))
+	(Precio 10))
 
 ([Practica_Class90018] of  Ocio
 
 	(Calidad Media)
 	(Nombre "Catedral de Colonia")
-	(PrecioKm 0)
+	(Precio 0)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -997,13 +997,13 @@
 
 	(Calidad Alta)
 	(Nombre "Tienda de Campaña")
-	(PrecioKm 25))
+	(Precio 25))
 
 ([Practica_Class90021] of  Ocio
 
 	(Calidad Baja)
 	(Nombre "London Eye")
-	(PrecioKm 5)
+	(Precio 5)
 	(Target Familias Parejas)
 	(TipoOcio Monumento))
 
@@ -1011,7 +1011,7 @@
 
 	(Calidad Alta)
 	(Nombre "Grand Park")
-	(PrecioKm 0)
+	(Precio 0)
 	(Target Familias Parejas Grupos)
 	(TipoOcio Excursion))
 
@@ -1019,7 +1019,7 @@
 
 	(Calidad Alta)
 	(Nombre "Universal Studios")
-	(PrecioKm 25)
+	(Precio 25)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
 
@@ -1027,7 +1027,7 @@
 
 	(Calidad Alta)
 	(Nombre "La Comarca")
-	(PrecioKm 0)
+	(Precio 0)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
 
@@ -1035,7 +1035,7 @@
 
 	(Calidad Alta)
 	(Nombre "Gondor")
-	(PrecioKm 0)
+	(Precio 0)
 	(Target Parejas)
 	(TipoOcio Excursion))
 
@@ -1043,7 +1043,7 @@
 
 	(Calidad Media)
 	(Nombre "Kremlin")
-	(PrecioKm 5)
+	(Precio 5)
 	(Target Grupos)
 	(TipoOcio Monumento))
 
@@ -1051,7 +1051,7 @@
 
 	(Calidad Alta)
 	(Nombre "Plaza Roja")
-	(PrecioKm 0)
+	(Precio 0)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1059,7 +1059,7 @@
 
 	(Calidad Baja)
 	(Nombre "El Armario")
-	(PrecioKm 5)
+	(Precio 5)
 	(Target Infantes)
 	(TipoOcio Excursion))
 
@@ -1067,7 +1067,7 @@
 
 	(Calidad Baja)
 	(Nombre "Correr por el Bosque")
-	(PrecioKm 0)
+	(Precio 0)
 	(Target Infantes)
 	(TipoOcio Excursion))
 
@@ -1075,7 +1075,7 @@
 
 	(Calidad Baja)
 	(Nombre "Qutab Minar")
-	(PrecioKm 5)
+	(Precio 5)
 	(Target Grupos)
 	(TipoOcio Monumento))
 
@@ -1083,7 +1083,7 @@
 
 	(Calidad Media)
 	(Nombre "Dotonbori")
-	(PrecioKm 0)
+	(Precio 0)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
 
@@ -1091,7 +1091,7 @@
 
 	(Calidad Alta)
 	(Nombre "Ciudad Prohibida")
-	(PrecioKm 10)
+	(Precio 10)
 	(Target Grupos Familias)
 	(TipoOcio Monumento))
 
@@ -1099,7 +1099,7 @@
 
 	(Calidad Alta)
 	(Nombre "Adorar al Gran Líder")
-	(PrecioKm 10)
+	(Precio 10)
 	(Target Familias)
 	(TipoOcio Excursion))
 
@@ -1107,7 +1107,7 @@
 
 	(Calidad Alta)
 	(Nombre "Ipanema")
-	(PrecioKm 0)
+	(Precio 0)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
 
@@ -1115,7 +1115,7 @@
 
 	(Calidad Alta)
 	(Nombre "Basilica de San Pedro")
-	(PrecioKm 5)
+	(Precio 5)
 	(Target Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1123,7 +1123,7 @@
 
 	(Calidad Alta)
 	(Nombre "Fontana di Trievi")
-	(PrecioKm 5)
+	(Precio 5)
 	(Target Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1131,7 +1131,7 @@
 
 	(Calidad Baja)
 	(Nombre "Catedral de Sao Paulo")
-	(PrecioKm 10)
+	(Precio 10)
 	(Target Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1139,7 +1139,7 @@
 
 	(Calidad Media)
 	(Nombre "Myeong-dong")
-	(PrecioKm 0)
+	(Precio 0)
 	(Target Grupos)
 	(TipoOcio Excursion))
 
@@ -1147,7 +1147,7 @@
 
 	(Calidad Alta)
 	(Nombre "Yuyuan")
-	(PrecioKm 25)
+	(Precio 25)
 	(Target Parejas)
 	(TipoOcio Excursion))
 
@@ -1155,7 +1155,7 @@
 
 	(Calidad Baja)
 	(Nombre "Jin Mao")
-	(PrecioKm 0)
+	(Precio 0)
 	(Target Grupos)
 	(TipoOcio Monumento))
 
@@ -1163,7 +1163,7 @@
 
 	(Calidad Alta)
 	(Nombre "Senso-Ji")
-	(PrecioKm 20)
+	(Precio 20)
 	(Target Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1171,7 +1171,7 @@
 
 	(Calidad Alta)
 	(Nombre "Monumento a Lincoln")
-	(PrecioKm 5)
+	(Precio 5)
 	(Target Grupos)
 	(TipoOcio Monumento))
 
@@ -1179,4 +1179,4 @@
 
 	(Calidad Alta)
 	(Nombre "Casa Blanca")
-	(PrecioKm 200))
+	(Precio 200))
