@@ -1,87 +1,25 @@
-; Sat May 26 00:13:08 CEST 2018
+; Sat May 26 20:20:16 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
 
-([Practica_Class0] of  Transporte
+([Practica_Class10] of  Transporte
 
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class15])
-	(Precio 1560)
-	(Tipo Avion))
+	(PrecioKm 20)
+	(TipoT "Tren")
+	(Velocidad 80))
 
-([Practica_Class10000] of  Transporte
+([Practica_Class11] of  Transporte
 
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class20])
-	(Precio 5580)
-	(Tipo Barco))
+	(PrecioKm 100)
+	(TipoT "Avion")
+	(Velocidad 300))
 
-([Practica_Class10002] of  Transporte
+([Practica_Class12] of  Transporte
 
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class21])
-	(CiudadOrigen [Practica_Class20])
-	(Precio 12420)
-	(Tipo Avion))
-
-([Practica_Class10003] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class20])
-	(Precio 11520)
-	(Tipo Avion))
-
-([Practica_Class10004] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 6840)
-	(Tipo Avion))
-
-([Practica_Class10005] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 4560)
-	(Tipo Barco))
-
-([Practica_Class10006] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class15])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 5670)
-	(Tipo Avion))
-
-([Practica_Class10008] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class16])
-	(Precio 200)
-	(Tipo Monociclo))
-
-([Practica_Class10009] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class19])
-	(CiudadOrigen [Practica_Class16])
-	(Precio 180)
-	(Tipo Delorean))
-
-([Practica_Class10011] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class15])
-	(CiudadOrigen [Practica_Class19])
-	(Precio 3000)
-	(Tipo Delorean))
+	(PrecioKm 80)
+	(TipoT "Delorean")
+	(Velocidad 10000))
 
 ([Practica_Class15] of  Ciudad
 
@@ -188,14 +126,6 @@
 	(Terreno Playa)
 	(Valoracion 1))
 
-([Practica_Class2] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class19])
-	(CiudadOrigen [Practica_Class15])
-	(Precio 1530)
-	(Tipo Avion))
-
 ([Practica_Class20] of  Ciudad
 
 	(Continente "Asia")
@@ -214,78 +144,6 @@
 		[Practica_Class90003])
 	(Tema Cultural Exotico)
 	(Valoracion 10))
-
-([Practica_Class20000] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class24])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 1380)
-	(Tipo Delorean))
-
-([Practica_Class20001] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 720)
-	(Tipo Coche))
-
-([Practica_Class20002] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 1080)
-	(Tipo Avion))
-
-([Practica_Class20003] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 120)
-	(Tipo Monociclo))
-
-([Practica_Class20004] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 720)
-	(Tipo Tren))
-
-([Practica_Class20005] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class18])
-	(Precio 600)
-	(Tipo Barco))
-
-([Practica_Class20006] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class18])
-	(Precio 900)
-	(Tipo Avion))
-
-([Practica_Class20007] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class24])
-	(Precio 3360)
-	(Tipo Delorean))
-
-([Practica_Class20008] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class20])
-	(CiudadOrigen [Practica_Class24])
-	(Precio 3540)
-	(Tipo Delorean))
 
 ([Practica_Class21] of  Ciudad
 
@@ -390,655 +248,23 @@
 	(Terreno Desierto)
 	(Valoracion 4))
 
-([Practica_Class30000] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class15])
-	(CiudadOrigen [Practica_Class26])
-	(Precio 930)
-	(Tipo Barco))
-
-([Practica_Class30001] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class26])
-	(Precio 3270)
-	(Tipo Avion))
-
-([Practica_Class30002] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class26])
-	(Precio 930)
-	(Tipo Barco))
-
-([Practica_Class30003] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class26])
-	(CiudadOrigen [Practica_Class22])
-	(Precio 1980)
-	(Tipo Delorean))
-
-([Practica_Class30004] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class22])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 180)
-	(Tipo Delorean))
-
-([Practica_Class30005] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class22])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 4380)
-	(Tipo Delorean))
-
-([Practica_Class30006] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class25])
-	(Precio 4140)
-	(Tipo Tren))
-
-([Practica_Class30008] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class25])
-	(Precio 460)
-	(Tipo Monociclo))
-
-([Practica_Class30009] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class25])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 4140)
-	(Tipo Tren))
-
-([Practica_Class30010] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class25])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 10980)
-	(Tipo Avion))
-
-([Practica_Class30011] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class25])
-	(Precio 2760)
-	(Tipo Coche))
-
-([Practica_Class40000] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class19])
-	(CiudadOrigen [Practica_Class16])
-	(Precio 270)
-	(Tipo Delorean))
-
-([Practica_Class40001] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class19])
-	(CiudadOrigen [Practica_Class16])
-	(Precio 90)
-	(Tipo Delorean))
-
-([Practica_Class40002] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class16])
-	(Precio 100)
-	(Tipo Monociclo))
-
-([Practica_Class40003] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class16])
-	(Precio 300)
-	(Tipo Monociclo))
-
-([Practica_Class40004] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class25])
-	(Precio 4140)
-	(Tipo Coche))
-
-([Practica_Class40005] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class25])
-	(Precio 1380)
-	(Tipo Coche))
-
-([Practica_Class40006] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class25])
-	(Precio 920)
-	(Tipo Monociclo))
-
-([Practica_Class40007] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class25])
-	(Precio 1380)
-	(Tipo Monociclo))
-
-([Practica_Class40008] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class26])
-	(Precio 1860)
-	(Tipo Barco))
-
-([Practica_Class40009] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class25])
-	(Precio 2760)
-	(Tipo Tren))
-
-([Practica_Class40010] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class25])
-	(Precio 1380)
-	(Tipo Tren))
-
-([Practica_Class40011] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class26])
-	(Precio 2790)
-	(Tipo Barco))
-
-([Practica_Class40012] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class26])
-	(Precio 9810)
-	(Tipo Avion))
-
-([Practica_Class40013] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class26])
-	(Precio 6540)
-	(Tipo Avion))
-
-([Practica_Class40014] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class15])
-	(CiudadOrigen [Practica_Class26])
-	(Precio 1860)
-	(Tipo Barco))
-
-([Practica_Class40015] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class15])
-	(CiudadOrigen [Practica_Class26])
-	(Precio 2790)
-	(Tipo Barco))
-
-([Practica_Class40016] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class24])
-	(Precio 1680)
-	(Tipo Delorean))
-
-([Practica_Class40017] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class24])
-	(Precio 5040)
-	(Tipo Delorean))
-
-([Practica_Class40018] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class20])
-	(CiudadOrigen [Practica_Class24])
-	(Precio 7080)
-	(Tipo Delorean))
-
-([Practica_Class40019] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class20])
-	(CiudadOrigen [Practica_Class24])
-	(Precio 10620)
-	(Tipo Delorean))
-
-([Practica_Class40020] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class15])
-	(CiudadOrigen [Practica_Class19])
-	(Precio 1500)
-	(Tipo Delorean))
-
-([Practica_Class40021] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class15])
-	(CiudadOrigen [Practica_Class19])
-	(Precio 4500)
-	(Tipo Delorean))
-
-([Practica_Class40022] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class26])
-	(CiudadOrigen [Practica_Class22])
-	(Precio 990)
-	(Tipo Delorean))
-
-([Practica_Class40023] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class26])
-	(CiudadOrigen [Practica_Class22])
-	(Precio 2970)
-	(Tipo Delorean))
-
-([Practica_Class40024] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 4560)
-	(Tipo Avion))
-
-([Practica_Class40025] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 2280)
-	(Tipo Avion))
-
-([Practica_Class40026] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 2280)
-	(Tipo Barco))
-
-([Practica_Class40027] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 6840)
-	(Tipo Barco))
-
-([Practica_Class40028] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class25])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 2760)
-	(Tipo Tren))
-
-([Practica_Class40029] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class25])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 1380)
-	(Tipo Tren))
-
-([Practica_Class40030] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class22])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 2190)
-	(Tipo Delorean))
-
-([Practica_Class40031] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class22])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 6570)
-	(Tipo Delorean))
-
-([Practica_Class40032] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class15])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 3780)
-	(Tipo Avion))
-
-([Practica_Class40033] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class15])
-	(CiudadOrigen [Practica_Class17])
-	(Precio 1890)
-	(Tipo Avion))
-
-([Practica_Class40034] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class25])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 7320)
-	(Tipo Avion))
-
-([Practica_Class40035] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class25])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 3660)
-	(Tipo Avion))
-
-([Practica_Class40036] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class24])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 840)
-	(Tipo Delorean))
-
-([Practica_Class40037] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class24])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 2520)
-	(Tipo Delorean))
-
-([Practica_Class40038] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class22])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 90)
-	(Tipo Delorean))
-
-([Practica_Class40039] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class22])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 270)
-	(Tipo Delorean))
-
-([Practica_Class40040] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 720)
-	(Tipo Avion))
-
-([Practica_Class40041] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 360)
-	(Tipo Avion))
-
-([Practica_Class40042] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 360)
-	(Tipo Coche))
-
-([Practica_Class40043] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 1080)
-	(Tipo Coche))
-
-([Practica_Class40044] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 240)
-	(Tipo Monociclo))
-
-([Practica_Class40045] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 360)
-	(Tipo Monociclo))
-
-([Practica_Class40046] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 360)
-	(Tipo Tren))
-
-([Practica_Class40047] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class21])
-	(Precio 1080)
-	(Tipo Tren))
-
-([Practica_Class40048] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class18])
-	(Precio 600)
-	(Tipo Avion))
-
-([Practica_Class40049] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class18])
-	(Precio 300)
-	(Tipo Avion))
-
-([Practica_Class40050] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class18])
-	(Precio 300)
-	(Tipo Barco))
-
-([Practica_Class40051] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class18])
-	(Precio 900)
-	(Tipo Barco))
-
-([Practica_Class40052] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class20])
-	(Precio 3720)
-	(Tipo Barco))
-
-([Practica_Class40053] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class17])
-	(CiudadOrigen [Practica_Class20])
-	(Precio 1860)
-	(Tipo Barco))
-
-([Practica_Class40054] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class21])
-	(CiudadOrigen [Practica_Class20])
-	(Precio 8280)
-	(Tipo Avion))
-
-([Practica_Class40055] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class21])
-	(CiudadOrigen [Practica_Class20])
-	(Precio 4140)
-	(Tipo Avion))
-
-([Practica_Class40056] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class20])
-	(Precio 7680)
-	(Tipo Avion))
-
-([Practica_Class40057] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class20])
-	(Precio 3840)
-	(Tipo Avion))
-
-([Practica_Class40058] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class15])
-	(Precio 3120)
-	(Tipo Avion))
-
-([Practica_Class40059] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class16])
-	(CiudadOrigen [Practica_Class15])
-	(Precio 4680)
-	(Tipo Avion))
-
-([Practica_Class40060] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class19])
-	(CiudadOrigen [Practica_Class15])
-	(Precio 3060)
-	(Tipo Avion))
-
-([Practica_Class40061] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class19])
-	(CiudadOrigen [Practica_Class15])
-	(Precio 4590)
-	(Tipo Avion))
-
-([Practica_Class40062] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class15])
-	(Precio 2820)
-	(Tipo Avion))
-
-([Practica_Class40063] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class15])
-	(Precio 1410)
-	(Tipo Avion))
-
-([Practica_Class40064] of  Transporte
-
-	(Calidad Baja)
-	(CiudadDestino [Practica_Class20])
-	(CiudadOrigen [Practica_Class15])
-	(Precio 3420)
-	(Tipo Avion))
-
-([Practica_Class40065] of  Transporte
-
-	(Calidad Media)
-	(CiudadDestino [Practica_Class20])
-	(CiudadOrigen [Practica_Class15])
-	(Precio 6840)
-	(Tipo Avion))
-
-([Practica_Class5] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class20])
-	(CiudadOrigen [Practica_Class15])
-	(Precio 10260)
-	(Tipo Avion))
-
 ([Practica_Class50000] of  Hospedaje
 
 	(Calidad Alta)
 	(Nombre "CentroPokemon")
-	(Precio 200))
+	(PrecioKm 200))
 
 ([Practica_Class50001] of  Hospedaje
 
 	(Calidad Media)
 	(Nombre "HotelTransilvania")
-	(Precio 100))
+	(PrecioKm 100))
 
 ([Practica_Class50002] of  Hospedaje
 
 	(Calidad Baja)
 	(Nombre "Barad-dur")
-	(Precio 50))
-
-([Practica_Class6] of  Transporte
-
-	(Calidad Alta)
-	(CiudadDestino [Practica_Class18])
-	(CiudadOrigen [Practica_Class15])
-	(Precio 4230)
-	(Tipo Avion))
+	(PrecioKm 50))
 
 ([Practica_Class60000] of  Ciudad
 
@@ -1253,7 +479,7 @@
 ([Practica_Class60010] of  Ciudad
 
 	(Continente "America")
-	(Nombre "Sao Paulo")
+	(Nombre "SaoPaulo")
 	(Pais "Brasil")
 	(PosX -23.55052)
 	(PosY -46.63331)
@@ -1343,7 +569,7 @@
 
 	(Calidad Alta)
 	(Nombre "Machu Picchu")
-	(Precio 20)
+	(PrecioKm 20)
 	(Target Familias Grupos Parejas Adultos)
 	(TipoOcio Monumento))
 
@@ -1367,7 +593,7 @@
 
 	(Calidad Alta)
 	(Nombre "Chichen Itza")
-	(Precio 20)
+	(PrecioKm 20)
 	(Target Familias Adultos Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1375,7 +601,7 @@
 
 	(Calidad Alta)
 	(Nombre "Coliseo")
-	(Precio 30)
+	(PrecioKm 30)
 	(Target Grupos Familias Adultos Parejas)
 	(TipoOcio Monumento))
 
@@ -1383,7 +609,7 @@
 
 	(Calidad Alta)
 	(Nombre "Cristo Redentor")
-	(Precio 20)
+	(PrecioKm 20)
 	(Target Adultos Familias Grupos)
 	(TipoOcio Monumento))
 
@@ -1391,7 +617,7 @@
 
 	(Calidad Alta)
 	(Nombre "Gran Muralla China")
-	(Precio 50)
+	(PrecioKm 50)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1399,7 +625,7 @@
 
 	(Calidad Alta)
 	(Nombre "Petra")
-	(Precio 20)
+	(PrecioKm 20)
 	(Target Familias Grupos)
 	(TipoOcio Monumento))
 
@@ -1407,14 +633,14 @@
 
 	(Calidad Alta)
 	(Nombre "Taj Mahal")
-	(Precio 50)
+	(PrecioKm 50)
 	(Target Familias Parejas Grupos)
 	(TipoOcio Monumento))
 
 ([Practica_Class60024] of  Ciudad
 
 	(Continente "America")
-	(Nombre "Rio de Janeiro")
+	(Nombre "RioDeJaneiro")
 	(Pais "Brasil")
 	(PosX -22.906847)
 	(PosY -43.172897)
@@ -1447,7 +673,7 @@
 ([Practica_Class60026] of  Ciudad
 
 	(Continente "Asia")
-	(Nombre "Nueva Delhi")
+	(Nombre "NuevaDelhi")
 	(Pais "India")
 	(PosX 28.61394)
 	(PosY 77.20902)
@@ -1463,11 +689,17 @@
 	(Terreno Playa)
 	(Valoracion 8))
 
+([Practica_Class7] of  Transporte
+
+	(PrecioKm 1)
+	(TipoT "Monociclo")
+	(Velocidad 10))
+
 ([Practica_Class70000] of  Ocio
 
 	(Calidad Alta)
 	(Nombre "Torre Eiffel")
-	(Precio 25)
+	(PrecioKm 25)
 	(Target Grupos Parejas Adultos)
 	(TipoOcio Monumento))
 
@@ -1475,7 +707,7 @@
 
 	(Calidad Media)
 	(Nombre "Tibidabo")
-	(Precio 5)
+	(PrecioKm 5)
 	(Target Infantes Grupos Adultos)
 	(TipoOcio Excursion))
 
@@ -1483,7 +715,7 @@
 
 	(Calidad Alta)
 	(Nombre "Termopilas")
-	(Precio 50)
+	(PrecioKm 50)
 	(Target Adultos)
 	(TipoOcio Excursion))
 
@@ -1491,7 +723,7 @@
 
 	(Calidad Media)
 	(Nombre "Hollywood")
-	(Precio 30)
+	(PrecioKm 30)
 	(Target Grupos Familias)
 	(TipoOcio Excursion))
 
@@ -1499,7 +731,7 @@
 
 	(Calidad Baja)
 	(Nombre "La Mina")
-	(Precio 5)
+	(PrecioKm 5)
 	(Target Grupos Adultos)
 	(TipoOcio Excursion))
 
@@ -1507,7 +739,7 @@
 
 	(Calidad Alta)
 	(Nombre "Avengers Base")
-	(Precio 40)
+	(PrecioKm 40)
 	(Target Familias Infantes)
 	(TipoOcio Excursion))
 
@@ -1515,7 +747,7 @@
 
 	(Calidad Media)
 	(Nombre "Piramides Giza")
-	(Precio 25)
+	(PrecioKm 25)
 	(Target Adultos Grupos)
 	(TipoOcio Monumento))
 
@@ -1523,7 +755,7 @@
 
 	(Calidad Alta)
 	(Nombre "DisneyLand")
-	(Precio 35)
+	(PrecioKm 35)
 	(Target Grupos Parejas Familias)
 	(TipoOcio Excursion))
 
@@ -1531,7 +763,7 @@
 
 	(Calidad Alta)
 	(Nombre "Big Ben")
-	(Precio 40)
+	(PrecioKm 40)
 	(Target Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1539,7 +771,7 @@
 
 	(Calidad Baja)
 	(Nombre "MuseoCera")
-	(Precio 15)
+	(PrecioKm 15)
 	(Target Familias)
 	(TipoOcio Museo))
 
@@ -1547,7 +779,7 @@
 
 	(Calidad Baja)
 	(Nombre "McDonalds")
-	(Precio 10)
+	(PrecioKm 10)
 	(Target Familias)
 	(TipoOcio Excursion))
 
@@ -1555,49 +787,49 @@
 
 	(Calidad Baja)
 	(Nombre "PensionLoli")
-	(Precio 20))
+	(PrecioKm 20))
 
 ([Practica_Class70013] of  Hospedaje
 
 	(Calidad Media)
 	(Nombre "HotelCapsula")
-	(Precio 75))
+	(PrecioKm 75))
 
 ([Practica_Class70014] of  Hospedaje
 
 	(Calidad Baja)
 	(Nombre "Albergue")
-	(Precio 10))
+	(PrecioKm 10))
 
 ([Practica_Class70015] of  Hospedaje
 
 	(Calidad Alta)
 	(Nombre "Hilton")
-	(Precio 300))
+	(PrecioKm 300))
 
 ([Practica_Class70016] of  Hospedaje
 
 	(Calidad Baja)
 	(Nombre "BBVA")
-	(Precio 1))
+	(PrecioKm 1))
 
 ([Practica_Class70017] of  Hospedaje
 
 	(Calidad Media)
 	(Nombre "PisoAlquilado")
-	(Precio 65))
+	(PrecioKm 65))
 
 ([Practica_Class70018] of  Hospedaje
 
 	(Calidad Alta)
 	(Nombre "H10")
-	(Precio 190))
+	(PrecioKm 190))
 
 ([Practica_Class70019] of  Ocio
 
 	(Calidad Alta)
 	(Nombre "Louvre")
-	(Precio 15)
+	(PrecioKm 15)
 	(Target Grupos)
 	(TipoOcio Museo))
 
@@ -1605,15 +837,21 @@
 
 	(Calidad Media)
 	(Nombre "MuseoArteNacional")
-	(Precio 20)
+	(PrecioKm 20)
 	(Target Grupos Adultos)
 	(TipoOcio Museo))
+
+([Practica_Class8] of  Transporte
+
+	(PrecioKm 20)
+	(TipoT "Barco")
+	(Velocidad 60))
 
 ([Practica_Class80000] of  Ocio
 
 	(Calidad Alta)
 	(Nombre "PortAventura")
-	(Precio 25)
+	(PrecioKm 25)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
 
@@ -1621,7 +859,7 @@
 
 	(Calidad Media)
 	(Nombre "Museu Egipci")
-	(Precio 15)
+	(PrecioKm 15)
 	(Target Adultos Grupos)
 	(TipoOcio Museo))
 
@@ -1629,7 +867,7 @@
 
 	(Calidad Media)
 	(Nombre "Montserrat")
-	(Precio 5)
+	(PrecioKm 5)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
 
@@ -1637,19 +875,19 @@
 
 	(Calidad Alta)
 	(Nombre "Cair Paravel")
-	(Precio 50))
+	(PrecioKm 50))
 
 ([Practica_Class80004] of  Hospedaje
 
 	(Calidad Alta)
 	(Nombre "Cair Paravel")
-	(Precio 200))
+	(PrecioKm 200))
 
 ([Practica_Class80005] of  Ocio
 
 	(Calidad Baja)
 	(Nombre "El Rey")
-	(Precio 15)
+	(PrecioKm 15)
 	(Target Adultos Grupos)
 	(TipoOcio Monumento))
 
@@ -1657,7 +895,7 @@
 
 	(Calidad Baja)
 	(Nombre "Cloud Gate")
-	(Precio 0)
+	(PrecioKm 0)
 	(Target Familias Grupos)
 	(TipoOcio Monumento))
 
@@ -1665,87 +903,93 @@
 
 	(Calidad Media)
 	(Nombre "Grant Park")
-	(Precio 0)
+	(PrecioKm 0)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
+
+([Practica_Class9] of  Transporte
+
+	(PrecioKm 30)
+	(TipoT "Coche")
+	(Velocidad 100))
 
 ([Practica_Class90003] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Tren")
-	(Precio 5))
+	(PrecioKm 5))
 
 ([Practica_Class90004] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Taxi")
-	(Precio 15))
+	(PrecioKm 15))
 
 ([Practica_Class90005] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Monorail")
-	(Precio 5))
+	(PrecioKm 5))
 
 ([Practica_Class90006] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Bicicleta")
-	(Precio 20))
+	(PrecioKm 20))
 
 ([Practica_Class90007] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Bus")
-	(Precio 10))
+	(PrecioKm 10))
 
 ([Practica_Class90008] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Metro")
-	(Precio 5))
+	(PrecioKm 5))
 
 ([Practica_Class90009] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Nazgul")
-	(Precio 20))
+	(PrecioKm 20))
 
 ([Practica_Class90010] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "León")
-	(Precio 20))
+	(PrecioKm 20))
 
 ([Practica_Class90011] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Centauro")
-	(Precio 10))
+	(PrecioKm 10))
 
 ([Practica_Class90012] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Carreta")
-	(Precio 5))
+	(PrecioKm 5))
 
 ([Practica_Class90013] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Caballo")
-	(Precio 7))
+	(PrecioKm 7))
 
 ([Practica_Class90016] of  Movibilidad
 
 	(Calidad Alta)
 	(Nombre "Camello")
-	(Precio 10))
+	(PrecioKm 10))
 
 ([Practica_Class90018] of  Ocio
 
 	(Calidad Media)
 	(Nombre "Catedral de Colonia")
-	(Precio 0)
+	(PrecioKm 0)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1753,13 +997,13 @@
 
 	(Calidad Alta)
 	(Nombre "Tienda de Campaña")
-	(Precio 25))
+	(PrecioKm 25))
 
 ([Practica_Class90021] of  Ocio
 
 	(Calidad Baja)
 	(Nombre "London Eye")
-	(Precio 5)
+	(PrecioKm 5)
 	(Target Familias Parejas)
 	(TipoOcio Monumento))
 
@@ -1767,7 +1011,7 @@
 
 	(Calidad Alta)
 	(Nombre "Grand Park")
-	(Precio 0)
+	(PrecioKm 0)
 	(Target Familias Parejas Grupos)
 	(TipoOcio Excursion))
 
@@ -1775,7 +1019,7 @@
 
 	(Calidad Alta)
 	(Nombre "Universal Studios")
-	(Precio 25)
+	(PrecioKm 25)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
 
@@ -1783,7 +1027,7 @@
 
 	(Calidad Alta)
 	(Nombre "La Comarca")
-	(Precio 0)
+	(PrecioKm 0)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
 
@@ -1791,7 +1035,7 @@
 
 	(Calidad Alta)
 	(Nombre "Gondor")
-	(Precio 0)
+	(PrecioKm 0)
 	(Target Parejas)
 	(TipoOcio Excursion))
 
@@ -1799,7 +1043,7 @@
 
 	(Calidad Media)
 	(Nombre "Kremlin")
-	(Precio 5)
+	(PrecioKm 5)
 	(Target Grupos)
 	(TipoOcio Monumento))
 
@@ -1807,7 +1051,7 @@
 
 	(Calidad Alta)
 	(Nombre "Plaza Roja")
-	(Precio 0)
+	(PrecioKm 0)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1815,7 +1059,7 @@
 
 	(Calidad Baja)
 	(Nombre "El Armario")
-	(Precio 5)
+	(PrecioKm 5)
 	(Target Infantes)
 	(TipoOcio Excursion))
 
@@ -1823,7 +1067,7 @@
 
 	(Calidad Baja)
 	(Nombre "Correr por el Bosque")
-	(Precio 0)
+	(PrecioKm 0)
 	(Target Infantes)
 	(TipoOcio Excursion))
 
@@ -1831,7 +1075,7 @@
 
 	(Calidad Baja)
 	(Nombre "Qutab Minar")
-	(Precio 5)
+	(PrecioKm 5)
 	(Target Grupos)
 	(TipoOcio Monumento))
 
@@ -1839,7 +1083,7 @@
 
 	(Calidad Media)
 	(Nombre "Dotonbori")
-	(Precio 0)
+	(PrecioKm 0)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
 
@@ -1847,7 +1091,7 @@
 
 	(Calidad Alta)
 	(Nombre "Ciudad Prohibida")
-	(Precio 10)
+	(PrecioKm 10)
 	(Target Grupos Familias)
 	(TipoOcio Monumento))
 
@@ -1855,7 +1099,7 @@
 
 	(Calidad Alta)
 	(Nombre "Adorar al Gran Líder")
-	(Precio 10)
+	(PrecioKm 10)
 	(Target Familias)
 	(TipoOcio Excursion))
 
@@ -1863,7 +1107,7 @@
 
 	(Calidad Alta)
 	(Nombre "Ipanema")
-	(Precio 0)
+	(PrecioKm 0)
 	(Target Familias Grupos Parejas)
 	(TipoOcio Excursion))
 
@@ -1871,7 +1115,7 @@
 
 	(Calidad Alta)
 	(Nombre "Basilica de San Pedro")
-	(Precio 5)
+	(PrecioKm 5)
 	(Target Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1879,7 +1123,7 @@
 
 	(Calidad Alta)
 	(Nombre "Fontana di Trievi")
-	(Precio 5)
+	(PrecioKm 5)
 	(Target Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1887,7 +1131,7 @@
 
 	(Calidad Baja)
 	(Nombre "Catedral de Sao Paulo")
-	(Precio 10)
+	(PrecioKm 10)
 	(Target Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1895,7 +1139,7 @@
 
 	(Calidad Media)
 	(Nombre "Myeong-dong")
-	(Precio 0)
+	(PrecioKm 0)
 	(Target Grupos)
 	(TipoOcio Excursion))
 
@@ -1903,7 +1147,7 @@
 
 	(Calidad Alta)
 	(Nombre "Yuyuan")
-	(Precio 25)
+	(PrecioKm 25)
 	(Target Parejas)
 	(TipoOcio Excursion))
 
@@ -1911,7 +1155,7 @@
 
 	(Calidad Baja)
 	(Nombre "Jin Mao")
-	(Precio 0)
+	(PrecioKm 0)
 	(Target Grupos)
 	(TipoOcio Monumento))
 
@@ -1919,7 +1163,7 @@
 
 	(Calidad Alta)
 	(Nombre "Senso-Ji")
-	(Precio 20)
+	(PrecioKm 20)
 	(Target Grupos Parejas)
 	(TipoOcio Monumento))
 
@@ -1927,7 +1171,7 @@
 
 	(Calidad Alta)
 	(Nombre "Monumento a Lincoln")
-	(Precio 5)
+	(PrecioKm 5)
 	(Target Grupos)
 	(TipoOcio Monumento))
 
@@ -1935,4 +1179,4 @@
 
 	(Calidad Alta)
 	(Nombre "Casa Blanca")
-	(Precio 200))
+	(PrecioKm 200))

@@ -1,4 +1,4 @@
-; Fri May 25 10:55:11 CEST 2018
+; Sat May 26 20:20:16 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -38,18 +38,22 @@
 		(allowed-values Infantes Adultos Familias Grupos Parejas)
 		(cardinality 1 ?VARIABLE)
 		(create-accessor read-write))
-	(single-slot Precio
-		(type INTEGER)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
 	(single-slot CiudadDestino
 		(type INSTANCE)
 ;+		(allowed-classes Ciudad)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
+	(single-slot TipoT
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
 	(multislot Terreno
 		(type SYMBOL)
 		(allowed-values Playa Montana Nieve Desierto)
+		(create-accessor read-write))
+	(single-slot PrecioKm
+		(type INTEGER)
+;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Calidad
 		(type SYMBOL)
@@ -66,6 +70,10 @@
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
 	(single-slot Tamanyo
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Velocidad
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
@@ -137,7 +145,7 @@
 (defclass Servicio
 	(is-a USER)
 	(role abstract)
-	(single-slot Precio
+	(single-slot PrecioKm
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
@@ -184,27 +192,15 @@
 (defclass Transporte
 	(is-a USER)
 	(role concrete)
-	(single-slot Precio
+	(single-slot TipoT
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Velocidad
 		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write))
-	(single-slot CiudadDestino
-		(type INSTANCE)
-;+		(allowed-classes Ciudad)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot Tipo
-		(type SYMBOL)
-		(allowed-values Barco Avion Tren Monociclo Delorean Coche)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot Calidad
-		(type SYMBOL)
-		(allowed-values Alta Media Baja)
-;+		(cardinality 1 1)
-		(create-accessor read-write))
-	(single-slot CiudadOrigen
-		(type INSTANCE)
-;+		(allowed-classes Ciudad)
+	(single-slot PrecioKm
+		(type INTEGER)
 ;+		(cardinality 1 1)
 		(create-accessor read-write)))
