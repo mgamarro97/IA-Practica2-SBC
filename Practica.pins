@@ -435,7 +435,7 @@
 
 ([Practica_Class60008] of  Ciudad
 
-	(Continente "America")
+	(Continente "NorteAmerica")
 	(Nombre "Chicago")
 	(Pais "USA")
 	(PosX 41.878113)
@@ -458,7 +458,7 @@
 
 ([Practica_Class60009] of  Ciudad
 
-	(Continente "America")
+	(Continente "NorteAmerica")
 	(Nombre "WashingtonDC")
 	(Pais "USA")
 	(PosX 38.907192)
@@ -478,7 +478,7 @@
 
 ([Practica_Class60010] of  Ciudad
 
-	(Continente "America")
+	(Continente "NorteAmerica")
 	(Nombre "SaoPaulo")
 	(Pais "Brasil")
 	(PosX -23.55052)
@@ -494,7 +494,7 @@
 
 ([Practica_Class60011] of  Ciudad
 
-	(Continente "America")
+	(Continente "NorteAmerica")
 	(Nombre "MexicoDC")
 	(Pais "Mexico")
 	(PosX 19.432608)
@@ -551,7 +551,7 @@
 
 ([Practica_Class60014] of  Ciudad
 
-	(Continente "America")
+	(Continente "SudAmerica")
 	(Nombre "Cusco")
 	(Pais "Peru")
 	(PosX -13.53195)
@@ -575,7 +575,7 @@
 
 ([Practica_Class60016] of  Ciudad
 
-	(Continente "America")
+	(Continente "SudAmerica")
 	(Nombre "Cancun")
 	(Pais "Mexico")
 	(PosX 21.161907)
@@ -639,7 +639,7 @@
 
 ([Practica_Class60024] of  Ciudad
 
-	(Continente "America")
+	(Continente "SudAmerica")
 	(Nombre "RioDeJaneiro")
 	(Pais "Brasil")
 	(PosX -22.906847)
