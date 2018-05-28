@@ -1,13 +1,119 @@
-; Sat May 26 20:43:08 CEST 2018
+; Mon May 28 11:17:34 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
+
+([Practica_Class0] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "SantEsteveDeLesRoures")
+	(Pais "Espana")
+	(PosX 41.99167)
+	(PosY 2.1248033)
+	(Serv
+		[Practica_Class70001]
+		[Practica_Class70007]
+		[Practica_Class90024]
+		[Practica_Class90007]
+		[Practica_Class90006]
+		[Practica_Class70015]
+		[Practica_Class70017]
+		[Practica_Class90019])
+	(Tema Cultural Exotico)
+	(Valoracion 6))
+
+([Practica_Class1] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Cuenca")
+	(Pais "Espana")
+	(PosX 40.070393)
+	(PosY -2.1374161)
+	(Serv
+		[Practica_Class10010]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90007]
+		[Practica_Class90006]
+		[Practica_Class90028]
+		[Practica_Class70004])
+	(Tema Romantico Descanso)
+	(Valoracion 10))
 
 ([Practica_Class10] of  Transporte
 
 	(Precio 20)
 	(TipoT "Tren")
 	(Velocidad 80))
+
+([Practica_Class10007] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Timbu")
+	(Pais "Butan")
+	(PosX 27.467323)
+	(PosY 89.57886)
+	(Serv
+		[Practica_Class90019]
+		[Practica_Class90016]
+		[Practica_Class70013]
+		[Practica_Class90012]
+		[Practica_Class90010]
+		[Practica_Class90029]
+		[Practica_Class80005]
+		[Practica_Class70020]
+		[Practica_Class10012])
+	(Tema Exotico Ocio Familiar)
+	(Valoracion 7))
+
+([Practica_Class10008] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Kabul")
+	(Pais "Afganistan")
+	(PosX 34.613304)
+	(PosY 68.984375)
+	(Serv
+		[Practica_Class90016]
+		[Practica_Class90013]
+		[Practica_Class70012]
+		[Practica_Class50000]
+		[Practica_Class10012]
+		[Practica_Class70020]
+		[Practica_Class70005])
+	(Tema Romantico Ocio)
+	(Valoracion 6))
+
+([Practica_Class10009] of  Ciudad
+
+	(Continente "Africa")
+	(Nombre "CiudadDelCabo")
+	(Pais "Sudafrica")
+	(PosX -33.807076)
+	(PosY 18.537464)
+	(Serv
+		[Practica_Class70015]
+		[Practica_Class90044]
+		[Practica_Class90016]
+		[Practica_Class70020]
+		[Practica_Class90023])
+	(Tema Exotico Familiar Descanso)
+	(Valoracion 6))
+
+([Practica_Class10010] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Mirar a Cuenca")
+	(Precio 5)
+	(Target Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class10012] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Salvar la Villa Oculta")
+	(Precio 20)
+	(TipoOcio Excursion))
 
 ([Practica_Class11] of  Transporte
 
@@ -62,7 +168,6 @@
 		[Practica_Class90003]
 		[Practica_Class70004])
 	(Tema Ocio Cultural Familiar)
-	(Terreno Playa Montana)
 	(Valoracion 8))
 
 ([Practica_Class17] of  Ciudad
@@ -85,7 +190,6 @@
 		[Practica_Class70010]
 		[Practica_Class90023])
 	(Tema Familiar Cultural Ocio)
-	(Terreno Playa)
 	(Valoracion 2))
 
 ([Practica_Class18] of  Ciudad
@@ -123,8 +227,28 @@
 		[Practica_Class90024]
 		[Practica_Class90025])
 	(Tema Romantico)
-	(Terreno Playa)
 	(Valoracion 1))
+
+([Practica_Class2] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Asgard")
+	(Pais "Noruega")
+	(PosX 60.47202)
+	(PosY 8.468945)
+	(Serv
+		[Practica_Class70012]
+		[Practica_Class70014]
+		[Practica_Class90019]
+		[Practica_Class90013]
+		[Practica_Class90013]
+		[Practica_Class90011]
+		[Practica_Class80000]
+		[Practica_Class90029]
+		[Practica_Class70007]
+		[Practica_Class70010])
+	(Tema Exotico Cultural)
+	(Valoracion 7))
 
 ([Practica_Class20] of  Ciudad
 
@@ -201,7 +325,6 @@
 		[Practica_Class70014]
 		[Practica_Class90019])
 	(Tema Familiar Descanso)
-	(Terreno Playa Montana)
 	(Valoracion 10))
 
 ([Practica_Class25] of  Ciudad
@@ -245,8 +368,58 @@
 		[Practica_Class70018]
 		[Practica_Class90019])
 	(Tema Exotico Cultural)
-	(Terreno Desierto)
 	(Valoracion 4))
+
+([Practica_Class3] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Anor Londo")
+	(Pais "UK")
+	(PosX 53.37364)
+	(PosY -1.4497824)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class70018]
+		[Practica_Class90005]
+		[Practica_Class90013]
+		[Practica_Class90034]
+		[Practica_Class90023]
+		[Practica_Class60018])
+	(Tema Cultural Ocio)
+	(Valoracion 4))
+
+([Practica_Class4] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Konoha")
+	(Pais "Japon")
+	(PosX 32.83829)
+	(PosY 130.84329)
+	(Serv
+		[Practica_Class70013]
+		[Practica_Class70014]
+		[Practica_Class90006]
+		[Practica_Class90012]
+		[Practica_Class10012]
+		[Practica_Class90029])
+	(Tema Exotico Familiar)
+	(Valoracion 2))
+
+([Practica_Class5] of  Ciudad
+
+	(Continente "Africa")
+	(Nombre "Nairobi")
+	(Pais "Kenia")
+	(PosX -1.1280684)
+	(PosY 37.225426)
+	(Serv
+		[Practica_Class90012]
+		[Practica_Class90004]
+		[Practica_Class90034]
+		[Practica_Class70005]
+		[Practica_Class70009])
+	(Tema Exotico Cultural)
+	(Valoracion 3))
 
 ([Practica_Class50000] of  Hospedaje
 
@@ -257,7 +430,7 @@
 ([Practica_Class50001] of  Hospedaje
 
 	(Calidad Media)
-	(Nombre "HotelTransilvania")
+	(Nombre "Hotel Transilvania")
 	(Precio 100))
 
 ([Practica_Class50002] of  Hospedaje
@@ -265,6 +438,23 @@
 	(Calidad Baja)
 	(Nombre "Barad-dur")
 	(Precio 50))
+
+([Practica_Class6] of  Ciudad
+
+	(Continente "NorteAmerica")
+	(Nombre "Denver")
+	(Pais "USA")
+	(PosX 39.708157)
+	(PosY -105.03467)
+	(Serv
+		[Practica_Class70015]
+		[Practica_Class50000]
+		[Practica_Class90005]
+		[Practica_Class90004]
+		[Practica_Class90029]
+		[Practica_Class90023])
+	(Tema Cultural Ocio)
+	(Valoracion 5))
 
 ([Practica_Class60000] of  Ciudad
 
@@ -284,7 +474,6 @@
 		[Practica_Class90007]
 		[Practica_Class50000])
 	(Tema Familiar Cultural Ocio)
-	(Terreno Montana)
 	(Valoracion 5))
 
 ([Practica_Class60001] of  Ciudad
@@ -306,7 +495,6 @@
 		[Practica_Class90027]
 		[Practica_Class70010])
 	(Tema Exotico)
-	(Terreno Nieve)
 	(Valoracion 5))
 
 ([Practica_Class60002] of  Ciudad
@@ -562,7 +750,6 @@
 		[Practica_Class70014]
 		[Practica_Class90012])
 	(Tema Cultural)
-	(Terreno Montana)
 	(Valoracion 7))
 
 ([Practica_Class60015] of  Ocio
@@ -586,7 +773,6 @@
 		[Practica_Class90004]
 		[Practica_Class90006])
 	(Tema Cultural Descanso Romantico)
-	(Terreno Playa)
 	(Valoracion 8))
 
 ([Practica_Class60017] of  Ocio
@@ -667,7 +853,6 @@
 		[Practica_Class90013]
 		[Practica_Class90019])
 	(Tema Cultural Exotico)
-	(Terreno Montana Desierto)
 	(Valoracion 2))
 
 ([Practica_Class60026] of  Ciudad
@@ -686,7 +871,6 @@
 		[Practica_Class70013]
 		[Practica_Class70017])
 	(Tema Exotico Cultural)
-	(Terreno Playa)
 	(Valoracion 8))
 
 ([Practica_Class7] of  Transporte
@@ -770,7 +954,7 @@
 ([Practica_Class70009] of  Ocio
 
 	(Calidad Baja)
-	(Nombre "MuseoCera")
+	(Nombre "Museo Cera")
 	(Precio 15)
 	(Target Familias)
 	(TipoOcio Museo))
@@ -786,13 +970,13 @@
 ([Practica_Class70012] of  Hospedaje
 
 	(Calidad Baja)
-	(Nombre "PensionLoli")
+	(Nombre "Pension Loli")
 	(Precio 20))
 
 ([Practica_Class70013] of  Hospedaje
 
 	(Calidad Media)
-	(Nombre "HotelCapsula")
+	(Nombre "Hotel Capsula")
 	(Precio 75))
 
 ([Practica_Class70014] of  Hospedaje
@@ -816,7 +1000,7 @@
 ([Practica_Class70017] of  Hospedaje
 
 	(Calidad Media)
-	(Nombre "PisoAlquilado")
+	(Nombre "Piso Alquilado")
 	(Precio 65))
 
 ([Practica_Class70018] of  Hospedaje
@@ -836,7 +1020,7 @@
 ([Practica_Class70020] of  Ocio
 
 	(Calidad Media)
-	(Nombre "MuseoArteNacional")
+	(Nombre "Museo de Arte Nacional")
 	(Precio 20)
 	(Target Grupos Adultos)
 	(TipoOcio Museo))
@@ -913,73 +1097,73 @@
 	(TipoT "Coche")
 	(Velocidad 100))
 
-([Practica_Class90003] of  Movibilidad
+([Practica_Class90003] of  Movilidad
 
 	(Calidad Alta)
 	(Nombre "Tren")
 	(Precio 5))
 
-([Practica_Class90004] of  Movibilidad
+([Practica_Class90004] of  Movilidad
 
 	(Calidad Alta)
 	(Nombre "Taxi")
 	(Precio 15))
 
-([Practica_Class90005] of  Movibilidad
+([Practica_Class90005] of  Movilidad
 
 	(Calidad Alta)
 	(Nombre "Monorail")
 	(Precio 5))
 
-([Practica_Class90006] of  Movibilidad
+([Practica_Class90006] of  Movilidad
 
 	(Calidad Alta)
 	(Nombre "Bicicleta")
 	(Precio 20))
 
-([Practica_Class90007] of  Movibilidad
+([Practica_Class90007] of  Movilidad
 
 	(Calidad Alta)
 	(Nombre "Bus")
 	(Precio 10))
 
-([Practica_Class90008] of  Movibilidad
+([Practica_Class90008] of  Movilidad
 
 	(Calidad Alta)
 	(Nombre "Metro")
 	(Precio 5))
 
-([Practica_Class90009] of  Movibilidad
+([Practica_Class90009] of  Movilidad
 
 	(Calidad Alta)
 	(Nombre "Nazgul")
 	(Precio 20))
 
-([Practica_Class90010] of  Movibilidad
+([Practica_Class90010] of  Movilidad
 
 	(Calidad Alta)
 	(Nombre "León")
 	(Precio 20))
 
-([Practica_Class90011] of  Movibilidad
+([Practica_Class90011] of  Movilidad
 
 	(Calidad Alta)
 	(Nombre "Centauro")
 	(Precio 10))
 
-([Practica_Class90012] of  Movibilidad
+([Practica_Class90012] of  Movilidad
 
 	(Calidad Alta)
 	(Nombre "Carreta")
 	(Precio 5))
 
-([Practica_Class90013] of  Movibilidad
+([Practica_Class90013] of  Movilidad
 
 	(Calidad Alta)
 	(Nombre "Caballo")
 	(Precio 7))
 
-([Practica_Class90016] of  Movibilidad
+([Practica_Class90016] of  Movilidad
 
 	(Calidad Alta)
 	(Nombre "Camello")
