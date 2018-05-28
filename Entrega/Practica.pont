@@ -1,0 +1,198 @@
+; Tue May 29 01:10:05 CEST 2018
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+
+(defclass %3ACLIPS_TOP_LEVEL_SLOT_CLASS "Fake class to save top-level slot information"
+	(is-a USER)
+	(role abstract)
+	(single-slot Pais
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Practica_Class23
+		(type STRING)
+;+		(cardinality 0 1)
+		(create-accessor read-write))
+	(multislot Medio
+		(type SYMBOL)
+		(allowed-values Metro Autobus Tren Ferrocarril)
+		(create-accessor read-write))
+	(multislot Tema
+		(type SYMBOL)
+		(allowed-values Romantico Familiar Cultural Ocio Descanso Exotico)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Valoracion
+		(type INTEGER)
+		(range 1 10)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Target
+		(type SYMBOL)
+		(allowed-values Infantes Adultos Familias Grupos Parejas)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot CiudadDestino
+		(type INSTANCE)
+;+		(allowed-classes Ciudad)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Precio
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot TipoT
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Terreno
+		(type SYMBOL)
+		(allowed-values Playa Montana Nieve Desierto)
+		(create-accessor read-write))
+	(single-slot PrecioKm
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Calidad
+		(type SYMBOL)
+		(allowed-values Alta Media Baja)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot CiudadOrigen
+		(type INSTANCE)
+;+		(allowed-classes Ciudad)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Continente
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Tamanyo
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Velocidad
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot PosY
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Tipo
+		(type SYMBOL)
+		(allowed-values Barco Avion Tren Monociclo Delorean Coche)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot PosX
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot TipoOcio
+		(type SYMBOL)
+		(allowed-values Museo Monumento Excursion)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Serv
+		(type INSTANCE)
+;+		(allowed-classes Servicio)
+		(create-accessor read-write)))
+
+(defclass Ciudad
+	(is-a USER)
+	(role concrete)
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Valoracion
+		(type INTEGER)
+		(range 1 10)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Tema
+		(type SYMBOL)
+		(allowed-values Romantico Familiar Cultural Ocio Descanso Exotico)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write))
+	(single-slot Continente
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Pais
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot PosY
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot PosX
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Serv
+		(type INSTANCE)
+;+		(allowed-classes Servicio)
+		(create-accessor read-write)))
+
+(defclass Servicio
+	(is-a USER)
+	(role abstract)
+	(single-slot Precio
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Nombre
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Calidad
+		(type SYMBOL)
+		(allowed-values Alta Media Baja)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))
+
+(defclass Movilidad
+	(is-a Servicio)
+	(role concrete))
+
+(defclass Hospedaje
+	(is-a Servicio)
+	(role concrete))
+
+(defclass Ocio
+	(is-a Servicio)
+	(role concrete)
+	(single-slot TipoOcio
+		(type SYMBOL)
+		(allowed-values Museo Monumento Excursion)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(multislot Target
+		(type SYMBOL)
+		(allowed-values Infantes Adultos Familias Grupos Parejas)
+		(cardinality 1 ?VARIABLE)
+		(create-accessor read-write)))
+
+(defclass Transporte
+	(is-a USER)
+	(role concrete)
+	(single-slot TipoT
+		(type STRING)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot Velocidad
+		(type INTEGER)
+;+		(cardinality 1 1)
+		(create-accessor read-write))
+	(single-slot PrecioKm
+		(type FLOAT)
+;+		(cardinality 1 1)
+		(create-accessor read-write)))

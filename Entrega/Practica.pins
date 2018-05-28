@@ -1,0 +1,1369 @@
+; Tue May 29 01:10:05 CEST 2018
+; 
+;+ (version "3.5")
+;+ (build "Build 663")
+
+([Practica_Class0] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "SantEsteveDeLesRoures")
+	(Pais "Espana")
+	(PosX 41.99167)
+	(PosY 2.1248033)
+	(Serv
+		[Practica_Class70001]
+		[Practica_Class70007]
+		[Practica_Class90024]
+		[Practica_Class90007]
+		[Practica_Class90006]
+		[Practica_Class70015]
+		[Practica_Class70017]
+		[Practica_Class90019])
+	(Tema Cultural Exotico)
+	(Valoracion 6))
+
+([Practica_Class1] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Cuenca")
+	(Pais "Espana")
+	(PosX 40.070393)
+	(PosY -2.1374161)
+	(Serv
+		[Practica_Class10010]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90007]
+		[Practica_Class90006]
+		[Practica_Class90028]
+		[Practica_Class70004])
+	(Tema Romantico Descanso)
+	(Valoracion 10))
+
+([Practica_Class10] of  Transporte
+
+	(PrecioKm 0.0010)
+	(TipoT "Tren")
+	(Velocidad 80))
+
+([Practica_Class10007] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Timbu")
+	(Pais "Butan")
+	(PosX 27.467323)
+	(PosY 89.57886)
+	(Serv
+		[Practica_Class90019]
+		[Practica_Class90016]
+		[Practica_Class70013]
+		[Practica_Class90012]
+		[Practica_Class90010]
+		[Practica_Class90029]
+		[Practica_Class80005]
+		[Practica_Class70020]
+		[Practica_Class10012])
+	(Tema Exotico Ocio Familiar)
+	(Valoracion 7))
+
+([Practica_Class10008] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Kabul")
+	(Pais "Afganistan")
+	(PosX 34.613304)
+	(PosY 68.984375)
+	(Serv
+		[Practica_Class90016]
+		[Practica_Class90013]
+		[Practica_Class70012]
+		[Practica_Class50000]
+		[Practica_Class10012]
+		[Practica_Class70020]
+		[Practica_Class70005])
+	(Tema Romantico Ocio)
+	(Valoracion 6))
+
+([Practica_Class10009] of  Ciudad
+
+	(Continente "Africa")
+	(Nombre "CiudadDelCabo")
+	(Pais "Sudafrica")
+	(PosX -33.807076)
+	(PosY 18.537464)
+	(Serv
+		[Practica_Class70015]
+		[Practica_Class90044]
+		[Practica_Class90016]
+		[Practica_Class70020]
+		[Practica_Class90023])
+	(Tema Exotico Familiar Descanso)
+	(Valoracion 6))
+
+([Practica_Class10010] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Mirar a Cuenca")
+	(Precio 5)
+	(Target Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class10012] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Salvar la Villa Oculta")
+	(Precio 20)
+	(Target Familias Grupos)
+	(TipoOcio Excursion))
+
+([Practica_Class11] of  Transporte
+
+	(PrecioKm 1.0)
+	(TipoT "Avion")
+	(Velocidad 300))
+
+([Practica_Class12] of  Transporte
+
+	(PrecioKm 2.0)
+	(TipoT "Delorean")
+	(Velocidad 10000))
+
+([Practica_Class15] of  Ciudad
+
+	(Continente "Africa")
+	(Nombre "Wakanda")
+	(Pais "Wakanda")
+	(PosX -1.334525)
+	(PosY 31.804743)
+	(Serv
+		[Practica_Class50001]
+		[Practica_Class70005]
+		[Practica_Class90006]
+		[Practica_Class90013]
+		[Practica_Class90012]
+		[Practica_Class90010])
+	(Tema Exotico Cultural)
+	(Valoracion 10))
+
+([Practica_Class16] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Barcelona")
+	(Pais "Espana")
+	(PosX 41.38508)
+	(PosY 2.124209)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001]
+		[Practica_Class80002]
+		[Practica_Class80001]
+		[Practica_Class70001]
+		[Practica_Class80000]
+		[Practica_Class70009]
+		[Practica_Class70018]
+		[Practica_Class70015]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90008]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class70004])
+	(Tema Ocio Cultural Familiar)
+	(Valoracion 8))
+
+([Practica_Class17] of  Ciudad
+
+	(Continente "NorteAmerica")
+	(Nombre "NuevaYork")
+	(Pais "USA")
+	(PosX 42.72877)
+	(PosY -78.01356)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90005]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class70018]
+		[Practica_Class70005]
+		[Practica_Class70010]
+		[Practica_Class90023])
+	(Tema Familiar Cultural Ocio)
+	(Valoracion 2))
+
+([Practica_Class18] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Roma")
+	(Pais "Italia")
+	(PosX 41.91024)
+	(PosY 12.395912)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001]
+		[Practica_Class60018]
+		[Practica_Class90036]
+		[Practica_Class90037]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004])
+	(Tema Cultural Romantico)
+	(Valoracion 5))
+
+([Practica_Class19] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Mordor")
+	(Pais "Espana")
+	(PosX 37.980595)
+	(PosY -1.1621948)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50002]
+		[Practica_Class90019]
+		[Practica_Class90013]
+		[Practica_Class90009]
+		[Practica_Class90024]
+		[Practica_Class90025])
+	(Tema Romantico)
+	(Valoracion 1))
+
+([Practica_Class2] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Asgard")
+	(Pais "Noruega")
+	(PosX 60.47202)
+	(PosY 8.468945)
+	(Serv
+		[Practica_Class70012]
+		[Practica_Class70014]
+		[Practica_Class90019]
+		[Practica_Class90013]
+		[Practica_Class90013]
+		[Practica_Class90011]
+		[Practica_Class80000]
+		[Practica_Class90029]
+		[Practica_Class70007]
+		[Practica_Class70010])
+	(Tema Exotico Cultural)
+	(Valoracion 7))
+
+([Practica_Class20] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Tokio")
+	(Pais "Japon")
+	(PosX 35.673542)
+	(PosY 139.5703)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001]
+		[Practica_Class90042]
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90003])
+	(Tema Cultural Exotico)
+	(Valoracion 10))
+
+([Practica_Class21] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Paris")
+	(Pais "Francia")
+	(PosX 48.85895)
+	(PosY 2.2770197)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90003]
+		[Practica_Class70005]
+		[Practica_Class70007]
+		[Practica_Class70010]
+		[Practica_Class70000])
+	(Tema Romantico)
+	(Valoracion 7))
+
+([Practica_Class22] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Narnia")
+	(Pais "ReinoUnido")
+	(PosX 50.207188)
+	(PosY -5.277354)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001]
+		[Practica_Class80004]
+		[Practica_Class90013]
+		[Practica_Class90012]
+		[Practica_Class90011]
+		[Practica_Class90010]
+		[Practica_Class90028]
+		[Practica_Class90029])
+	(Tema Familiar)
+	(Valoracion 3))
+
+([Practica_Class24] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Esparta")
+	(Pais "Grecia")
+	(PosX 37.09516)
+	(PosY 22.15699)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001]
+		[Practica_Class70002]
+		[Practica_Class90013]
+		[Practica_Class90012]
+		[Practica_Class70014]
+		[Practica_Class90019])
+	(Tema Familiar Descanso)
+	(Valoracion 10))
+
+([Practica_Class25] of  Ciudad
+
+	(Continente "NorteAmerica")
+	(Nombre "LosAngeles")
+	(Pais "USA")
+	(PosX 37.193005)
+	(PosY -123.799446)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001]
+		[Practica_Class90022]
+		[Practica_Class70007]
+		[Practica_Class90023]
+		[Practica_Class70015]
+		[Practica_Class70018]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90008]
+		[Practica_Class90005]
+		[Practica_Class90004]
+		[Practica_Class90003])
+	(Tema Ocio)
+	(Valoracion 6))
+
+([Practica_Class26] of  Ciudad
+
+	(Continente "Africa")
+	(Nombre "ElCairo")
+	(Pais "Egipto")
+	(PosX 30.059484)
+	(PosY 31.223444)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class50001]
+		[Practica_Class70006]
+		[Practica_Class90013]
+		[Practica_Class90016]
+		[Practica_Class70018]
+		[Practica_Class90019])
+	(Tema Exotico Cultural)
+	(Valoracion 4))
+
+([Practica_Class3] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Anor Londo")
+	(Pais "UK")
+	(PosX 53.37364)
+	(PosY -1.4497824)
+	(Serv
+		[Practica_Class50000]
+		[Practica_Class70018]
+		[Practica_Class90005]
+		[Practica_Class90013]
+		[Practica_Class90034]
+		[Practica_Class90023]
+		[Practica_Class60018])
+	(Tema Cultural Ocio)
+	(Valoracion 4))
+
+([Practica_Class4] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Konoha")
+	(Pais "Japon")
+	(PosX 32.83829)
+	(PosY 130.84329)
+	(Serv
+		[Practica_Class70013]
+		[Practica_Class70014]
+		[Practica_Class90006]
+		[Practica_Class90012]
+		[Practica_Class10012]
+		[Practica_Class90029])
+	(Tema Exotico Familiar)
+	(Valoracion 2))
+
+([Practica_Class5] of  Ciudad
+
+	(Continente "Africa")
+	(Nombre "Nairobi")
+	(Pais "Kenia")
+	(PosX -1.1280684)
+	(PosY 37.225426)
+	(Serv
+		[Practica_Class90012]
+		[Practica_Class90004]
+		[Practica_Class90034]
+		[Practica_Class70005]
+		[Practica_Class70009])
+	(Tema Exotico Cultural)
+	(Valoracion 3))
+
+([Practica_Class50000] of  Hospedaje
+
+	(Calidad Alta)
+	(Nombre "CentroPokemon")
+	(Precio 200))
+
+([Practica_Class50001] of  Hospedaje
+
+	(Calidad Media)
+	(Nombre "Hotel Transilvania")
+	(Precio 100))
+
+([Practica_Class50002] of  Hospedaje
+
+	(Calidad Baja)
+	(Nombre "Barad-dur")
+	(Precio 50))
+
+([Practica_Class6] of  Ciudad
+
+	(Continente "NorteAmerica")
+	(Nombre "Denver")
+	(Pais "USA")
+	(PosX 39.708157)
+	(PosY -105.03467)
+	(Serv
+		[Practica_Class70015]
+		[Practica_Class50000]
+		[Practica_Class90005]
+		[Practica_Class90004]
+		[Practica_Class90029]
+		[Practica_Class90023])
+	(Tema Cultural Ocio)
+	(Valoracion 5))
+
+([Practica_Class60000] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Pekin")
+	(Pais "China")
+	(PosX 39.9042)
+	(PosY 116.407394)
+	(Serv
+		[Practica_Class60020]
+		[Practica_Class90033]
+		[Practica_Class70014]
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class50000])
+	(Tema Familiar Cultural Ocio)
+	(Valoracion 5))
+
+([Practica_Class60001] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Moscu")
+	(Pais "Rusia")
+	(PosX 55.755825)
+	(PosY 37.6173)
+	(Serv
+		[Practica_Class70014]
+		[Practica_Class50000]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004]
+		[Practica_Class90026]
+		[Practica_Class90027]
+		[Practica_Class70010])
+	(Tema Exotico)
+	(Valoracion 5))
+
+([Practica_Class60002] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Seul")
+	(Pais "CoreaMala")
+	(PosX 37.566536)
+	(PosY 126.97797)
+	(Serv
+		[Practica_Class90039]
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004]
+		[Practica_Class90003])
+	(Tema Familiar Cultural Ocio)
+	(Valoracion 2))
+
+([Practica_Class60003] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Pionyang")
+	(Pais "CoreaBuena")
+	(PosX 39.03922)
+	(PosY 125.76253)
+	(Serv
+		[Practica_Class70014]
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class90034]
+		[Practica_Class50000])
+	(Tema Romantico Familiar Cultural Ocio Descanso Exotico)
+	(Valoracion 10))
+
+([Practica_Class60004] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Londres")
+	(Pais "UK")
+	(PosX 51.50735)
+	(PosY -0.1277583)
+	(Serv
+		[Practica_Class70013]
+		[Practica_Class70018]
+		[Practica_Class70015]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90008]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class70008]
+		[Practica_Class70010]
+		[Practica_Class70008]
+		[Practica_Class90021])
+	(Tema Romantico Descanso Ocio Familiar)
+	(Valoracion 8))
+
+([Practica_Class60005] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Osaka")
+	(Pais "Japon")
+	(PosX 34.693737)
+	(PosY 135.50217)
+	(Serv
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class90023]
+		[Practica_Class90032])
+	(Tema Cultural Descanso)
+	(Valoracion 8))
+
+([Practica_Class60006] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Shangai")
+	(Pais "China")
+	(PosX 31.23039)
+	(PosY 121.4737)
+	(Serv
+		[Practica_Class90040]
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class90041]
+		[Practica_Class50000])
+	(Tema Cultural Descanso)
+	(Valoracion 8))
+
+([Practica_Class60007] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Colonia")
+	(Pais "Alemania")
+	(PosX 50.93753)
+	(PosY 6.9602785)
+	(Serv
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90008]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class70007]
+		[Practica_Class90018]
+		[Practica_Class70013]
+		[Practica_Class70012])
+	(Tema Cultural Familiar Ocio)
+	(Valoracion 7))
+
+([Practica_Class60008] of  Ciudad
+
+	(Continente "NorteAmerica")
+	(Nombre "Chicago")
+	(Pais "USA")
+	(PosX 41.878113)
+	(PosY -87.6298)
+	(Serv
+		[Practica_Class70017]
+		[Practica_Class80006]
+		[Practica_Class70015]
+		[Practica_Class70010]
+		[Practica_Class80007]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90008]
+		[Practica_Class90005]
+		[Practica_Class90004]
+		[Practica_Class90003]
+		[Practica_Class80007])
+	(Tema Familiar Cultural)
+	(Valoracion 8))
+
+([Practica_Class60009] of  Ciudad
+
+	(Continente "NorteAmerica")
+	(Nombre "WashingtonDC")
+	(Pais "USA")
+	(PosX 38.907192)
+	(PosY -77.03687)
+	(Serv
+		[Practica_Class90043]
+		[Practica_Class90044]
+		[Practica_Class70018]
+		[Practica_Class70015]
+		[Practica_Class70017]
+		[Practica_Class90034]
+		[Practica_Class70003]
+		[Practica_Class70010]
+		[Practica_Class90023])
+	(Tema Familiar Ocio)
+	(Valoracion 8))
+
+([Practica_Class60010] of  Ciudad
+
+	(Continente "NorteAmerica")
+	(Nombre "SaoPaulo")
+	(Pais "Brasil")
+	(PosX -23.55052)
+	(PosY -46.63331)
+	(Serv
+		[Practica_Class90038]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90004]
+		[Practica_Class70010])
+	(Tema Cultural Descanso Exotico)
+	(Valoracion 8))
+
+([Practica_Class60011] of  Ciudad
+
+	(Continente "NorteAmerica")
+	(Nombre "MexicoDC")
+	(Pais "Mexico")
+	(PosX 19.432608)
+	(PosY -99.13321)
+	(Serv
+		[Practica_Class60017]
+		[Practica_Class70014]
+		[Practica_Class70016]
+		[Practica_Class70017]
+		[Practica_Class90019]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90013])
+	(Tema Exotico)
+	(Valoracion 7))
+
+([Practica_Class60012] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Singapur")
+	(Pais "Singapur")
+	(PosX 1.3553793)
+	(PosY 103.867744)
+	(Serv
+		[Practica_Class70013]
+		[Practica_Class70012]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90023])
+	(Tema Familiar Exotico)
+	(Valoracion 7))
+
+([Practica_Class60013] of  Ciudad
+
+	(Continente "Europa")
+	(Nombre "Madrid")
+	(Pais "Espana")
+	(PosX 40.416775)
+	(PosY -3.7037902)
+	(Serv
+		[Practica_Class70018]
+		[Practica_Class70015]
+		[Practica_Class70017]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class90012]
+		[Practica_Class90008]
+		[Practica_Class90004]
+		[Practica_Class70009]
+		[Practica_Class70005]
+		[Practica_Class70020])
+	(Tema Familiar Descanso)
+	(Valoracion 8))
+
+([Practica_Class60014] of  Ciudad
+
+	(Continente "SudAmerica")
+	(Nombre "Cusco")
+	(Pais "Peru")
+	(PosX -13.53195)
+	(PosY -71.96746)
+	(Serv
+		[Practica_Class60015]
+		[Practica_Class90013]
+		[Practica_Class70014]
+		[Practica_Class90012])
+	(Tema Cultural)
+	(Valoracion 7))
+
+([Practica_Class60015] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Machu Picchu")
+	(Precio 20)
+	(Target Familias Grupos Parejas Adultos)
+	(TipoOcio Monumento))
+
+([Practica_Class60016] of  Ciudad
+
+	(Continente "SudAmerica")
+	(Nombre "Cancun")
+	(Pais "Mexico")
+	(PosX 21.161907)
+	(PosY -86.851524)
+	(Serv
+		[Practica_Class70014]
+		[Practica_Class80005]
+		[Practica_Class90004]
+		[Practica_Class90006])
+	(Tema Cultural Descanso Romantico)
+	(Valoracion 8))
+
+([Practica_Class60017] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Chichen Itza")
+	(Precio 20)
+	(Target Familias Adultos Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class60018] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Coliseo")
+	(Precio 30)
+	(Target Grupos Familias Adultos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class60019] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Cristo Redentor")
+	(Precio 20)
+	(Target Adultos Familias Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class60020] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Gran Muralla China")
+	(Precio 50)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class60021] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Petra")
+	(Precio 20)
+	(Target Familias Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class60022] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Taj Mahal")
+	(Precio 50)
+	(Target Familias Parejas Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class60024] of  Ciudad
+
+	(Continente "SudAmerica")
+	(Nombre "RioDeJaneiro")
+	(Pais "Brasil")
+	(PosX -22.906847)
+	(PosY -43.172897)
+	(Serv
+		[Practica_Class60019]
+		[Practica_Class90035]
+		[Practica_Class70013]
+		[Practica_Class50001]
+		[Practica_Class70010])
+	(Tema Exotico Cultural)
+	(Valoracion 8))
+
+([Practica_Class60025] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "Aman")
+	(Pais "Jordania")
+	(PosX 31.945366)
+	(PosY 35.92837)
+	(Serv
+		[Practica_Class60021]
+		[Practica_Class70014]
+		[Practica_Class90016]
+		[Practica_Class90013]
+		[Practica_Class90019])
+	(Tema Cultural Exotico)
+	(Valoracion 2))
+
+([Practica_Class60026] of  Ciudad
+
+	(Continente "Asia")
+	(Nombre "NuevaDelhi")
+	(Pais "India")
+	(PosX 28.61394)
+	(PosY 77.20902)
+	(Serv
+		[Practica_Class60022]
+		[Practica_Class90030]
+		[Practica_Class90006]
+		[Practica_Class90007]
+		[Practica_Class70014]
+		[Practica_Class70013]
+		[Practica_Class70017])
+	(Tema Exotico Cultural)
+	(Valoracion 8))
+
+([Practica_Class7] of  Transporte
+
+	(PrecioKm 1.0E-4)
+	(TipoT "Monociclo")
+	(Velocidad 10))
+
+([Practica_Class70000] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Torre Eiffel")
+	(Precio 25)
+	(Target Grupos Parejas Adultos)
+	(TipoOcio Monumento))
+
+([Practica_Class70001] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Tibidabo")
+	(Precio 5)
+	(Target Infantes Grupos Adultos)
+	(TipoOcio Excursion))
+
+([Practica_Class70002] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Termopilas")
+	(Precio 50)
+	(Target Adultos)
+	(TipoOcio Excursion))
+
+([Practica_Class70003] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Hollywood")
+	(Precio 30)
+	(Target Grupos Familias)
+	(TipoOcio Excursion))
+
+([Practica_Class70004] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "La Mina")
+	(Precio 5)
+	(Target Grupos Adultos)
+	(TipoOcio Excursion))
+
+([Practica_Class70005] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Avengers Base")
+	(Precio 40)
+	(Target Familias Infantes)
+	(TipoOcio Excursion))
+
+([Practica_Class70006] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Piramides Giza")
+	(Precio 25)
+	(Target Adultos Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class70007] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "DisneyLand")
+	(Precio 35)
+	(Target Grupos Parejas Familias)
+	(TipoOcio Excursion))
+
+([Practica_Class70008] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Big Ben")
+	(Precio 40)
+	(Target Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class70009] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "Museo Cera")
+	(Precio 15)
+	(Target Familias)
+	(TipoOcio Museo))
+
+([Practica_Class70010] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "McDonalds")
+	(Precio 10)
+	(Target Familias)
+	(TipoOcio Excursion))
+
+([Practica_Class70012] of  Hospedaje
+
+	(Calidad Baja)
+	(Nombre "Pension Loli")
+	(Precio 20))
+
+([Practica_Class70013] of  Hospedaje
+
+	(Calidad Media)
+	(Nombre "Hotel Capsula")
+	(Precio 75))
+
+([Practica_Class70014] of  Hospedaje
+
+	(Calidad Baja)
+	(Nombre "Albergue")
+	(Precio 10))
+
+([Practica_Class70015] of  Hospedaje
+
+	(Calidad Alta)
+	(Nombre "Hilton")
+	(Precio 300))
+
+([Practica_Class70016] of  Hospedaje
+
+	(Calidad Baja)
+	(Nombre "BBVA")
+	(Precio 1))
+
+([Practica_Class70017] of  Hospedaje
+
+	(Calidad Media)
+	(Nombre "Piso Alquilado")
+	(Precio 65))
+
+([Practica_Class70018] of  Hospedaje
+
+	(Calidad Alta)
+	(Nombre "H10")
+	(Precio 190))
+
+([Practica_Class70019] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Louvre")
+	(Precio 15)
+	(Target Grupos)
+	(TipoOcio Museo))
+
+([Practica_Class70020] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Museo de Arte Nacional")
+	(Precio 20)
+	(Target Grupos Adultos)
+	(TipoOcio Museo))
+
+([Practica_Class8] of  Transporte
+
+	(PrecioKm 0.5)
+	(TipoT "Barco")
+	(Velocidad 60))
+
+([Practica_Class80000] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "PortAventura")
+	(Precio 25)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class80001] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Museu Egipci")
+	(Precio 15)
+	(Target Adultos Grupos)
+	(TipoOcio Museo))
+
+([Practica_Class80002] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Montserrat")
+	(Precio 5)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class80003] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Cair Paravel")
+	(Precio 50)
+	(Target Familias Grupos)
+	(TipoOcio Excursion))
+
+([Practica_Class80004] of  Hospedaje
+
+	(Calidad Alta)
+	(Nombre "Cair Paravel")
+	(Precio 200))
+
+([Practica_Class80005] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "El Rey")
+	(Precio 15)
+	(Target Adultos Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class80006] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "Cloud Gate")
+	(Precio 0)
+	(Target Familias Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class80007] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Grant Park")
+	(Precio 0)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class9] of  Transporte
+
+	(PrecioKm 0.0010)
+	(TipoT "Coche")
+	(Velocidad 100))
+
+([Practica_Class90003] of  Movilidad
+
+	(Calidad Alta)
+	(Nombre "Tren")
+	(Precio 5))
+
+([Practica_Class90004] of  Movilidad
+
+	(Calidad Alta)
+	(Nombre "Taxi")
+	(Precio 15))
+
+([Practica_Class90005] of  Movilidad
+
+	(Calidad Alta)
+	(Nombre "Monorail")
+	(Precio 5))
+
+([Practica_Class90006] of  Movilidad
+
+	(Calidad Alta)
+	(Nombre "Bicicleta")
+	(Precio 20))
+
+([Practica_Class90007] of  Movilidad
+
+	(Calidad Alta)
+	(Nombre "Bus")
+	(Precio 10))
+
+([Practica_Class90008] of  Movilidad
+
+	(Calidad Alta)
+	(Nombre "Metro")
+	(Precio 5))
+
+([Practica_Class90009] of  Movilidad
+
+	(Calidad Alta)
+	(Nombre "Nazgul")
+	(Precio 20))
+
+([Practica_Class90010] of  Movilidad
+
+	(Calidad Alta)
+	(Nombre "León")
+	(Precio 20))
+
+([Practica_Class90011] of  Movilidad
+
+	(Calidad Alta)
+	(Nombre "Centauro")
+	(Precio 10))
+
+([Practica_Class90012] of  Movilidad
+
+	(Calidad Alta)
+	(Nombre "Carreta")
+	(Precio 5))
+
+([Practica_Class90013] of  Movilidad
+
+	(Calidad Alta)
+	(Nombre "Caballo")
+	(Precio 7))
+
+([Practica_Class90016] of  Movilidad
+
+	(Calidad Alta)
+	(Nombre "Camello")
+	(Precio 10))
+
+([Practica_Class90018] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Catedral de Colonia")
+	(Precio 0)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90019] of  Hospedaje
+
+	(Calidad Alta)
+	(Nombre "Tienda de Campaña")
+	(Precio 25))
+
+([Practica_Class90021] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "London Eye")
+	(Precio 5)
+	(Target Familias Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90022] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Grand Park")
+	(Precio 0)
+	(Target Familias Parejas Grupos)
+	(TipoOcio Excursion))
+
+([Practica_Class90023] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Universal Studios")
+	(Precio 25)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class90024] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "La Comarca")
+	(Precio 0)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class90025] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Gondor")
+	(Precio 0)
+	(Target Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class90026] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Kremlin")
+	(Precio 5)
+	(Target Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class90027] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Plaza Roja")
+	(Precio 0)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90028] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "El Armario")
+	(Precio 5)
+	(Target Infantes)
+	(TipoOcio Excursion))
+
+([Practica_Class90029] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "Correr por el Bosque")
+	(Precio 0)
+	(Target Infantes)
+	(TipoOcio Excursion))
+
+([Practica_Class90030] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "Qutab Minar")
+	(Precio 5)
+	(Target Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class90032] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Dotonbori")
+	(Precio 0)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class90033] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Ciudad Prohibida")
+	(Precio 10)
+	(Target Grupos Familias)
+	(TipoOcio Monumento))
+
+([Practica_Class90034] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Adorar al Gran Líder")
+	(Precio 10)
+	(Target Familias)
+	(TipoOcio Excursion))
+
+([Practica_Class90035] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Ipanema")
+	(Precio 0)
+	(Target Familias Grupos Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class90036] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Basilica de San Pedro")
+	(Precio 5)
+	(Target Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90037] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Fontana di Trievi")
+	(Precio 5)
+	(Target Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90038] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "Catedral de Sao Paulo")
+	(Precio 10)
+	(Target Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90039] of  Ocio
+
+	(Calidad Media)
+	(Nombre "Myeong-dong")
+	(Precio 0)
+	(Target Grupos)
+	(TipoOcio Excursion))
+
+([Practica_Class90040] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Yuyuan")
+	(Precio 25)
+	(Target Parejas)
+	(TipoOcio Excursion))
+
+([Practica_Class90041] of  Ocio
+
+	(Calidad Baja)
+	(Nombre "Jin Mao")
+	(Precio 0)
+	(Target Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class90042] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Senso-Ji")
+	(Precio 20)
+	(Target Grupos Parejas)
+	(TipoOcio Monumento))
+
+([Practica_Class90043] of  Ocio
+
+	(Calidad Alta)
+	(Nombre "Monumento a Lincoln")
+	(Precio 5)
+	(Target Grupos)
+	(TipoOcio Monumento))
+
+([Practica_Class90044] of  Hospedaje
+
+	(Calidad Alta)
+	(Nombre "Casa Blanca")
+	(Precio 200))
