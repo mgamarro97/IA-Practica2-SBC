@@ -1,4 +1,4 @@
-; Mon May 28 11:17:34 CEST 2018
+; Mon May 28 11:26:38 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -113,6 +113,7 @@
 	(Calidad Media)
 	(Nombre "Salvar la Villa Oculta")
 	(Precio 20)
+	(Target Familias Grupos)
 	(TipoOcio Excursion))
 
 ([Practica_Class11] of  Transporte
@@ -1059,7 +1060,9 @@
 
 	(Calidad Alta)
 	(Nombre "Cair Paravel")
-	(Precio 50))
+	(Precio 50)
+	(Target Familias Grupos)
+	(TipoOcio Excursion))
 
 ([Practica_Class80004] of  Hospedaje
 
