@@ -1,4 +1,4 @@
-; Tue May 08 16:31:41 CEST 2018
+; Mon May 28 11:26:38 CEST 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -20,9 +20,14 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[Practica_ProjectKB_Class75]
-		[Practica_ProjectKB_Class76]
-		[Practica_ProjectKB_Class77]))
+		[Practica_ProjectKB_Class10227]
+		[Practica_ProjectKB_Class10228]
+		[Practica_ProjectKB_Class10229]
+		[Practica_ProjectKB_Class10230]
+		[Practica_ProjectKB_Class10231]
+		[Practica_ProjectKB_Class10232]
+		[Practica_ProjectKB_Class10233]
+		[Practica_ProjectKB_Class10234]))
 
 ([CLSES_TAB] of  Widget
 
@@ -163,7 +168,7 @@
 	(name "classes_file_name")
 	(string_value "Practica.pont"))
 
-([KB_526538_Class0] of  Map
+([KB_873325_Class0] of  Map
 )
 
 ([LAYOUT_PROPERTIES] of  Property_List
@@ -252,6 +257,60 @@
 
 ([Practica_ProjectKB_Class10] of  Property_List
 )
+
+([Practica_ProjectKB_Class10097] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "Terreno")
+	(property_list [Practica_ProjectKB_Class10098])
+	(widget_class_name "edu.stanford.smi.protege.widget.SymbolListWidget")
+	(width 200)
+	(x 200)
+	(y 180))
+
+([Practica_ProjectKB_Class10098] of  Property_List
+)
+
+([Practica_ProjectKB_Class10227] of  String
+
+	(name "Ocio")
+	(string_value "Nombre"))
+
+([Practica_ProjectKB_Class10228] of  String
+
+	(name "Transporte")
+	(string_value "TipoT{+-+}Precio"))
+
+([Practica_ProjectKB_Class10229] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([Practica_ProjectKB_Class10230] of  String
+
+	(name "Ciudad")
+	(string_value "Nombre"))
+
+([Practica_ProjectKB_Class10231] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([Practica_ProjectKB_Class10232] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([Practica_ProjectKB_Class10233] of  String
+
+	(name "Movilidad")
+	(string_value "Nombre"))
+
+([Practica_ProjectKB_Class10234] of  String
+
+	(name "Hospedaje")
+	(string_value "Nombre"))
 
 ([Practica_ProjectKB_Class11] of  Widget
 
@@ -568,21 +627,6 @@
 ([Practica_ProjectKB_Class74] of  Property_List
 )
 
-([Practica_ProjectKB_Class75] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([Practica_ProjectKB_Class76] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([Practica_ProjectKB_Class77] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
 ([Practica_ProjectKB_Class8] of  Property_List
 )
 
@@ -597,8 +641,8 @@
 	(browser_slot_names [BROWSER_SLOT_NAMES])
 	(customized_instance_widgets
 		[INSTANCE_ANNOTATION_FORM_WIDGET]
-		[STANDARD_FACET_FORM_WIDGET]
 		[STANDARD_SLOT_FORM_WIDGET]
+		[STANDARD_FACET_FORM_WIDGET]
 		[PAL_FORM_WIDGET]
 		[STANDARD_CLASS_FORM_WIDGET])
 	(default_cls_metaclass ":STANDARD-CLASS")
